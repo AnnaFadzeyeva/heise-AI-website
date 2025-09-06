@@ -1,0 +1,12 @@
+{
+  "title": "KI-gestützter Workflow – klar & effektiv",
+  "subtitle": "Wählen, verfeinern, planen und posten in wenigen Klicks.",
+  "infographic": {
+    "image": "img/svg/infografik.svg",
+    "alt": "KI-Workflow Infografik"
+  },
+  "visual": {
+    "image": "img/symbolic.png",
+    "alt": "Symbolisches Beispielbild"
+  }
+}

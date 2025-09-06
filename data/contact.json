@@ -1,0 +1,36 @@
+{
+  "title": "Kontakt & Support",
+  "subtitle": "Wir sind für Sie da – schnell, persönlich, unkompliziert.",
+  "form": {
+    "note": "Mit Sternchen markierte Felder müssen ausgefüllt werden *",
+    "fields": [
+      {
+        "label": "Vor- und Nachname *",
+        "placeholder": "Max Mustermann",
+        "name": "fullname",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Ihr Unternehmen *",
+        "placeholder": "Firma XYZ",
+        "name": "company",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Ihr Unternehmenssitz *",
+        "placeholder": "Firma XYZ",
+        "name": "location",
+        "type": "text",
+        "required": true
+      }
+    ],
+    "pagination": {
+      "current": 1,
+      "total": 2,
+      "buttonText": "Weiter"
+    }
+  },
+  "image": "img/screens/heiseAIscreens.png"
+}

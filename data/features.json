@@ -1,0 +1,27 @@
+{
+  "title": "Einmal erstellen, überall posten",
+  "social": [
+    { "icon": "img/svg/sm/linkedin.svg", "alt": "LinkedIn" },
+    { "icon": "img/svg/sm/x.svg", "alt": "X" },
+    { "icon": "img/svg/sm/whatsapp.svg", "alt": "WhatsApp" },
+    { "icon": "img/svg/sm/facebook.svg", "alt": "Facebook" },
+    { "icon": "img/svg/sm/instagram.svg", "alt": "Instagram" }
+  ],
+  "features": [
+    {
+      "icon": "img/svg/CircleClock.svg",
+      "title": "Sparen Sie Zeit",
+      "text": "Mit unserer Web-App erstellen Sie schnell und einfach Social-Media-Beiträge, sodass Sie wertvolle Zeit für andere wichtige Aufgaben nutzen können."
+    },
+    {
+      "icon": "img/svg/LightbulbOn.svg",
+      "title": "Werden Sie kreativ",
+      "text": "Lassen Sie sich von unserer Web-App inspirieren: Entwickeln Sie kreative Ideen für Ihre Social-Media-Inhalte, die Ihre Follower begeistern."
+    },
+    {
+      "icon": "img/svg/ShareLink.svg",
+      "title": "Posten Sie effizient",
+      "text": "Mit wenigen Klicks erzeugen Sie maßgeschneiderte Beiträge zeitgleich auf fünf Plattformen: Facebook, Instagram, LinkedIn, X und WhatsApp."
+    }
+  ]
+}

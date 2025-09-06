@@ -1,0 +1,103 @@
+/* Section Layout */
+.compliance,
+.leistungen {
+  padding: var(--space-8) 0;
+/*   background: linear-gradient(180deg, #f9fbff 0%, #e7efff 100%); */
+  text-align: center;
+}
+
+.compliance h2,
+.leistungen h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  margin-bottom: var(--space-3);
+  color: var(--color-primary);
+}
+
+.compliance .subtitle,
+.leistungen .subtitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--app-subtitle-color);
+  margin-bottom: var(--space-2);
+}
+
+.compliance .description,
+.leistungen .description {
+  max-width: 720px;
+  margin: 0 auto var(--space-5);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.compliance .btn,
+.leistungen .btn {
+  margin-bottom: var(--space-7);
+}
+
+/* Grid für die Karten */
+.compliance .card-grid,
+.leistungen .card-grid {
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Card Styles mit Glasmorphism */
+.compliance .card,
+.leistungen .card {
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 1rem;
+  padding: var(--space-5);
+  text-align: left;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover Effekt */
+.compliance .card:hover,
+.leistungen .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Container */
+.compliance .card-icon,
+.leistungen .card-icon {
+  width: 100%;
+  height: 40px;
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.compliance .card-icon img,
+.leistungen .card-icon img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Titel */
+.compliance h3,
+.leistungen h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+  color: var(--color-dark);
+}
+
+/* Text */
+.compliance p,
+.leistungen p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.5;
+}

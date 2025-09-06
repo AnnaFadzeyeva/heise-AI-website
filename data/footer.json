@@ -1,0 +1,58 @@
+{
+  "brand": {
+    "logo": "img/heiseAI-logo.svg",
+    "alt": "heise AI Logo",
+    "text": "Smarte Beiträge für alle Social Media<br />Kanäle in Sekunden",
+    "social": [
+      { "icon": "img/icons/linkedin.svg", "alt": "LinkedIn", "url": "#" },
+      { "icon": "img/icons/x.svg", "alt": "X", "url": "#" },
+      { "icon": "img/icons/whatsapp.svg", "alt": "WhatsApp", "url": "#" },
+      { "icon": "img/icons/facebook.svg", "alt": "Facebook", "url": "#" },
+      { "icon": "img/icons/instagram.svg", "alt": "Instagram", "url": "#" }
+    ]
+  },
+  "navigation": [
+    {
+      "title": "heise AI",
+      "links": [
+        { "label": "Funktionen", "url": "#" },
+        { "label": "How it works", "url": "#" },
+        { "label": "Preise", "url": "#" },
+        { "label": "Kontakt", "url": "#" },
+        { "label": "FAQ", "url": "#" }
+      ]
+    },
+    {
+      "title": "Extern",
+      "links": [
+        { "label": "heise I/O", "url": "#" },
+        { "label": "heise KI PRO", "url": "#" },
+        { "label": "THE DECODER", "url": "#" },
+        { "label": "DEEP CONTENT", "url": "#" },
+        { "label": "Newsletter abonnieren", "url": "#" }
+      ]
+    },
+    {
+      "title": "LinkedIn",
+      "links": [
+        { "label": "heise AI", "url": "#" },
+        { "label": "heise I/O", "url": "#" },
+        { "label": "heise KI PRO", "url": "#" },
+        { "label": "DEEP CONTENT", "url": "#" }
+      ]
+    }
+  ],
+  "partner": {
+    "logo": "img/deepcontent-logo.svg",
+    "alt": "deep content Logo",
+    "text": "by heise"
+  },
+  "bottom": {
+    "text": "Made with ❤️ by DEEP CONTENT ©2025 All rights reserved",
+    "links": [
+      { "label": "Impressum", "url": "#" },
+      { "label": "Datenschutz", "url": "#" },
+      { "label": "AGB", "url": "#" }
+    ]
+  }
+}

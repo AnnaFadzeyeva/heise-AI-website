@@ -1,0 +1,119 @@
+/* ===== Features Section ===== */
+.features {
+  text-align: center;
+  padding: var(--space-9) 0;
+}
+
+.features h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-6);
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.social-icons img {
+  width: 48px;
+  height: 48px;
+  padding: 14px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-icons img:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* Feature Cards */
+.features-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  flex-wrap: wrap;
+}
+
+/* Feature Card */
+.feature-card {
+  flex: 1;
+  max-width: 280px;
+  min-width: 220px;
+  padding: var(--space-6) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Wave zwischen Cards */
+.wave-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wave-wrapper img {
+  width: 160px;
+  height: auto;
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: var(--space-3);
+  padding: 14px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+  color: var(--color-primary);
+}
+
+.feature-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-primary);
+}
+
+/* Welle nur mittig & rechts sichtbar */
+.feature-card .wave {
+  position: absolute;
+  top: 50%;
+  right: -50%;
+  transform: translateY(-50%);
+  width: 120px;
+  height: auto;
+}
+
+.feature-card:last-child .wave {
+  display: none;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1075px) {
+  .wave-wrapper {
+    display: none;
+  }
+}

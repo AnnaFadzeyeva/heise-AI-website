@@ -1,0 +1,24 @@
+{
+  "title": "So geht's",
+  "subtitle": "Starten Sie mit einem Bild, einem Stichwort oder einem Themenvorschlag – schnell, einfach, professionell.",
+  "steps": [
+    {
+      "title": "Bild hochladen",
+      "text": "Mehr Wirkung mit Bildern: KI schreibt den passenden Text.",
+      "image": "img/screens/upload-img.png",
+      "alt": "Bild hochladen Screen"
+    },
+    {
+      "title": "Gedanken teilen",
+      "text": "Ein Satz reicht. Wir machen daraus einen professionellen Beitrag.",
+      "image": "img/screens/share-text.png",
+      "alt": "Gedanken teilen Screen"
+    },
+    {
+      "title": "Vorschlag auswählen",
+      "text": "Personalisierte Themenideen, abgestimmt auf Ihr Unternehmen.",
+      "image": "img/screens/suggestions.png",
+      "alt": "Vorschläge auswählen Screen"
+    }
+  ]
+}

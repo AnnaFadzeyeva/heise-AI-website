@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>heise AI – Social Media leicht gemacht</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/features.css" />
+    <link rel="stylesheet" href="css/hero-bg.css" />
+    <link rel="stylesheet" href="css/compliance.css" />
+    <link rel="stylesheet" href="css/so-gehts.css" />
+    <link rel="stylesheet" href="css/workflow.css" />
+    <link rel="stylesheet" href="css/testimonials.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/faq.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
+  <body>
+    <!-- Header / Navigation -->
+
+    <div class="masthead">
+      <header class="site-header">
+        <div class="container header-inner">
+          <!-- Links: Logo -->
+          <a class="brand" href="#home" aria-label="Startseite">
+            <img
+              class="brand-logo"
+              src="img/heiseAI-logo.svg"
+              alt="heise AI"
+              width="128"
+              height="32"
+              decoding="async"
+            />
+          </a>
+
+          <!-- Mobile Burger -->
+          <button
+            class="nav-toggle"
+            aria-controls="primary-nav"
+            aria-expanded="false"
+            aria-label="Navigation öffnen"
+          >
+            <span class="nav-toggle-box" aria-hidden="true">
+              <span class="nav-toggle-line"></span>
+              <span class="nav-toggle-line"></span>
+              <span class="nav-toggle-line"></span>
+            </span>
+          </button>
+
+          <!-- Navigation -->
+          <nav class="nav" id="primary-nav" aria-label="Hauptnavigation">
+            <!-- ZENTRIERTES, SCHWEBENDES MENÜ (Desktop), vertikal (Mobile) -->
+            <ul class="nav-center">
+              <li><a class="nav-item" href="#leistungen">Leistungen</a></li>
+              <li><a class="nav-item" href="#preise">Preise</a></li>
+              <li><a class="nav-item" href="#referenzen">Referenzen</a></li>
+              <li><a class="nav-item" href="#faq">FAQ</a></li>
+            </ul>
+
+            <!-- RECHTS: Aktionen -->
+            <div class="nav-right">
+              <a class="nav-item login" href="#login">Anmelden</a>
+              <a class="btn btn-secondary cta" href="#test">Kostenlos testen</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Hero / First Section -->
+
+      <section class="hero" id="home">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">heise AI Social App</p>
+            <h1>
+              Social Media<br />
+              leicht gemacht
+            </h1>
+            <p class="lead">
+              Keine Zeit oder Ideen für kreative Postings? Erstellen Sie mit
+              Künstlicher Intelligenz professionelle Social-Media-Beiträge und
+              posten Sie sie auf bis zu fünf Plattformen.
+            </p>
+
+            <div class="actions">
+              <a class="btn btn-primary" href="#ausprobieren">Ausprobieren</a>
+              <a class="btn btn-ghost" href="#video">Video ansehen</a>
+            </div>
+          </div>
+
+          <div class="hero-media" aria-hidden="true">
+            <img src="img/bg-post.png" alt="" class="phone-mock" />
+          </div>
+        </div>
+      </section>
+    </div>
+    <main>
+      <section id="features" class="features">
+        <div class="container">
+          <h2 id="features-title"></h2>
+
+          <div id="features-social" class="social-icons"></div>
+
+          <div id="features-cards" class="features-list"></div>
+        </div>
+      </section>
+
+      <section id="leistungen" class="leistungen">
+        <div class="container">
+          <h2 id="leistungen-title"></h2>
+          <p class="description" id="leistungen-description"></p>
+          <a id="leistungen-cta" class="btn btn-primary" href="#"></a>
+
+          <div id="leistungen-cards" class="card-grid"></div>
+        </div>
+      </section>
+
+      <section id="so-gehts" class="so-gehts">
+        <div class="container">
+          <h2 id="so-gehts-title"></h2>
+          <p id="so-gehts-subtitle" class="subtitle"></p>
+
+          <div id="so-gehts-steps" class="steps-list"></div>
+        </div>
+      </section>
+
+      <section id="workflow" class="workflow">
+        <div class="container workflow-inner">
+          <div class="workflow-text">
+            <h2 id="workflow-title"></h2>
+            <p id="workflow-subtitle" class="subtitle"></p>
+
+            <div id="workflow-infographic" class="workflow-infographic"></div>
+
+            <div id="workflow-social" class="workflow-social"></div>
+          </div>
+
+          <div id="workflow-visual" class="workflow-visual"></div>
+        </div>
+      </section>
+
+      <section id="compliance" class="compliance">
+        <div class="container">
+          <h2 id="compliance-title"></h2>
+          <p class="subtitle" id="compliance-subtitle"></p>
+          <p class="description" id="compliance-description"></p>
+          <a id="compliance-cta" class="btn btn-primary" href="#"></a>
+
+          <div id="compliance-cards" class="card-grid"></div>
+        </div>
+      </section>
+
+      <section id="referenzen" class="testimonials">
+        <div class="container">
+          <h2 id="testimonials-title"></h2>
+          <p id="testimonials-subtitle" class="subtitle"></p>
+
+          <div class="carousel">
+            <div id="testimonials-items" class="carousel-track"></div>
+
+            <!-- Pagination Dots -->
+            <div id="testimonials-dots" class="carousel-dots"></div>
+
+            <!-- Navigation Arrows -->
+            <button class="carousel-prev" aria-label="Vorheriges Testimonial">
+              ←
+            </button>
+            <button class="carousel-next" aria-label="Nächstes Testimonial">
+              →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact-support" class="contact">
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-form-wrapper">
+              <h2 id="contact-title"></h2>
+              <p id="contact-subtitle" class="subtitle"></p>
+              <form id="contact-form"></form>
+              <div id="contact-pagination"></div>
+            </div>
+            <div class="contact-image">
+              <img id="contact-image" alt="App Screens" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="heise-io-faq" class="faq">
+        <div class="container">
+          <h2 id="heise-io-faq-title"></h2>
+          <div id="heise-io-faq-items" class="faq-list"></div>
+          <a id="" class="btn btn-primary" href="#"></a>
+        </div>
+      </section>
+    </main>
+
+   <footer id="site-footer" class="site-footer"></footer>
+
+    <script src="script.js"></script>
+    <script src="menu.js"></script>
+    <script src="contact.js"></script>
+    <script src="footer.js"></script>
+  </body>
+</html>

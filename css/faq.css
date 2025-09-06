@@ -1,0 +1,167 @@
+/* ===== FAQ Section (Glasmorphism) ===== */
+
+.faq {
+  padding: var(--space-8) 0 var(--space-9);
+/*   background: linear-gradient(180deg, #f9fbff 0%, #e7efff 100%); */
+}
+
+.faq .container {
+  max-width: 1000px;
+}
+
+.faq h2 {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: var(--space-6);
+}                     
+
+/* CTA unter der Liste */
+#heise-io-faq-cta {
+  display: inline-flex;
+  margin: var(--space-6) auto 0;
+}
+
+/* Liste: einspaltig, mit vertikalen Abständen */
+.faq-list {
+  display: grid;
+  gap: var(--space-4);
+}
+
+/* Einzelnes Item mit Glas-Effekt */
+.faq-item {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  overflow: hidden;
+  transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Frage-Button (Header des Accordions) */
+.faq-question {
+  all: unset; /* reset für sauberes Styling */
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-4) var(--space-5);
+  color: var(--color-dark);
+}
+
+.faq-question span:first-child {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: .005em;
+}
+
+/* Plus/Minus Icon rechts */
+.faq-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--color-primary);
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(20, 49, 91, 0.1);
+  transition: transform .2s ease, background .2s ease, color .2s ease;
+}
+
+.faq-question:hover .faq-icon {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.9);
+}
+
+/* Fokus für A11y */
+.faq-question:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 3px;
+  border-radius: .75rem;
+}
+
+/* Antwortbereich mit sanfter Collapsing-Animation */
+.faq-answer {
+  padding: 0 var(--space-5) var(--space-5);
+  color: var(--text);
+  font-size: 0.98rem;
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .35s ease, opacity .25s ease, padding-top .25s ease;
+}
+
+/* Wenn geöffnet (per aria-expanded gesteuert) */
+.faq-question[aria-expanded="true"] + .faq-answer {
+  /* JS entfernt das hidden-Attribut, dann greift diese Regel */
+  max-height: 900px; /* ausreichend groß für lange Antworten */
+  opacity: 1;
+  padding-top: var(--space-2);
+}
+
+/* Falls JS das hidden-Attribut nutzt: sicherheitshalber ausblenden */
+.faq-answer[hidden] {
+  display: block;              /* wichtig, damit max-height animieren kann */
+  max-height: 0 !important;
+  opacity: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Dünne Trennlinie oben an der Antwort (dezent) */
+.faq-question[aria-expanded="true"] + .faq-answer::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(16,27,68,0.08), rgba(16,27,68,0.02));
+  margin: 0 0 var(--space-3);
+}
+
+/* Dark Theme Anpassungen */
+:root[data-theme="dark"] .faq {
+  background: linear-gradient(180deg, #242a33 0%, #1d2229 100%);
+}
+
+:root[data-theme="dark"] .faq-item {
+  background: rgba(37, 44, 51, 0.55);
+  border-color: rgba(255,255,255,0.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+
+:root[data-theme="dark"] .faq-question span:first-child {
+  color: var(--color-dark);
+}
+
+:root[data-theme="dark"] .faq-answer {
+  color: var(--text);
+}
+
+:root[data-theme="dark"] .faq-icon {
+  background: rgba(255,255,255,0.12);
+  color: var(--color-secondary);
+  border-color: rgba(255,255,255,0.12);
+}
+
+/* Motion-Reduce */
+@media (prefers-reduced-motion: reduce) {
+  .faq-item,
+  .faq-question,
+  .faq-answer,
+  .faq-icon {
+    transition: none !important;
+  }
+}

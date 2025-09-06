@@ -1,0 +1,169 @@
+/* App-Theme-Variablen (Light & Dark) — ohne --ion- Prefix */
+:root {
+  /* Typography */
+  --font-family: "Source Sans 3", sans-serif;
+  --font-size: 0.875rem;
+  --line-height: 1.5;
+
+  /* Base & surfaces */
+  --background-color: #ffffff;
+  --toolbar-background: #ffffff;
+  --content-background: #ffffff;
+  --item-background: #ffffff;
+  --card-background: #ffffff;
+
+  --color-bg-0: hsl(209, 60%, 75%);
+  --color-bg-1: hsl(209, 45%, 80%);
+  --color-bg-2: hsl(224, 50%, 92%);
+
+
+  /* Text */
+  --text-color: #000000;
+  --text-color-step-850: #000000;
+
+  /* Color steps */
+  --color-step-50:  #f4f4f4;
+  --color-step-100: #eaeaea;
+  --color-step-150: #e0e0e0;
+  --color-step-200: #d6d6d6;
+  --color-step-250: #cccccc;
+  --color-step-300: #c2c2c2;
+  --color-step-350: #b8b8b8;
+  --color-step-400: #aeaeae;
+  --color-step-450: #a4a4a4;
+  --color-step-500: #999999;
+  --color-step-550: #8f8f8f;
+  --color-step-600: #858585;
+  --color-step-650: #7b7b7b;
+  --color-step-700: #717171;
+  --color-step-750: #666666;
+  --color-step-800: #5c5c5c;
+  --color-step-850: #525252;
+  --color-step-900: #474747;
+
+  --color-primary: #14315B;
+  --color-primary-rgb: 20, 49, 91;
+  --color-primary-contrast: #ffffff;
+  --color-primary-contrast-rgb: 255, 255, 255;
+  --color-primary-shade: #122b50;
+  --color-primary-tint:  #2c466b;
+
+  --color-secondary: #64A4FF;
+  --color-secondary-rgb: 100, 164, 255;
+  --color-secondary-contrast: #000000;
+  --color-secondary-contrast-rgb: 0, 0, 0;
+  --color-secondary-shade: #5890e0;
+  --color-secondary-tint:  #74adff;
+
+  --color-tertiary: #4854E0;
+  --color-tertiary-rgb: 72, 84, 224;
+  --color-tertiary-contrast: #ffffff;
+  --color-tertiary-contrast-rgb: 255, 255, 255;
+  --color-tertiary-shade: #3f4ac5;
+  --color-tertiary-tint:  #5a65e3;
+
+  --color-success: #2DD36F;
+  --color-success-rgb: 45, 211, 111;
+  --color-success-contrast: #000000;
+  --color-success-contrast-rgb: 0, 0, 0;
+  --color-success-shade: #28ba62;
+  --color-success-tint:  #42d77d;
+
+  --color-warning: #FFC409;
+  --color-warning-rgb: 255, 196, 9;
+  --color-warning-contrast: #000000;
+  --color-warning-contrast-rgb: 0, 0, 0;
+  --color-warning-shade: #e0ac08;
+  --color-warning-tint:  #ffca22;
+
+  --color-danger: #EB445A;
+  --color-danger-rgb: 235, 68, 90;
+  --color-danger-contrast: #000000;
+  --color-danger-contrast-rgb: 0, 0, 0;
+  --color-danger-shade: #cf3c4f;
+  --color-danger-tint:  #ed576b;
+
+  --color-light: #F4F6F7;
+  --color-light-rgb: 244, 246, 247;
+  --color-light-contrast: #000000;
+  --color-light-contrast-rgb: 0, 0, 0;
+  --color-light-shade: #d7d8d9;
+  --color-light-tint:  #f5f7f8;
+
+  --color-medium: #828A93;
+  --color-medium-rgb: 130, 138, 147;
+  --color-medium-contrast: #000000;
+  --color-medium-contrast-rgb: 0, 0, 0;
+  --color-medium-shade: #727981;
+  --color-medium-tint:  #8f969e;
+
+  --color-dark: #252C33;
+  --color-dark-rgb: 37, 44, 51;
+  --color-dark-contrast: #ffffff;
+  --color-dark-contrast-rgb: 255, 255, 255;
+  --color-dark-shade: #21272d;
+  --color-dark-tint:  #3b4147;
+
+  /* App specific */
+  --app-heading-color:  #14315B;
+  --app-subtitle-color: #828A93;
+
+  /* Toggle (Light) */
+  --toggle-handle-bg: #ffffff;
+  --toggle-track-bg: var(--color-medium);
+  --toggle-track-bg-checked: var(--color-success);
+
+  --space-1: 0.25rem;  /* 4px  - sehr klein, z.B. für Hairline-Abstände */
+  --space-2: 0.5rem;   /* 8px  - kleine Gaps, Inline-Spacing */
+  --space-3: 0.75rem;  /* 12px - kleine Paddings, Buttons */
+  --space-4: 1rem;     /* 16px - Standard-Innenabstand */
+  --space-5: 1.5rem;   /* 24px - Section-Padding mobil */
+  --space-6: 2rem;     /* 32px - größere Paddings */
+  --space-7: 3rem;     /* 48px - Section-Abstände Tablet */
+  --space-8: 4rem;     /* 64px - Section-Abstände Desktop */
+  --space-9: 6rem;     /* 96px - große Section-Abstände */
+  --space-10: 8rem;    /* 128px - Hero/Full-Width-Abstände */
+
+}
+
+/* Dark Theme */
+:root[data-theme="dark"] {
+
+  /* Base */
+  --background-color: #252C33;
+  --toolbar-background: #252C33;
+  --content-background: #252C33;
+  --item-background: #252C33;
+  --card-background: #252C33;
+
+  /* Text */
+  --text-color: #f4f6f7;
+
+  /* Palette */
+  --color-primary:   #4d6b95;
+  --color-primary-contrast: #ffffff;
+
+  --color-secondary: #8bbfff;
+  --color-secondary-contrast: #000000;
+
+  --color-tertiary:  #7c84ff;
+  --color-tertiary-contrast: #ffffff;
+
+  --color-success: #50e29f;
+  --color-warning: #ffd74a;
+  --color-danger:  #ff667a;
+
+  --color-light: #1e1e1e;
+  --color-light-contrast: #ffffff;
+
+  --color-medium: #a0a7b0;
+  --color-medium-contrast: #000000;
+
+  --color-dark: #f4f6f7;
+  --color-dark-contrast: #000000;
+
+  /* Toggle (Dark) */
+  --toggle-handle-bg: #ffffff;
+  --toggle-track-bg: var(--color-medium);
+  --toggle-track-bg-checked: var(--color-success);
+}

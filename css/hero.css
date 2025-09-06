@@ -1,0 +1,94 @@
+/* ===== HERO (Bild an Masthead unten rechts ausrichten) ===== */
+
+/* Das Bild sitzt an .masthead, daher darf .hero NICHT der
+   Positionierungs-Referenzrahmen sein. */
+.hero {
+  position: static;
+  overflow: clip;
+  --media-w: clamp(520px, 48vw, 860px);
+  padding-top: clamp(2.5rem, 6vw, 4rem);
+  min-height: 64vh;       /* Höhe für den gesamten Bereich */
+  display: flex;
+  flex-direction: column; /* wichtig, damit child flex:1 funktioniert */
+}
+
+.hero-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  flex: 1;               
+  width: 100%;
+  padding-right: calc(var(--media-w) + 2rem);
+}
+
+/* Textblock */
+.hero-copy {
+  z-index: 2;
+  max-width: 820px;
+  padding: 0 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Bildblock */
+.hero-media {
+  align-self: flex-end; 
+  z-index: 100;
+}
+
+@media (min-width: 1400px) {
+  .hero-copy {
+    max-width: 1100px;
+    padding: 0 4em;
+  }
+}
+
+.hero-copy .eyebrow { color: var(--brand); font-weight: 800; letter-spacing: .02em; margin-bottom: .25rem; }
+.hero h1 {
+  font-size: clamp(2.5rem, 4.8vw + .5rem, 4.75rem);
+  line-height: 1.05;
+  letter-spacing: .01em;
+  margin-bottom: var(--space-3, 1rem);
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+.lead { font-size: var(--lead); color: var(--text-color-step-850, var(--muted)); max-width: 45ch; }
+.actions { display: flex; gap: .75rem; margin-top: var(--space-4, 1.5rem); }
+
+/* >>> Das Bild absolut an .masthead kleben (bündig rechts/unten) */
+.masthead { position: relative; }        /* Referenzrahmen */
+.masthead .hero-media {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.masthead .phone-mock {
+  display: block;
+  width: var(--media-w);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 30px 60px rgba(16,27,68,.18));
+}
+
+/* Tablet: Bild/Breite anpassen – Textreserve folgt automatisch */
+@media (max-width: 1200px) {
+  .hero { --media-w: clamp(420px, 46vw, 620px); }
+}
+
+/* Mobile: Bild unter den Text in den normalen Fluss rutschen lassen */
+@media (max-width: 960px) {
+  .hero { --media-w: clamp(300px, 78vw, 420px); }
+  .hero-inner { padding-right: 0; gap: var(--space-5, 2rem); }
+  .masthead .hero-media {
+    position: static;                 /* <— rutscht unter den Text */
+    margin-top: var(--space-4, 1.5rem);
+  }
+  .masthead .phone-mock {
+    width: var(--media-w);
+    margin-inline: auto;
+  }
+}
