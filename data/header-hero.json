@@ -1,0 +1,64 @@
+{
+  "de": {
+    "header": {
+      "nav": {
+        "links": [
+          { "label": "Vorteile", "url": "#leistungen" },
+          { "label": "Preise", "url": "#pricing" },
+          { "label": "Referenzen", "url": "#referenzen" },
+          { "label": "FAQ", "url": "#heise-io-faq" }
+        ],
+        "actions": {
+          "login": { "label": "Anmelden", "url": "#login" },
+          "cta": { "label": "Kostenlos testen", "url": "#test" }
+        }
+      }
+    },
+    "hero": {
+      "eyebrow": "heise AI Social App",
+      "headline": "Social Media<br />leicht gemacht",
+      "lead": "Keine Zeit oder Ideen für kreative Postings? Erstellen Sie mit Künstlicher Intelligenz professionelle Social-Media-Beiträge und posten Sie sie auf bis zu fünf Plattformen.",
+      "actions": [
+        { "label": "Ausprobieren", "style": "btn btn-primary", "url": "#ausprobieren" },
+        { "label": "Video ansehen", "style": "btn btn-ghost", "url": "#video" }
+      ],
+      "image": {
+        "src": "img/bg-post-1200.webp",
+        "srcset": "img/bg-post-600.webp 600w, img/bg-post-1200.webp 1200w, img/bg-post-2000.webp 2000w",
+        "sizes": "(max-width: 768px) 100vw, 50vw",
+        "alt": "Social Media Post Mockup"
+      }
+    }
+  },
+  "en": {
+    "header": {
+      "nav": {
+        "links": [
+          { "label": "Benefits", "url": "#leistungen" },
+          { "label": "Pricing", "url": "#pricing" },
+          { "label": "References", "url": "#referenzen" },
+          { "label": "FAQ", "url": "#heise-io-faq" }
+        ],
+        "actions": {
+          "login": { "label": "Login", "url": "#login" },
+          "cta": { "label": "Start Free Trial", "url": "#test" }
+        }
+      }
+    },
+    "hero": {
+      "eyebrow": "heise AI Social App",
+      "headline": "Social Media<br />made easy",
+      "lead": "No time or ideas for creative posts? With Artificial Intelligence, create professional social media posts and publish them on up to five platforms.",
+      "actions": [
+        { "label": "Try it", "style": "btn btn-primary", "url": "#try" },
+        { "label": "Watch Video", "style": "btn btn-ghost", "url": "#video" }
+      ],
+      "image": {
+        "src": "img/bg-post-1200.webp",
+        "srcset": "img/bg-post-600.webp 600w, img/bg-post-1200.webp 1200w, img/bg-post-2000.webp 2000w",
+        "sizes": "(max-width: 768px) 100vw, 50vw",
+        "alt": "Social Media Post Mockup"
+      }
+    }
+  }
+}

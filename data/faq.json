@@ -1,0 +1,108 @@
+{
+  "de": {
+    "title": "heise I/O – Fragen & Antworten",
+    "cta": {
+      "label": "Demo vereinbaren",
+      "link": "#demo"
+    },
+    "faqs": [
+      {
+        "question": "Was ist heise I/O?",
+        "answer": "heise I/O ist eine KI-gestützte Publishing-Plattform. Die Plattform ermöglicht die effiziente Nutzung von KI in Content-Workflows – ohne dass jeder einzelne Nutzer KI-Expertise benötigt. Anders als bei Chat-Experimenten arbeiten Teams mit erprobten, auf ihre Bedürfnisse zugeschnittenen Prozessen."
+      },
+      {
+        "question": "Wodurch unterscheidet sich heise I/O von anderen KI-Tools?",
+        "answer": "heise I/O ist eine professionelle Publishing-Plattform, die von Grund auf für das KI-Zeitalter entwickelt wurde. Das Prompting wird zentral von KI-Experten gepflegt – Teams konzentrieren sich auf ihre Kernaufgaben. Die Plattform verarbeitet eigene Datenquellen und verschiedene Medienformate, integriert alle Schritte von Recherche bis Publishing und bietet spezialisierte KI-Assistenten sowie Performance-Analysen."
+      },
+      {
+        "question": "Für welche Teams ist heise I/O geeignet?",
+        "answer": "heise I/O ist für Content-Teams aller Art entwickelt: Redaktionen, Corporate Newsrooms, Marketing, PR, HR und Sales. Überall wo regelmäßig professionelle Inhalte erstellt werden, optimiert heise I/O die Workflows und macht KI für alle nutzbar."
+      },
+      {
+        "question": "Wie funktioniert die Integration eigener Daten?",
+        "answer": "Nach dem \"Bring Your Own Data\"-Prinzip binden Sie Dokumente und Datenbanken nahtlos ein. heise I/O verarbeitet verschiedene Dateiformate und kombiniert mehrere Quellen. Beispiel: Aus einem Produktdatenblatt und einem Marketing-Briefing wird automatisch eine Pressemitteilung oder ein Social-Media-Beitrag erstellt."
+      },
+      {
+        "question": "Welche KI-Modelle werden verwendet?",
+        "answer": "Sie entscheiden, welche KI-Modelle eingesetzt werden. heise I/O bindet sich nicht an einzelne Anbieter und ermöglicht so die jeweils beste oder kosteneffizienteste Option."
+      },
+      {
+        "question": "Wie steht es um Datenschutz und Compliance?",
+        "answer": "heise I/O ist vollständig DSGVO-konform und EU AI Act vorbereitet. Alle Modelle laufen isoliert, Daten werden nicht für Training verwendet. Optional ist ein lokaler Betrieb in eigener Infrastruktur möglich. Governance-Funktionen machen KI-Prozesse transparent und nachvollziehbar."
+      },
+      {
+        "question": "Was kostet heise I/O?",
+        "answer": "Die Kosten hängen von Ihren Anforderungen ab: Implementierung, Nutzerzahl, Features und KI-Verbrauch. In einer persönlichen Demo analysieren wir Ihren Bedarf und erstellen ein Angebot."
+      },
+      {
+        "question": "Wie erfolgt die Implementation?",
+        "answer": "Nach einer Bedarfsanalyse werden Workflows eingerichtet, Datenquellen integriert und Teams geschult. Die Schulungen erfüllen bereits Anforderungen des EU AI Acts. Danach erfolgt kontinuierliche Optimierung."
+      },
+      {
+        "question": "Wie wird der Erfolg der KI-Nutzung gemessen?",
+        "answer": "Ein Analytics-Dashboard zeigt die Nutzung von Workflows und Prompts. So lassen sich Effizienzgewinne und Wirksamkeit der KI-Integration nachvollziehen."
+      },
+      {
+        "question": "Welchen Support gibt es bei heise I/O?",
+        "answer": "Wir bieten technischen Support und Workflow-Beratung. Regelmäßige Updates verbessern die Plattform kontinuierlich – basierend auf Nutzerfeedback und neuen Entwicklungen."
+      },
+      {
+        "question": "Was ist die Vision hinter heise I/O?",
+        "answer": "heise I/O versteht KI-Modelle als Werkzeug wie den Taschenrechner für Mathematiker: unverzichtbar für alle, die mit Sprache arbeiten. Ziel ist \"Direct to Draft\" – nie wieder vor dem leeren Blatt sitzen. KI schafft Freiraum für Konzeption, Recherche und kreative Arbeit."
+      }
+    ]
+  },
+  "en": {
+    "title": "heise I/O – Questions & Answers",
+    "cta": {
+      "label": "Book a Demo",
+      "link": "#demo"
+    },
+    "faqs": [
+      {
+        "question": "What is heise I/O?",
+        "answer": "heise I/O is an AI-powered publishing platform. It enables efficient use of AI in content workflows – without requiring every user to be an AI expert. Unlike chat experiments, teams work with proven processes tailored to their needs."
+      },
+      {
+        "question": "How does heise I/O differ from other AI tools?",
+        "answer": "heise I/O is a professional publishing platform built from the ground up for the AI era. Prompting is centrally maintained by AI experts – teams can focus on their core tasks. The platform processes proprietary data sources and various media formats, integrates all steps from research to publishing, and offers specialized AI assistants as well as performance analytics."
+      },
+      {
+        "question": "Which teams is heise I/O designed for?",
+        "answer": "heise I/O is designed for all types of content teams: editorial, corporate newsrooms, marketing, PR, HR, and sales. Wherever professional content is regularly created, heise I/O optimizes workflows and makes AI accessible to everyone."
+      },
+      {
+        "question": "How does the integration of own data work?",
+        "answer": "Following the 'Bring Your Own Data' principle, you can seamlessly integrate documents and databases. heise I/O processes various file formats and combines multiple sources. Example: from a product datasheet and a marketing briefing, a press release or social media post can be generated automatically."
+      },
+      {
+        "question": "Which AI models are used?",
+        "answer": "You decide which AI models are deployed. heise I/O is not tied to specific providers, allowing the best or most cost-effective option in each case."
+      },
+      {
+        "question": "What about data protection and compliance?",
+        "answer": "heise I/O is fully GDPR compliant and EU AI Act ready. All models run in isolated environments, data is not used for training. Optional local operation within your own infrastructure is possible. Governance functions make AI processes transparent and traceable."
+      },
+      {
+        "question": "How much does heise I/O cost?",
+        "answer": "The cost depends on your requirements: implementation, number of users, features, and AI usage. In a personal demo, we analyze your needs and create a tailored offer."
+      },
+      {
+        "question": "How is implementation carried out?",
+        "answer": "After a needs analysis, workflows are set up, data sources integrated, and teams trained. The training already meets EU AI Act requirements. Continuous optimization follows afterwards."
+      },
+      {
+        "question": "How is the success of AI usage measured?",
+        "answer": "An analytics dashboard shows the usage of workflows and prompts. This allows efficiency gains and effectiveness of AI integration to be tracked."
+      },
+      {
+        "question": "What kind of support is available for heise I/O?",
+        "answer": "We provide technical support and workflow consulting. Regular updates continuously improve the platform – based on user feedback and new developments."
+      },
+      {
+        "question": "What is the vision behind heise I/O?",
+        "answer": "heise I/O sees AI models as a tool like the calculator for mathematicians: indispensable for anyone working with language. The goal is 'Direct to Draft' – never face a blank page again. AI creates freedom for concept development, research, and creative work."
+      }
+    ]
+  }
+}

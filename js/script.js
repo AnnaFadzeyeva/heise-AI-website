@@ -2,6 +2,12 @@
 import { renderWorkflow } from "./workflow.js";
 import { renderAwards } from "./awards.js";
 import { renderPricing } from "./pricing.js";
+import { renderContact } from "./contact.js";
+import { renderFooter } from "./footer.js";
+import { renderHeaderHero } from "./headerHero.js";
+function getLanguage() {
+  return localStorage.getItem("lang") || "de";
+}
 
 // ---------- Dynamic Section Rendering ----------
 function renderSection(sectionId, jsonFile) {
@@ -11,30 +17,34 @@ function renderSection(sectionId, jsonFile) {
       return response.json();
     })
     .then((data) => {
+      const lang = getLanguage();
+      const content = data[lang] || data["de"];
       // Titel
       const titleEl = document.getElementById(`${sectionId}-title`);
-      if (titleEl && data.title) titleEl.textContent = data.title;
+      if (titleEl && content.title) titleEl.textContent = content.title;
 
       // Optionaler Untertitel
       const subtitleEl = document.getElementById(`${sectionId}-subtitle`);
-      if (subtitleEl && data.subtitle) subtitleEl.textContent = data.subtitle;
+      if (subtitleEl && content.subtitle)
+        subtitleEl.textContent = content.subtitle;
 
       // Beschreibung
       const descEl = document.getElementById(`${sectionId}-description`);
-      if (descEl && data.description) descEl.textContent = data.description;
+      if (descEl && content.description)
+        descEl.textContent = content.description;
 
       // CTA
       const ctaEl = document.getElementById(`${sectionId}-cta`);
-      if (ctaEl && data.cta) {
-        ctaEl.textContent = data.cta.label;
-        ctaEl.href = data.cta.link;
+      if (ctaEl && content.cta) {
+        ctaEl.textContent = content.cta.label;
+        ctaEl.href = content.cta.link;
       }
 
       // Karten (generisch)
       const cardsContainer = document.getElementById(`${sectionId}-cards`);
-      if (cardsContainer && data.cards) {
+      if (cardsContainer && content.cards) {
         cardsContainer.innerHTML = "";
-        data.cards.forEach((card) => {
+        content.cards.forEach((card) => {
           const cardEl = document.createElement("div");
           cardEl.className = "card";
           cardEl.innerHTML = `
@@ -52,9 +62,9 @@ function renderSection(sectionId, jsonFile) {
 
       // Features-Block (Social + Features-Karten + Wave)
       const socialEl = document.getElementById(`${sectionId}-social`);
-      if (sectionId !== "workflow" && socialEl && data.social) {
+      if (sectionId !== "workflow" && socialEl && content.social) {
         socialEl.innerHTML = "";
-        data.social.forEach((s) => {
+        content.social.forEach((s) => {
           const icon = document.createElement("img");
           icon.src = s.icon;
           icon.alt = s.alt;
@@ -63,10 +73,10 @@ function renderSection(sectionId, jsonFile) {
       }
 
       const featuresEl = document.getElementById(`${sectionId}-cards`);
-      if (featuresEl && data.features) {
+      if (featuresEl && content.features) {
         featuresEl.innerHTML = "";
 
-        data.features.forEach((f, i) => {
+        content.features.forEach((f, i) => {
           // Feature Card
           const card = document.createElement("div");
           card.className = "feature-card";
@@ -80,7 +90,7 @@ function renderSection(sectionId, jsonFile) {
           featuresEl.appendChild(card);
 
           // Wave nur zwischen den Cards (nicht nach der letzten)
-          if (i < data.features.length - 1) {
+          if (i < content.features.length - 1) {
             const wave = document.createElement("div");
             wave.className = "wave-wrapper";
             wave.innerHTML = `<img src="img/svg/wave.svg" alt="Trennlinie">`;
@@ -91,9 +101,9 @@ function renderSection(sectionId, jsonFile) {
 
       // Steps-Block ("So geht's")
       const stepsEl = document.getElementById(`${sectionId}-steps`);
-      if (stepsEl && data.steps) {
+      if (stepsEl && content.steps) {
         stepsEl.innerHTML = "";
-        data.steps.forEach((step) => {
+        content.steps.forEach((step) => {
           const stepEl = document.createElement("div");
           stepEl.className = "step-card";
           stepEl.innerHTML = `
@@ -107,18 +117,18 @@ function renderSection(sectionId, jsonFile) {
 
       // Workflow
       if (sectionId === "workflow") {
-        renderWorkflow(sectionId, data);
+        renderWorkflow(sectionId, content);
       }
 
       // Testimonials Carousel
       const testimonialsContainer = document.getElementById(
         `${sectionId}-items`
       );
-      if (testimonialsContainer && data.testimonials) {
+      if (testimonialsContainer && content.testimonials) {
         testimonialsContainer.innerHTML = "";
 
         // --- Testimonials rendern ---
-        data.testimonials.forEach((t, i) => {
+        content.testimonials.forEach((t, i) => {
           const item = document.createElement("div");
           item.className = "testimonial-card";
           if (i === 0) item.classList.add("active");
@@ -144,7 +154,7 @@ function renderSection(sectionId, jsonFile) {
         const dotsContainer = document.getElementById(`${sectionId}-dots`);
         if (dotsContainer) {
           dotsContainer.innerHTML = "";
-          data.testimonials.forEach((_, i) => {
+          content.testimonials.forEach((_, i) => {
             const dot = document.createElement("button");
             dot.className = "carousel-dot";
             if (i === 0) dot.classList.add("active");
@@ -173,7 +183,7 @@ function renderSection(sectionId, jsonFile) {
         items = Array.from(track.querySelectorAll(".testimonial-card"));
 
         let currentIndex = 1; // Start beim echten ersten Element
-        let realLength = data.testimonials.length;
+        let realLength = content.testimonials.length;
 
         function setTranslate(index, animate = true) {
           const activeItem = items[index];
@@ -250,9 +260,9 @@ function renderSection(sectionId, jsonFile) {
 
       // FAQ
       const faqContainer = document.getElementById(`${sectionId}-items`);
-      if (faqContainer && data.faqs) {
+      if (faqContainer && content.faqs) {
         faqContainer.innerHTML = "";
-        data.faqs.forEach((faq, i) => {
+        content.faqs.forEach((faq, i) => {
           const item = document.createElement("div");
           item.className = "faq-item";
 
@@ -305,16 +315,116 @@ function renderSection(sectionId, jsonFile) {
 document.addEventListener("DOMContentLoaded", () => {
   renderSection("compliance", "data/compliance.json");
   renderSection("features", "data/features.json");
-  renderSection("leistungen", "data/leistungen.json");
-  renderSection("so-gehts", "data/so-gehts.json");
+  renderSection("leistungen", "data/benefits.json");
+  renderSection("so-gehts", "data/steps.json");
   renderSection("workflow", "data/workflow.json");
   renderSection("testimonials", "data/testimonials.json");
-  renderSection("heise-io-faq", "data/heise-io-faq.json");
-  fetch("data/auszeichnungen.json")
+  renderSection("heise-io-faq", "data/faq.json");
+  fetch("data/header-hero.json")
     .then((res) => res.json())
-    .then((data) => renderAwards("awards", data))
+    .then((data) => {
+      const lang = getLanguage();
+      const content = data[lang] || data["de"];
+      renderHeaderHero("header-hero", content);
+    });
+  fetch("data/awards.json")
+    .then((res) => res.json())
+    .then((data) => {
+      const lang = getLanguage();
+      const content = data[lang] || data["de"];
+      renderAwards("awards", content);
+    })
     .catch((err) => console.error("Awards JSON Fehler:", err));
   fetch("data/pricing.json")
     .then((res) => res.json())
-    .then((data) => renderPricing("pricing", data));
+    .then((data) => {
+      const lang = getLanguage();
+      const content = data[lang] || data["de"];
+      renderPricing("pricing", content);
+    });
+  fetch("data/contact.json")
+    .then((res) => res.json())
+    .then((data) => {
+      const lang = getLanguage();
+      const content = data[lang] || data["de"];
+      renderContact("contact-support", content);
+    });
+  fetch("data/footer.json")
+    .then((res) => res.json())
+    .then((data) => {
+      const lang = getLanguage();
+      const content = data[lang] || data["de"];
+      renderFooter(content);
+    });
 });
+
+// ---------- Language Switch ----------
+document.querySelectorAll(".lang-switch .lang").forEach((el) => {
+  el.addEventListener("click", (e) => {
+    e.preventDefault();
+    const newLang = el.dataset.lang;
+
+    // Sprache speichern
+    localStorage.setItem("lang", newLang);
+
+    // Aktive Klasse updaten
+    document
+      .querySelectorAll(".lang-switch .lang")
+      .forEach((l) => l.classList.remove("active"));
+    el.classList.add("active");
+
+    // Seite neu rendern (alle Sections)
+    reloadSections();
+  });
+});
+
+// Hilfsfunktion: rendert alle Sektionen neu
+function reloadSections() {
+  renderSection("compliance", "data/compliance.json");
+  renderSection("features", "data/features.json");
+  renderSection("leistungen", "data/benefits.json");
+  renderSection("so-gehts", "data/steps.json");
+  renderSection("workflow", "data/workflow.json");
+  renderSection("testimonials", "data/testimonials.json");
+  renderSection("heise-io-faq", "data/faq.json");
+
+  fetch("data/header-hero.json")
+    .then((res) => res.json())
+    .then((data) => {
+      const lang = getLanguage();
+      const content = data[lang] || data["de"];
+      renderHeaderHero("header-hero", content);
+    });
+    
+  fetch("data/awards.json")
+    .then((res) => res.json())
+    .then((data) => {
+      const lang = getLanguage();
+      const content = data[lang] || data["de"];
+      renderAwards("awards", content);
+    });
+
+  fetch("data/pricing.json")
+    .then((res) => res.json())
+    .then((data) => {
+      const lang = getLanguage();
+      const content = data[lang] || data["de"];
+      renderPricing("pricing", content);
+    });
+
+  fetch("data/contact.json")
+    .then((res) => res.json())
+    .then((data) => {
+      const lang = getLanguage();
+      const content = data[lang] || data["de"];
+      renderContact("contact-support", content);
+    });
+
+  fetch("data/footer.json")
+    .then((res) => res.json())
+    .then((data) => {
+      const lang = getLanguage();
+      const content = data[lang] || data["de"];
+      renderFooter(content);
+    });
+}

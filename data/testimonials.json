@@ -1,48 +1,98 @@
 {
-  "title": "Über 400 zufriedene Kundinnen und Kunden setzen deutschlandweit auf uns.",
-  "subtitle": "Mehr als eine Zahl – echte Erfolge mit echten Kunden.",
-  "testimonials": [
-    {
-      "name": "Adine Schulz",
-      "company": "Schulz Gebäudetechnik GmbH",
-      "logo": "img/customer-logo/schulz-gebaeudetechnik-gmbh-logo.webp",
-      "quote": "Mit der neuen heise KI Social App erstelle und veröffentliche ich Beiträge für Instagram und Facebook jetzt in weniger als 3 Minuten. Das macht richtig Spaß und überzeugt durch die Qualität der Texte."
-    },
-    {
-      "name": "Lukas Becker",
-      "company": "Becker Marketing Solutions",
-      "logo": "img/customer-logo/becker-marketing.png",
-      "quote": "Die App spart mir täglich Stunden. Vor allem die automatisierten Textvorschläge sind so präzise, dass wir sie fast unverändert nutzen können."
-    },
-    {
-      "name": "Sabine Hoffmann",
-      "company": "Hoffmann & Partner Rechtsanwälte",
-      "logo": "img/customer-logo/hoffmann-partner.png",
-      "quote": "Juristische Themen sind oft komplex – mit der KI-App lassen sie sich schnell, einfach und rechtssicher für Social Media aufbereiten."
-    },
-    {
-      "name": "Todo",
-      "company": "Unternehmen XYZ",
-      "logo": "img/customer-logo/unternehmen-xyz.png",
-      "quote": "Platzhalter: Hier könnte eine echte Kundenstimme stehen, die den Nutzen der App in wenigen Sätzen beschreibt."
-    },
-    {
-      "name": "Daniel Müller",
-      "company": "Müller Eventservice",
-      "logo": "img/customer-logo/mueller-eventservice.png",
-      "quote": "Besonders in stressigen Phasen unserer Events ist die App Gold wert: In Minuten sind Beiträge erstellt und geplant."
-    },
-    {
-      "name": "Todo",
-      "company": "Firma ABC",
-      "logo": "img/customer-logo/firma-abc.png",
-      "quote": "Platzhalter: Ein kurzer Satz über Effizienzsteigerung, Zeitersparnis oder bessere Reichweite."
-    },
-    {
-      "name": "Clara Schmidt",
-      "company": "Schmidt Designstudio",
-      "logo": "img/customer-logo/schmidt-designstudio.png",
-      "quote": "Als Designerin liebe ich die klaren Workflows. Ich kann Inhalte visuell anpassen und die Texte sind sofort auf den Punkt."
-    }
-  ]
+  "de": {
+    "title": "Über 400 zufriedene Kundinnen und Kunden setzen deutschlandweit auf uns.",
+    "subtitle": "Mehr als eine Zahl – echte Erfolge mit echten Kunden.",
+    "testimonials": [
+      {
+        "name": "Adine Schulz",
+        "company": "Schulz Gebäudetechnik GmbH",
+        "logo": "img/customer-logo/schulz-gebaeudetechnik-gmbh-logo.webp",
+        "quote": "Mit der neuen heise KI Social App erstelle und veröffentliche ich Beiträge für Instagram und Facebook jetzt in weniger als 3 Minuten. Das macht richtig Spaß und überzeugt durch die Qualität der Texte."
+      },
+      {
+        "name": "Lukas Becker",
+        "company": "Becker Marketing Solutions",
+        "logo": "img/customer-logo/becker-marketing.png",
+        "quote": "Die App spart mir täglich Stunden. Vor allem die automatisierten Textvorschläge sind so präzise, dass wir sie fast unverändert nutzen können."
+      },
+      {
+        "name": "Sabine Hoffmann",
+        "company": "Hoffmann & Partner Rechtsanwälte",
+        "logo": "img/customer-logo/hoffmann-partner.png",
+        "quote": "Juristische Themen sind oft komplex – mit der KI-App lassen sie sich schnell, einfach und rechtssicher für Social Media aufbereiten."
+      },
+      {
+        "name": "Todo",
+        "company": "Unternehmen XYZ",
+        "logo": "img/customer-logo/unternehmen-xyz.png",
+        "quote": "Platzhalter: Hier könnte eine echte Kundenstimme stehen, die den Nutzen der App in wenigen Sätzen beschreibt."
+      },
+      {
+        "name": "Daniel Müller",
+        "company": "Müller Eventservice",
+        "logo": "img/customer-logo/mueller-eventservice.png",
+        "quote": "Besonders in stressigen Phasen unserer Events ist die App Gold wert: In Minuten sind Beiträge erstellt und geplant."
+      },
+      {
+        "name": "Todo",
+        "company": "Firma ABC",
+        "logo": "img/customer-logo/firma-abc.png",
+        "quote": "Platzhalter: Ein kurzer Satz über Effizienzsteigerung, Zeitersparnis oder bessere Reichweite."
+      },
+      {
+        "name": "Clara Schmidt",
+        "company": "Schmidt Designstudio",
+        "logo": "img/customer-logo/schmidt-designstudio.png",
+        "quote": "Als Designerin liebe ich die klaren Workflows. Ich kann Inhalte visuell anpassen und die Texte sind sofort auf den Punkt."
+      }
+    ]
+  },
+  "en": {
+    "title": "Over 400 satisfied customers rely on us across Germany.",
+    "subtitle": "More than just a number – real success with real clients.",
+    "testimonials": [
+      {
+        "name": "Adine Schulz",
+        "company": "Schulz Gebäudetechnik GmbH",
+        "logo": "img/customer-logo/schulz-gebaeudetechnik-gmbh-logo.webp",
+        "quote": "With the new heise AI Social App, I now create and publish posts for Instagram and Facebook in less than 3 minutes. It's really fun and the text quality is impressive."
+      },
+      {
+        "name": "Lukas Becker",
+        "company": "Becker Marketing Solutions",
+        "logo": "img/customer-logo/becker-marketing.png",
+        "quote": "The app saves me hours every day. Especially the automated text suggestions are so accurate that we can use them almost unchanged."
+      },
+      {
+        "name": "Sabine Hoffmann",
+        "company": "Hoffmann & Partner Lawyers",
+        "logo": "img/customer-logo/hoffmann-partner.png",
+        "quote": "Legal topics are often complex – with the AI app, they can be prepared quickly, easily, and in compliance for social media."
+      },
+      {
+        "name": "Todo",
+        "company": "Company XYZ",
+        "logo": "img/customer-logo/unternehmen-xyz.png",
+        "quote": "Placeholder: This could be a real customer testimonial describing the app’s benefits in just a few sentences."
+      },
+      {
+        "name": "Daniel Müller",
+        "company": "Müller Eventservice",
+        "logo": "img/customer-logo/mueller-eventservice.png",
+        "quote": "Especially during stressful phases of our events, the app is worth its weight in gold: posts are created and scheduled within minutes."
+      },
+      {
+        "name": "Todo",
+        "company": "Company ABC",
+        "logo": "img/customer-logo/firma-abc.png",
+        "quote": "Placeholder: A short sentence about efficiency gains, time savings, or better reach."
+      },
+      {
+        "name": "Clara Schmidt",
+        "company": "Schmidt Designstudio",
+        "logo": "img/customer-logo/schmidt-designstudio.png",
+        "quote": "As a designer, I love the clear workflows. I can visually adapt content and the texts are instantly on point."
+      }
+    ]
+  }
 }

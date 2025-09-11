@@ -1,0 +1,48 @@
+{
+  "title": "Über 400 zufriedene Kundinnen und Kunden setzen deutschlandweit auf uns.",
+  "subtitle": "Mehr als eine Zahl – echte Erfolge mit echten Kunden.",
+  "testimonials": [
+    {
+      "name": "Adine Schulz",
+      "company": "Schulz Gebäudetechnik GmbH",
+      "logo": "img/customer-logo/schulz-gebaeudetechnik-gmbh-logo.webp",
+      "quote": "Mit der neuen heise KI Social App erstelle und veröffentliche ich Beiträge für Instagram und Facebook jetzt in weniger als 3 Minuten. Das macht richtig Spaß und überzeugt durch die Qualität der Texte."
+    },
+    {
+      "name": "Lukas Becker",
+      "company": "Becker Marketing Solutions",
+      "logo": "img/customer-logo/becker-marketing.png",
+      "quote": "Die App spart mir täglich Stunden. Vor allem die automatisierten Textvorschläge sind so präzise, dass wir sie fast unverändert nutzen können."
+    },
+    {
+      "name": "Sabine Hoffmann",
+      "company": "Hoffmann & Partner Rechtsanwälte",
+      "logo": "img/customer-logo/hoffmann-partner.png",
+      "quote": "Juristische Themen sind oft komplex – mit der KI-App lassen sie sich schnell, einfach und rechtssicher für Social Media aufbereiten."
+    },
+    {
+      "name": "Todo",
+      "company": "Unternehmen XYZ",
+      "logo": "img/customer-logo/unternehmen-xyz.png",
+      "quote": "Platzhalter: Hier könnte eine echte Kundenstimme stehen, die den Nutzen der App in wenigen Sätzen beschreibt."
+    },
+    {
+      "name": "Daniel Müller",
+      "company": "Müller Eventservice",
+      "logo": "img/customer-logo/mueller-eventservice.png",
+      "quote": "Besonders in stressigen Phasen unserer Events ist die App Gold wert: In Minuten sind Beiträge erstellt und geplant."
+    },
+    {
+      "name": "Todo",
+      "company": "Firma ABC",
+      "logo": "img/customer-logo/firma-abc.png",
+      "quote": "Platzhalter: Ein kurzer Satz über Effizienzsteigerung, Zeitersparnis oder bessere Reichweite."
+    },
+    {
+      "name": "Clara Schmidt",
+      "company": "Schmidt Designstudio",
+      "logo": "img/customer-logo/schmidt-designstudio.png",
+      "quote": "Als Designerin liebe ich die klaren Workflows. Ich kann Inhalte visuell anpassen und die Texte sind sofort auf den Punkt."
+    }
+  ]
+}

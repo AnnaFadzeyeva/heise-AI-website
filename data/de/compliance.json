@@ -1,0 +1,41 @@
+{
+  "title": "Datenschutz & Compliance",
+  "subtitle": "Technische Basis heise I/O",
+  "description": "Hauseigene KI-gestützte Publishing-Plattform für sichere, nachvollziehbare Content-Workflows. Integriert KI-Prozesse in den Arbeitsalltag – Datenschutz, Compliance und Datenqualität inklusive.",
+  "cta": {
+    "label": "heise I/O kennenlernen",
+    "link": "#heiseio"
+  },
+  "cards": [
+    {
+      "icon": "img/icons/Task-List-Edit.svg",
+      "title": "EU AI Act Ready",
+      "text": "Transparenz-, Dokumentations- und Risiko-Workflows sind integriert und unterstützen eine regelkonforme KI-Nutzung."
+    },
+    {
+      "icon": "img/icons/Share-Link-Lock.svg",
+      "title": "Keine Trainingsnutzung",
+      "text": "Ihre Inhalte trainieren keine Modelle; Nutzung ausschließlich zur Verarbeitung im Mandanten."
+    },
+    {
+      "icon": "img/icons/Module-Puzzle-3.svg",
+      "title": "Isolierte Modelle",
+      "text": "Ausführung in abgeschotteten Umgebungen, getrennte Mandanten."
+    },
+    {
+      "icon": "img/icons/Share-Code.svg",
+      "title": "DSGVO konform",
+      "text": "Einhaltung der europäischen Datenschutz-Grundverordnung."
+    },
+    {
+      "icon": "img/icons/Location-Home.svg",
+      "title": "Betriebsmodelle",
+      "text": "Cloud mit EU-Hosting – Daten bleiben in der Europäischen Union."
+    },
+    {
+      "icon": "img/icons/Make-Prototype-Spark.svg",
+      "title": "Governance & Audit",
+      "text": "Lückenloses Logging, Freigabe-Workflows und nachvollziehbare KI-Entscheidungen."
+    }
+  ]
+}

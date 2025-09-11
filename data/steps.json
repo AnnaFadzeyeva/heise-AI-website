@@ -1,0 +1,50 @@
+{
+  "de": {
+    "title": "So geht's",
+    "subtitle": "Starten Sie mit einem Bild, einem Stichwort oder einem Themenvorschlag – schnell, einfach, professionell.",
+    "steps": [
+      {
+        "title": "Bild hochladen",
+        "text": "Mehr Wirkung mit Bildern: KI schreibt den passenden Text.",
+        "image": "img/screens/upload-img.png",
+        "alt": "Bild hochladen Screen"
+      },
+      {
+        "title": "Gedanken teilen",
+        "text": "Ein Satz reicht. Wir machen daraus einen professionellen Beitrag.",
+        "image": "img/screens/share-text.png",
+        "alt": "Gedanken teilen Screen"
+      },
+      {
+        "title": "Vorschlag auswählen",
+        "text": "Personalisierte Themenideen, abgestimmt auf Ihr Unternehmen.",
+        "image": "img/screens/suggestions.png",
+        "alt": "Vorschläge auswählen Screen"
+      }
+    ]
+  },
+  "en": {
+    "title": "How it works",
+    "subtitle": "Start with an image, a keyword, or a topic suggestion – fast, simple, professional.",
+    "steps": [
+      {
+        "title": "Upload image",
+        "text": "More impact with visuals: AI writes the matching text.",
+        "image": "img/screens/upload-img.png",
+        "alt": "Upload image screen"
+      },
+      {
+        "title": "Share your thought",
+        "text": "One sentence is enough. We turn it into a professional post.",
+        "image": "img/screens/share-text.png",
+        "alt": "Share thought screen"
+      },
+      {
+        "title": "Choose a suggestion",
+        "text": "Personalized topic ideas tailored to your company.",
+        "image": "img/screens/suggestions.png",
+        "alt": "Choose suggestion screen"
+      }
+    ]
+  }
+}

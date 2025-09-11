@@ -1,0 +1,76 @@
+{
+  "de": {
+    "title": "AUSGEZEICHNET!",
+    "visual": {
+      "image": "img/awards/awards-2025.webp",
+      "alt": "Karsten Marquardsen und Finn Hassold mit den Auszeichnungen",
+      "caption": "Karsten Marquardsen (Geschäftsführer) und Finn Hassold (Leiter Produktmanagement) Digital bei heise regioconcept"
+    },
+    "social": [
+      {
+        "icon": "img/awards/vdav-verzeichnismedienpreis-2025.webp",
+        "alt": "vdav VerzeichnismedienPreis 2025 – Innovation Award Gold"
+      },
+      {
+        "icon": "img/awards/siinda-award-2025.webp",
+        "alt": "Siinda Digital Marketing & Innovation Awards 2025 – Silver, Innovation through leveraging AI"
+      }
+    ],
+    "paragraphs": [
+      "Unsere heise KI Social App wurde gleich zweifach prämiert:"
+    ],
+    "list": [
+      "[vdav] VerzeichnismedienPreis 2025 – Innovation Award Gold",
+      "Siinda Digital Marketing & Innovation Awards 2025 – Silber, Innovation through AI"
+    ],
+    "afterList": [
+      "Beide Auszeichnungen würdigen unseren Einsatz für innovative Lösungen, die kleine und mittlere Unternehmen unterstützen."
+    ],
+    "buttons": [
+      {
+        "label": "[vdav] Branchentreff 2025",
+        "link": "#vdav"
+      },
+      {
+        "label": "Siinda's Innovation Awards 2025",
+        "link": "#siinda"
+      }
+    ]
+  },
+  "en": {
+    "title": "AWARDED!",
+    "visual": {
+      "image": "img/awards/awards-2025.webp",
+      "alt": "Karsten Marquardsen and Finn Hassold with the awards",
+      "caption": "Karsten Marquardsen (Managing Director) and Finn Hassold (Head of Digital Product Management) at heise regioconcept"
+    },
+    "social": [
+      {
+        "icon": "img/awards/vdav-verzeichnismedienpreis-2025.webp",
+        "alt": "vdav Directory Media Award 2025 – Innovation Award Gold"
+      },
+      {
+        "icon": "img/awards/siinda-award-2025.webp",
+        "alt": "Siinda Digital Marketing & Innovation Awards 2025 – Silver, Innovation through leveraging AI"
+      }
+    ],
+    "paragraphs": ["Our heise AI Social App has received two awards:"],
+    "list": [
+      "[vdav] Directory Media Award 2025 – Innovation Award Gold",
+      "Siinda Digital Marketing & Innovation Awards 2025 – Silver, Innovation through AI"
+    ],
+    "afterList": [
+      "Both awards recognize our commitment to innovative solutions that support small and medium-sized businesses."
+    ],
+    "buttons": [
+      {
+        "label": "[vdav] Industry Meeting 2025",
+        "link": "#vdav"
+      },
+      {
+        "label": "Siinda's Innovation Awards 2025",
+        "link": "#siinda"
+      }
+    ]
+  }
+}

@@ -1,41 +1,84 @@
 {
-  "title": "Datenschutz & Compliance",
-  "subtitle": "Technische Basis heise I/O",
-  "description": "Hauseigene KI-gestützte Publishing-Plattform für sichere, nachvollziehbare Content-Workflows. Integriert KI-Prozesse in den Arbeitsalltag – Datenschutz, Compliance und Datenqualität inklusive.",
-  "cta": {
-    "label": "heise I/O kennenlernen",
-    "link": "#heiseio"
+  "de": {
+    "title": "Datenschutz & Compliance",
+    "subtitle": "Technische Basis heise I/O",
+    "description": "Hauseigene KI-gestützte Publishing-Plattform für sichere, nachvollziehbare Content-Workflows. Integriert KI-Prozesse in den Arbeitsalltag – Datenschutz, Compliance und Datenqualität inklusive.",
+    "cta": {
+      "label": "heise I/O kennenlernen",
+      "link": "#heiseio"
+    },
+    "cards": [
+      {
+        "icon": "img/icons/Task-List-Edit.svg",
+        "title": "EU AI Act Ready",
+        "text": "Transparenz-, Dokumentations- und Risiko-Workflows sind integriert und unterstützen eine regelkonforme KI-Nutzung."
+      },
+      {
+        "icon": "img/icons/Share-Link-Lock.svg",
+        "title": "Keine Trainingsnutzung",
+        "text": "Ihre Inhalte trainieren keine Modelle; Nutzung ausschließlich zur Verarbeitung im Mandanten."
+      },
+      {
+        "icon": "img/icons/Module-Puzzle-3.svg",
+        "title": "Isolierte Modelle",
+        "text": "Ausführung in abgeschotteten Umgebungen, getrennte Mandanten."
+      },
+      {
+        "icon": "img/icons/Share-Code.svg",
+        "title": "DSGVO konform",
+        "text": "Einhaltung der europäischen Datenschutz-Grundverordnung."
+      },
+      {
+        "icon": "img/icons/Location-Home.svg",
+        "title": "Betriebsmodelle",
+        "text": "Cloud mit EU-Hosting – Daten bleiben in der Europäischen Union."
+      },
+      {
+        "icon": "img/icons/Make-Prototype-Spark.svg",
+        "title": "Governance & Audit",
+        "text": "Lückenloses Logging, Freigabe-Workflows und nachvollziehbare KI-Entscheidungen."
+      }
+    ]
   },
-  "cards": [
-    {
-      "icon": "img/icons/Task-List-Edit.svg",
-      "title": "EU AI Act Ready",
-      "text": "Transparenz-, Dokumentations- und Risiko-Workflows sind integriert und unterstützen eine regelkonforme KI-Nutzung."
+  "en": {
+    "title": "Data Protection & Compliance",
+    "subtitle": "Technical Foundation: heise I/O",
+    "description": "In-house AI-powered publishing platform for secure, transparent content workflows. Integrates AI processes into daily work – including data protection, compliance, and data quality.",
+    "cta": {
+      "label": "Discover heise I/O",
+      "link": "#heiseio"
     },
-    {
-      "icon": "img/icons/Share-Link-Lock.svg",
-      "title": "Keine Trainingsnutzung",
-      "text": "Ihre Inhalte trainieren keine Modelle; Nutzung ausschließlich zur Verarbeitung im Mandanten."
-    },
-    {
-      "icon": "img/icons/Module-Puzzle-3.svg",
-      "title": "Isolierte Modelle",
-      "text": "Ausführung in abgeschotteten Umgebungen, getrennte Mandanten."
-    },
-    {
-      "icon": "img/icons/Share-Code.svg",
-      "title": "DSGVO konform",
-      "text": "Einhaltung der europäischen Datenschutz-Grundverordnung."
-    },
-    {
-      "icon": "img/icons/Location-Home.svg",
-      "title": "Betriebsmodelle",
-      "text": "Cloud mit EU-Hosting – Daten bleiben in der Europäischen Union."
-    },
-    {
-      "icon": "img/icons/Make-Prototype-Spark.svg",
-      "title": "Governance & Audit",
-      "text": "Lückenloses Logging, Freigabe-Workflows und nachvollziehbare KI-Entscheidungen."
-    }
-  ]
+    "cards": [
+      {
+        "icon": "img/icons/Task-List-Edit.svg",
+        "title": "EU AI Act Ready",
+        "text": "Transparency, documentation, and risk workflows are integrated to support compliant AI usage."
+      },
+      {
+        "icon": "img/icons/Share-Link-Lock.svg",
+        "title": "No Training Usage",
+        "text": "Your content does not train any models; it is used exclusively for processing within the tenant."
+      },
+      {
+        "icon": "img/icons/Module-Puzzle-3.svg",
+        "title": "Isolated Models",
+        "text": "Execution in segregated environments with separate tenants."
+      },
+      {
+        "icon": "img/icons/Share-Code.svg",
+        "title": "GDPR Compliant",
+        "text": "Full compliance with the European General Data Protection Regulation."
+      },
+      {
+        "icon": "img/icons/Location-Home.svg",
+        "title": "Operating Models",
+        "text": "Cloud with EU hosting – data stays within the European Union."
+      },
+      {
+        "icon": "img/icons/Make-Prototype-Spark.svg",
+        "title": "Governance & Audit",
+        "text": "Comprehensive logging, approval workflows, and traceable AI decisions."
+      }
+    ]
+  }
 }

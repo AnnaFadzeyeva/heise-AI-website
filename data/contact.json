@@ -1,48 +1,98 @@
 {
-  "title": "Kontakt & Support",
-  "subtitle": "Wir sind für Sie da – schnell, persönlich, unkompliziert.",
-  "form": {
-    "note": "Mit Sternchen markierte Felder müssen ausgefüllt werden *",
-    "fields": [
-      {
-        "label": "Vor- und Nachname *",
-        "placeholder": "Max Mustermann",
-        "name": "fullname",
-        "type": "text",
-        "required": true
-      },
-      {
-        "label": "Ihr Unternehmen *",
-        "placeholder": "Firma XYZ",
-        "name": "company",
-        "type": "text",
-        "required": true
-      },
-      {
-        "label": "E-Mail *",
-        "placeholder": "exemple@company.com",
-        "name": "email",
-        "type": "text",
-        "required": true
-      },
-      {
-        "label": "Telefonnummer *",
-        "placeholder": "+49 123 4567890",
-        "name": "telephone",
-        "type": "text",
-        "required": true
-      },
-      {
-        "label": "Ihre Nachricht",
-        "placeholder": "Schreiben Sie uns...",
-        "name": "message",
-        "type": "text",
-        "required": false
+  "de": {
+    "title": "Kontakt & Support",
+    "subtitle": "Wir sind für Sie da – schnell, persönlich, unkompliziert.",
+    "form": {
+      "note": "Mit Sternchen markierte Felder müssen ausgefüllt werden *",
+      "fields": [
+        {
+          "label": "Vor- und Nachname *",
+          "placeholder": "Max Mustermann",
+          "name": "fullname",
+          "type": "text",
+          "required": true
+        },
+        {
+          "label": "Ihr Unternehmen *",
+          "placeholder": "Firma XYZ",
+          "name": "company",
+          "type": "text",
+          "required": true
+        },
+        {
+          "label": "E-Mail *",
+          "placeholder": "exemple@company.com",
+          "name": "email",
+          "type": "text",
+          "required": true
+        },
+        {
+          "label": "Telefonnummer *",
+          "placeholder": "+49 123 4567890",
+          "name": "telephone",
+          "type": "text",
+          "required": true
+        },
+        {
+          "label": "Ihre Nachricht",
+          "placeholder": "Schreiben Sie uns...",
+          "name": "message",
+          "type": "text",
+          "required": false
+        }
+      ],
+      "pagination": {
+        "buttonText": "Senden"
       }
-    ],
-    "pagination": {
-      "buttonText": "Senden"
-    }
+    },
+    "image": "img/screens/heiseAIscreens.png"
   },
-  "image": "img/screens/heiseAIscreens.png"
+  "en": {
+    "title": "Contact & Support",
+    "subtitle": "We are here for you – fast, personal, and uncomplicated.",
+    "form": {
+      "note": "Fields marked with an asterisk must be filled in *",
+      "fields": [
+        {
+          "label": "Full Name *",
+          "placeholder": "John Doe",
+          "name": "fullname",
+          "type": "text",
+          "required": true
+        },
+        {
+          "label": "Your Company *",
+          "placeholder": "Company XYZ",
+          "name": "company",
+          "type": "text",
+          "required": true
+        },
+        {
+          "label": "E-Mail *",
+          "placeholder": "example@company.com",
+          "name": "email",
+          "type": "text",
+          "required": true
+        },
+        {
+          "label": "Phone Number *",
+          "placeholder": "+1 234 567890",
+          "name": "telephone",
+          "type": "text",
+          "required": true
+        },
+        {
+          "label": "Your Message",
+          "placeholder": "Write to us...",
+          "name": "message",
+          "type": "text",
+          "required": false
+        }
+      ],
+      "pagination": {
+        "buttonText": "Send"
+      }
+    },
+    "image": "img/screens/heiseAIscreens.png"
+  }
 }

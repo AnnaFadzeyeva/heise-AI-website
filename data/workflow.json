@@ -1,19 +1,40 @@
 {
-  "title": "KI-gestützter Workflow – klar & effektiv",
-  "subtitle": "Wählen, verfeinern, planen und posten in wenigen Klicks.",
-  "infographic": {
-    "html": "<div class='workflow-steps'>\n  <div class='workflow-row'>\n    <div class='workflow-box'>Foto hochladen</div>\n    <span class='workflow-or'>oder</span>\n    <div class='workflow-box'>Gedanken teilen</div>\n    <span class='workflow-or'>oder</span>\n    <div class='workflow-box'>Vorschlag benutzen</div>\n  </div>\n  <div class='workflow-arrow'>↓</div>\n  <div class='workflow-box'>Fragen beantworten</div>\n  <div class='workflow-arrow'>↓</div>\n  <div class='workflow-box'>Kanäle wählen</div>\n  <div class='workflow-arrow'>↓</div>\n  <div class='workflow-box'>Posten</div>\n</div>",
-    "alt": "KI-Workflow Infografik"
+  "de": {
+    "title": "KI-gestützter Workflow – klar & effektiv",
+    "subtitle": "Wählen, verfeinern, planen und posten in wenigen Klicks.",
+    "infographic": {
+      "html": "<div class='workflow-steps'>\n  <div class='workflow-row'>\n    <div class='workflow-box'>Foto hochladen</div>\n    <span class='workflow-or'>oder</span>\n    <div class='workflow-box'>Gedanken teilen</div>\n    <span class='workflow-or'>oder</span>\n    <div class='workflow-box'>Vorschlag benutzen</div>\n  </div>\n  <div class='workflow-arrow'>↓</div>\n  <div class='workflow-box'>Fragen beantworten</div>\n  <div class='workflow-arrow'>↓</div>\n  <div class='workflow-box'>Kanäle wählen</div>\n  <div class='workflow-arrow'>↓</div>\n  <div class='workflow-box'>Posten</div>\n</div>",
+      "alt": "KI-Workflow Infografik"
+    },
+    "visual": {
+      "image": "/img/heise-ki-social-app-hero.webp",
+      "alt": "Ein lächelnder Mann mit Locken und Bart in Arbeitskleidung sitzt am Tisch und schaut auf sein Smartphone. Auf dem Display erscheinen Social-Media-Symbole mit Herz- und Like-Icons."
+    },
+    "social": [
+      { "icon": "img/svg/sm/linkedin-checked.svg", "alt": "LinkedIn" },
+      { "icon": "img/svg/sm/x-checked.svg",        "alt": "X (Twitter)" },
+      { "icon": "img/svg/sm/facebook-checked.svg", "alt": "Facebook" },
+      { "icon": "img/svg/sm/instagram-checked.svg","alt": "Instagram" },
+      { "icon": "img/svg/sm/whatsapp-checked.svg", "alt": "WhatsApp" }
+    ]
   },
-  "visual": {
-    "image": "/img/symbolic.png",
-    "alt": "Ein lächelnder Mann mit Locken und Bart in Arbeitskleidung sitzt am Tisch und schaut auf sein Smartphone. Auf dem Display erscheinen Social-Media-Symbole mit Herz- und Like-Icons."
-  },
-  "social": [
-    { "icon": "img/svg/sm/linkedin-checked.svg", "alt": "LinkedIn" },
-    { "icon": "img/svg/sm/x-checked.svg",        "alt": "X (Twitter)" },
-    { "icon": "img/svg/sm/facebook-checked.svg", "alt": "Facebook" },
-    { "icon": "img/svg/sm/instagram-checked.svg","alt": "Instagram" },
-    { "icon": "img/svg/sm/whatsapp-checked.svg", "alt": "WhatsApp" }
-  ]
+  "en": {
+    "title": "AI-powered workflow – clear & effective",
+    "subtitle": "Choose, refine, schedule, and post in just a few clicks.",
+    "infographic": {
+      "html": "<div class='workflow-steps'>\n  <div class='workflow-row'>\n    <div class='workflow-box'>Upload photo</div>\n    <span class='workflow-or'>or</span>\n    <div class='workflow-box'>Share your thought</div>\n    <span class='workflow-or'>or</span>\n    <div class='workflow-box'>Use suggestion</div>\n  </div>\n  <div class='workflow-arrow'>↓</div>\n  <div class='workflow-box'>Answer questions</div>\n  <div class='workflow-arrow'>↓</div>\n  <div class='workflow-box'>Select channels</div>\n  <div class='workflow-arrow'>↓</div>\n  <div class='workflow-box'>Post</div>\n</div>",
+      "alt": "AI workflow infographic"
+    },
+    "visual": {
+      "image": "/img/heise-ki-social-app-hero.webp",
+      "alt": "A smiling man with curly hair and a beard in work clothes sits at a table looking at his smartphone. Social media icons with heart and like symbols appear on the screen."
+    },
+    "social": [
+      { "icon": "img/svg/sm/linkedin-checked.svg", "alt": "LinkedIn" },
+      { "icon": "img/svg/sm/x-checked.svg",        "alt": "X (Twitter)" },
+      { "icon": "img/svg/sm/facebook-checked.svg", "alt": "Facebook" },
+      { "icon": "img/svg/sm/instagram-checked.svg","alt": "Instagram" },
+      { "icon": "img/svg/sm/whatsapp-checked.svg", "alt": "WhatsApp" }
+    ]
+  }
 }

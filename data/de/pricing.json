@@ -1,0 +1,74 @@
+{
+  "title": "Preise",
+  "headline": "Starte noch heute mit intelligentem Posting",
+  "subheadline": "Teste heise AI 7 Tage kostenlos. Keine Kreditkarte erforderlich!",
+  "socialIcons": [
+    { "icon": "img/svg/sm/linkedin.svg", "alt": "LinkedIn" },
+    { "icon": "img/svg/sm/x.svg", "alt": "X (Twitter)" },
+    { "icon": "img/svg/sm/whatsapp.svg", "alt": "WhatsApp" },
+    { "icon": "img/svg/sm/facebook.svg", "alt": "Facebook" },
+    { "icon": "img/svg/sm/instagram.svg", "alt": "Instagram" }
+  ],
+  "plans": [
+    {
+      "id": "free",
+      "name": "Testversion",
+      "label": "Kostenlos",
+      "highlight": false,
+      "description": "Perfekt für den Einstieg",
+      "price": "0,00 €",
+      "period": "14 Tage freier Zugriff",
+      "features": [
+        { "icon": "img/svg/checked.svg", "text": "Erstelle deine ersten Posts" },
+        { "icon": "img/svg/checked.svg", "text": "Bis zu 5 KI generierte Beiträge" },
+        { "icon": "img/svg/checked.svg", "text": "5 Social Media Kanäle" },
+        { "icon": "img/svg/checked.svg", "text": "14 Tage freier Zugriff" }
+      ],
+      "button": {
+        "label": "Sofort loslegen",
+        "style": "btn btn-secondary",
+        "link": "#signup-free"
+      }
+    },
+    {
+      "id": "business",
+      "name": "Business",
+      "label": "49,00 €",
+      "highlight": true,
+      "tag": "Empfohlen",
+      "description": "Pro Nutzer monatlich (inkl. MwSt.)",
+      "features": [
+        { "icon": "img/svg/checked.svg", "text": "Bis zu 50 KI-Generierungen" },
+        { "icon": "img/svg/checked.svg", "text": "5 Social Media Kanäle" },
+        { "icon": "img/svg/checked.svg", "text": "Beiträge vorplanen" },
+        { "icon": "img/svg/checked.svg", "text": "Integration des Firmenlogos" },
+        { "icon": "img/svg/checked.svg", "text": "Mehrere Bilder in einem Post" },
+        { "icon": "img/svg/checked.svg", "text": "Videos auf Instagram posten" },
+        { "icon": "img/svg/info.svg", "text": "Mindestlaufzeit 12 Monate" }
+      ],
+      "button": {
+        "label": "Mit Business fortfahren",
+        "style": "btn btn-primary",
+        "link": "#signup-business"
+      }
+    },
+    {
+      "id": "business-pro",
+      "name": "Business Pro+",
+      "label": "Individuell",
+      "highlight": false,
+      "description": "Pro Nutzer monatlich (inkl. MwSt.)",
+      "features": [
+        { "icon": "img/svg/add.svg", "text": "Jeder weitere Zugang 49 € mtl." },
+        { "icon": "img/svg/add.svg", "text": "50 weitere Beiträge: 29 € mtl." },
+        { "icon": "img/svg/add.svg", "text": "100 weitere Beiträge: 49 € mtl." },
+        { "icon": "img/svg/add.svg", "text": "200 weitere Beiträge: 79 € mtl." }
+      ],
+      "button": {
+        "label": "Support kontaktieren",
+        "style": "btn btn-secondary",
+        "link": "#contact"
+      }
+    }
+  ]
+}

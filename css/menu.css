@@ -107,12 +107,12 @@
     gap: 1.75rem;
 
     padding: 0.75rem 1.75rem;
-    border-radius: 9999px;
+/*     border-radius: 9999px;
 
     background: #ffffff3d;
     backdrop-filter: saturate(140%) blur(10px);
     border: 1px solid rgba(16, 19, 26, 0.08);
-    box-shadow: 0 10px 25px rgba(16, 27, 68, 0.15);
+    box-shadow: 0 10px 25px rgba(16, 27, 68, 0.15); */
   }
 
   .nav-center .nav-item {
@@ -129,6 +129,14 @@
     gap: 0.75rem;
     justify-self: end;
   }
+  .nav-right-actions {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    justify-self: end;
+  }
+
   .nav-right .login {
     font-weight: 700;
     text-decoration: none;
@@ -210,10 +218,19 @@
   .nav-right {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     gap: var(--space-3);
     margin-top: auto;
     padding-top: var(--space-6);
     border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+    .nav-right-actions {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    justify-self: end;
   }
 
   .nav-right .login {
@@ -288,12 +305,12 @@
     gap: 1.75rem;
 
     padding: 0.75rem 1.75rem;
-    border-radius: 9999px;
+/*     border-radius: 9999px;
 
     background: #ffffff3d;
     backdrop-filter: saturate(140%) blur(10px);
     border: 1px solid rgba(16, 19, 26, 0.08);
-    box-shadow: 0 10px 25px rgba(16, 27, 68, 0.15);
+    box-shadow: 0 10px 25px rgba(16, 27, 68, 0.15); */
   }
 
   .nav-center .nav-item {

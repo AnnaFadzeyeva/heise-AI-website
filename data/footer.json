@@ -1,60 +1,155 @@
 {
-  "brand": {
-    "logo": "img/heiseAI-logo.svg",
-    "alt": "heise AI Logo",
-    "text": "Smarte Beiträge für alle Social Media<br />Kanäle in Sekunden",
-    "social": [
-      { "icon": "img/svg/sm/linkedin.svg", "alt": "LinkedIn", "url": "#" },
-      { "icon": "img/svg/sm/x.svg", "alt": "X", "url": "#" },
-      { "icon": "img/svg/sm/whatsapp.svg", "alt": "WhatsApp", "url": "#" },
-      { "icon": "img/svg/sm/facebook.svg", "alt": "Facebook", "url": "#" },
-      { "icon": "img/svg/sm/instagram.svg", "alt": "Instagram", "url": "#" }
-    ]
-  },
-  "navigation": [
-    {
-      "title": "heise AI",
-      "links": [
-        { "label": "Vorteile", "url": "#leistungen" },
-        { "label": "How it works", "url": "#so-gehts" },
-        { "label": "Preise", "url": "#pricing" },
-        { "label": "Kontakt", "url": "#contact-support" },
-        { "label": "FAQ", "url": "#heise-io-faq" }
+  "de": {
+    "brand": {
+      "logo": "img/heiseAI-logo.svg",
+      "alt": "heise AI Logo",
+      "text": "Smarte Beiträge für alle Social Media<br />Kanäle in Sekunden",
+      "social": [
+        { "icon": "img/svg/sm/linkedin.svg", "alt": "LinkedIn", "url": "#" },
+        { "icon": "img/svg/sm/x.svg", "alt": "X", "url": "#" },
+        { "icon": "img/svg/sm/whatsapp.svg", "alt": "WhatsApp", "url": "#" },
+        { "icon": "img/svg/sm/facebook.svg", "alt": "Facebook", "url": "#" },
+        { "icon": "img/svg/sm/instagram.svg", "alt": "Instagram", "url": "#" }
       ]
     },
-    {
-      "title": "Extern",
-      "links": [
-        { "label": "heise I/O", "url": "https://heise-io.de/" },
-        { "label": "heise KI PRO", "url": "http://pro.heise.de/ki/" },
-        { "label": "DEEP CONTENT", "url": "https://deep-content.io/" },
-                { "label": "heise regioconcept", "url": "https://www.heise-regioconcept.de/" }
-      ]
+    "navigation": [
+      {
+        "title": "heise AI",
+        "links": [
+          { "label": "So funktioniert’s", "url": "#workflow" },
+          { "label": "Vorteile", "url": "#leistungen" },
+          { "label": "Preise", "url": "#pricing" },
+          { "label": "FAQ", "url": "#heise-io-faq" },
+          { "label": "Kontakt", "url": "#contact-support" }
+        ]
+      },
+      {
+        "title": "Extern",
+        "links": [
+          { "label": "heise I/O", "url": "https://heise-io.de/" },
+          { "label": "heise KI PRO", "url": "http://pro.heise.de/ki/" },
+          { "label": "DEEP CONTENT", "url": "https://deep-content.io/" },
+          {
+            "label": "heise regioconcept",
+            "url": "https://www.heise-regioconcept.de/"
+          }
+        ]
+      },
+      {
+        "title": "LinkedIn",
+        "links": [
+          {
+            "label": "heise KI PRO",
+            "url": "https://www.linkedin.com/showcase/heise-ki-pro/"
+          },
+          {
+            "label": "THE DECODER",
+            "url": "https://www.linkedin.com/showcase/the-decoder-de/"
+          },
+          {
+            "label": "DEEP CONTENT",
+            "url": "https://www.linkedin.com/company/deep-content-by-heise/"
+          },
+          {
+            "label": "heise regioconcept",
+            "url": "https://de.linkedin.com/company/heiseregioconcept"
+          }
+        ]
+      }
+    ],
+    "partner": {
+      "text": "Entwickelt von",
+      "logo": "img/Logo_DEEP-CONTENT-Heise_micro.svg",
+      "alt": "deep content Logo"
     },
-    {
-      "title": "LinkedIn",
+    "bottom": {
+      "text": "Made with ❤️ by DEEP CONTENT ©2025 Alle Rechte vorbehalten",
       "links": [
-        { "label": "heise KI PRO", "url": "https://www.linkedin.com/showcase/heise-ki-pro/" },
-        { "label": "THE DECODER", "url": "https://www.linkedin.com/showcase/the-decoder-de/" },
+        { "label": "Impressum", "url": "https://deep-content.io/impressum/" },
         {
-          "label": "DEEP CONTENT",
-          "url": "https://www.linkedin.com/company/deep-content-by-heise/"
+          "label": "Datenschutz",
+          "url": "https://deep-content.io/datenschutz/"
         },
-        { "label": "heise regioconcept", "url": "https://de.linkedin.com/company/heiseregioconcept" }
+        { "label": "AGB", "url": "https://deep-content.io/AGB/" }
       ]
     }
-  ],
-  "partner": {
-    "text": "Entwickelt von",
-    "logo": "img/Logo_DEEP-CONTENT-Heise_micro.svg",
-    "alt": "deep content Logo"
   },
-  "bottom": {
-    "text": "Made with ❤️ by DEEP CONTENT ©2025 All rights reserved",
-    "links": [
-      { "label": "Impressum", "url": "https://deep-content.io/impressum/" },
-      { "label": "Datenschutz", "url": "https://deep-content.io/datenschutz/" },
-      { "label": "AGB", "url": "https://deep-content.io/AGB/" }
-    ]
+  "en": {
+    "brand": {
+      "logo": "img/heiseAI-logo.svg",
+      "alt": "heise AI Logo",
+      "text": "Smart posts for all social media<br />channels in seconds",
+      "social": [
+        { "icon": "img/svg/sm/linkedin.svg", "alt": "LinkedIn", "url": "#" },
+        { "icon": "img/svg/sm/x.svg", "alt": "X", "url": "#" },
+        { "icon": "img/svg/sm/whatsapp.svg", "alt": "WhatsApp", "url": "#" },
+        { "icon": "img/svg/sm/facebook.svg", "alt": "Facebook", "url": "#" },
+        { "icon": "img/svg/sm/instagram.svg", "alt": "Instagram", "url": "#" }
+      ]
+    },
+    "navigation": [
+      {
+        "title": "heise AI",
+        "links": [
+          { "label": "Benefits", "url": "#leistungen" },
+          { "label": "How it works", "url": "#workflow" },
+          { "label": "Pricing", "url": "#pricing" },
+          { "label": "FAQ", "url": "#heise-io-faq" },
+          { "label": "Contact", "url": "#contact-support" }
+        ]
+      },
+      {
+        "title": "External",
+        "links": [
+          { "label": "heise I/O", "url": "https://heise-io.de/" },
+          { "label": "heise KI PRO", "url": "http://pro.heise.de/ki/" },
+          { "label": "DEEP CONTENT", "url": "https://deep-content.io/" },
+          {
+            "label": "heise regioconcept",
+            "url": "https://www.heise-regioconcept.de/"
+          }
+        ]
+      },
+      {
+        "title": "LinkedIn",
+        "links": [
+          {
+            "label": "heise KI PRO",
+            "url": "https://www.linkedin.com/showcase/heise-ki-pro/"
+          },
+          {
+            "label": "THE DECODER",
+            "url": "https://www.linkedin.com/showcase/the-decoder-de/"
+          },
+          {
+            "label": "DEEP CONTENT",
+            "url": "https://www.linkedin.com/company/deep-content-by-heise/"
+          },
+          {
+            "label": "heise regioconcept",
+            "url": "https://de.linkedin.com/company/heiseregioconcept"
+          }
+        ]
+      }
+    ],
+    "partner": {
+      "text": "Developed by",
+      "logo": "img/Logo_DEEP-CONTENT-Heise_micro.svg",
+      "alt": "deep content Logo"
+    },
+    "bottom": {
+      "text": "Made with ❤️ by DEEP CONTENT ©2025 All rights reserved",
+      "links": [
+        {
+          "label": "Legal Notice",
+          "url": "https://deep-content.io/impressum/"
+        },
+        {
+          "label": "Privacy Policy",
+          "url": "https://deep-content.io/datenschutz/"
+        },
+        { "label": "Terms & Conditions", "url": "https://deep-content.io/AGB/" }
+      ]
+    }
   }
 }

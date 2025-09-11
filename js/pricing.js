@@ -1,16 +1,16 @@
-export function renderPricing(sectionId, data) {
+export function renderPricing(sectionId, content) {
   // Section-Titel (klein)
   const titleEl = document.getElementById(`${sectionId}-title`);
-  if (titleEl) titleEl.textContent = data.title;
+  if (titleEl) titleEl.textContent = content.title || "";
 
   // Headline (groß)
   const headlineEl = document.getElementById(`${sectionId}-headline`);
-  if (headlineEl) headlineEl.textContent = data.headline;
+  if (headlineEl) headlineEl.textContent = content.headline || "";
 
   // Social Icons
   const socialEl = document.getElementById(`${sectionId}-social`);
-  if (socialEl && data.socialIcons) {
-    socialEl.innerHTML = data.socialIcons
+  if (socialEl && content.socialIcons) {
+    socialEl.innerHTML = content.socialIcons
       .map(
         (s) => `<img src="${s.icon}" alt="${s.alt}" class="social-icon">`
       )
@@ -19,24 +19,26 @@ export function renderPricing(sectionId, data) {
 
   // Subheadline
   const subheadlineEl = document.getElementById(`${sectionId}-subheadline`);
-  if (subheadlineEl) subheadlineEl.textContent = data.subheadline;
+  if (subheadlineEl) subheadlineEl.textContent = content.subheadline || "";
 
   // Pricing-Pläne
   const plansEl = document.getElementById(`${sectionId}-plans`);
-  if (plansEl && data.plans) {
-    plansEl.innerHTML = data.plans
-      .map(
-        (p) => `
+  if (plansEl && content.plans) {
+    plansEl.innerHTML = content.plans
+      .map((p) => `
         <div class="pricing-card ${p.highlight ? "highlight" : ""}" role="button" tabindex="0">
           <div class="pricing-header">
-            <h4>${p.name} ${p.tag ? `<span class="tag">${p.tag}</span>` : ""}</h4>
+            <h4>
+              ${p.name}
+              ${p.tag ? `<span class="tag">${p.tag}</span>` : ""}
+            </h4>
             <div class="price">
               <span class="label">${p.label}</span>
               ${p.description ? `<p>${p.description}</p>` : ""}
             </div>
           </div>
           <ul class="pricing-features">
-            ${p.features
+            ${(p.features || [])
               .map(
                 (f) => `
               <li>
@@ -47,9 +49,13 @@ export function renderPricing(sectionId, data) {
               .join("")}
           </ul>
           <div class="pricing-footer">
-            <a href="${p.button.link}" class="btn ${p.button.style}" onclick="event.stopPropagation()">
-              ${p.button.label}
-            </a>
+            ${
+              p.button
+                ? `<a href="${p.button.link}" class="btn ${p.button.style}" onclick="event.stopPropagation()">
+                     ${p.button.label}
+                   </a>`
+                : ""
+            }
           </div>
         </div>`
       )

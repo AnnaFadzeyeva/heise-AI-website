@@ -8,12 +8,14 @@
   width: 100vw;
 
   /* Glasmorphism Verlauf */
-  background: linear-gradient(
+/*   background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0.6) 0%,
     rgba(255, 255, 255, 0.3) 60%,
     rgba(255, 255, 255, 0) 100%
-  );
+  ); */
+
+  background-color: #ffffff;
 
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
@@ -42,4 +44,28 @@
   display: block;
   height: 24px;
   width: auto;
+}
+
+/* Sprachumschalter */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+}
+
+.lang-switch a {
+  color: var(--color-text, #222);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.lang-switch a:hover {
+  text-decoration: underline;
+}
+
+.lang-switch .active {
+  font-weight: 700;
+  color: var(--color-primary, #0056d2);
 }
