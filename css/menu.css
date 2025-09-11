@@ -9,13 +9,18 @@
   width: min(92vw, 360px);
   max-height: calc(100dvh - 64px);
   translate: 100% 0;
-  border-left: 1px solid rgba(16, 19, 26, 0.06);
+  background: var(--card-background);
+  border-left: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: var(--shadow);
   padding: var(--space-3, 1.5rem) var(--space-3, 1.5rem) var(--space-5, 3rem);
   transition: translate 0.25s ease;
   display: grid;
   gap: 1rem;
 }
+:root[data-theme="dark"] .nav {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .nav.is-open {
   translate: 0 0;
 }
@@ -63,6 +68,11 @@
   background: #1d2430;
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
+
+:root[data-theme="dark"] .nav-toggle-line {
+  background: var(--color-secondary);
+}
+
 .nav-toggle[aria-expanded="true"] .nav-toggle-line:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
@@ -74,7 +84,7 @@
 }
 
 /* Desktop: Floating-Pill Menü */
-@media (min-width: 960px) {
+@media (min-width: 1200px) {
   .site-header {
     border-bottom: none;
     backdrop-filter: none;
@@ -107,7 +117,7 @@
     gap: 1.75rem;
 
     padding: 0.75rem 1.75rem;
-/*     border-radius: 9999px;
+    /*     border-radius: 9999px;
 
     background: #ffffff3d;
     backdrop-filter: saturate(140%) blur(10px);
@@ -138,7 +148,7 @@
   }
 
   .nav-right .login {
-    font-weight: 700;
+    font-weight: 500;
     text-decoration: none;
     color: var(--text);
   }
@@ -148,7 +158,7 @@
 }
 
 /* ===== MOBILE NAVIGATION (unter 960px) ===== */
-@media (max-width: 959px) {
+@media (max-width: 1199px) {
   .nav {
     position: fixed;
     top: 4.5rem;
@@ -156,7 +166,7 @@
     bottom: 0;
     width: min(100vw);
     height: calc(100dvh - 4.5rem);
-    background: #fff;
+    background: var(--card-background);
     box-shadow: -2px 0 16px rgba(0, 0, 0, 0.15);
     border-left: 1px solid rgba(0, 0, 0, 0.06);
 
@@ -189,12 +199,15 @@
     width: 100%;
     border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
   }
+  :root[data-theme="dark"] .nav-center li {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.12);
+  }
 
   .nav-item {
     font-size: 1.1rem;
     font-weight: 500;
     text-decoration: none;
-    color: var(--color-dark);
+    color: var(--text);
     padding: 1rem 0;
     width: 100%;
     display: flex;
@@ -211,7 +224,7 @@
   .nav-item::after {
     content: "›";
     font-size: 1.2rem;
-    color: rgba(0, 0, 0, 0.5);
+    color: var(--muted);
   }
 
   /* Aktionen am unteren Rand */
@@ -225,7 +238,7 @@
     border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
 
-    .nav-right-actions {
+  .nav-right-actions {
     display: inline-flex;
     flex-direction: row;
     align-items: center;
@@ -236,13 +249,26 @@
   .nav-right .login {
     flex: 1;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--color-dark);
     text-decoration: none;
     text-align: center;
     padding: 0.75rem 1rem;
     border-radius: 0.5rem;
-    background: #f8f9fb;
+    color: var(--text);
+    background: var(--color-light);
+  }
+
+  /* Dark Mode: Login-Button */
+  :root[data-theme="dark"] .nav-right .login {
+    background: #373f47;
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  :root[data-theme="dark"] .nav-right .login:hover {
+    background: var(--color-secondary);
+    color: #fff !important;
   }
 
   .nav-right .cta {
@@ -253,13 +279,21 @@
     border-radius: 0.5rem;
     background: linear-gradient(
       135deg,
-      #4776e6 0%,
+      var(--color-tertiary) 100%,
       var(--color-secondary) 100%
     );
     color: #fff;
   }
 
-  /* Body fixieren wenn Menü offen */
+  :root[data-theme="dark"] .nav-right .cta {
+    background: transparent;
+    color: var(--color-secondary);
+    border: 1px solid var(--color-secondary);
+    box-shadow: none;
+  }
+  :root[data-theme="dark"] .nav-right .cta:hover {
+    background: rgba(100, 164, 255, 0.1);
+  }
   body.menu-open {
     overflow: hidden;
   }
@@ -277,7 +311,7 @@
 }
 
 /* ===== DESKTOP NAVIGATION (ab 960px) ===== */
-@media (min-width: 960px) {
+@media (min-width: 1200px) {
   .nav-toggle {
     display: none; /* Burger nur mobil */
   }
@@ -305,7 +339,7 @@
     gap: 1.75rem;
 
     padding: 0.75rem 1.75rem;
-/*     border-radius: 9999px;
+    /*     border-radius: 9999px;
 
     background: #ffffff3d;
     backdrop-filter: saturate(140%) blur(10px);
@@ -316,7 +350,7 @@
   .nav-center .nav-item {
     font-size: 0.9rem;
     font-weight: 500;
-    color: var(--color-dark);
+    color: var(--text);
     text-decoration: none;
     white-space: nowrap;
   }
@@ -329,9 +363,9 @@
   }
 
   .nav-right .login {
-    font-weight: 700;
-    color: var(--color-dark);
+    color: var(--text);
     text-decoration: none;
+    font-size: 0.9rem;
   }
 
   .nav-right .cta {
@@ -342,5 +376,18 @@
       #4776e6 0%,
       var(--color-secondary) 100%
     );
+  }
+
+  :root[data-theme="dark"] .nav-right .cta {
+    background: transparent;
+    color: var(--color-secondary);
+    border: 1px solid var(--color-secondary);
+    box-shadow: none;
+  }
+  :root[data-theme="dark"] .nav-right .cta:hover {
+    background: rgba(100, 164, 255, 0.1);
+  }
+  body.menu-open {
+    overflow: hidden;
   }
 }

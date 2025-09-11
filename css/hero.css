@@ -1,23 +1,21 @@
 /* ===== HERO (Bild an Masthead unten rechts ausrichten) ===== */
 
-/* Das Bild sitzt an .masthead, daher darf .hero NICHT der
-   Positionierungs-Referenzrahmen sein. */
 .hero {
   position: static;
   overflow: clip;
   --media-w: clamp(520px, 48vw, 860px);
   padding-top: clamp(2.5rem, 6vw, 4rem);
-  min-height: 64vh;       /* Höhe für den gesamten Bereich */
+  min-height: 64vh;
   display: flex;
-  flex-direction: column; /* wichtig, damit child flex:1 funktioniert */
+  flex-direction: column;
 }
 
 .hero-inner {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
-  flex: 1;               
+  justify-content: space-between;
+  flex: 1;
   width: 100%;
   padding-right: calc(var(--media-w) + 2rem);
   padding-top: calc(var(--space-6, 2.5rem) + 2.5rem);
@@ -33,13 +31,13 @@
   align-items: flex-start;
 }
 
-.hero-copy p{
+.hero-copy p {
   color: var(--color-primary);
 }
 
 /* Bildblock */
 .hero-media {
-  align-self: flex-end; 
+  align-self: flex-end;
   z-index: 100;
 }
 
@@ -50,20 +48,35 @@
   }
 }
 
-.hero-copy .eyebrow { color: var(--brand); font-weight: 800; letter-spacing: .02em; margin-bottom: .25rem; }
+.hero-copy .eyebrow {
+  color: var(--brand);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.25rem;
+}
 .hero h1 {
   font-size: clamp(2.2rem, 4vw + 0.4rem, 4rem);
   line-height: 1.05;
-  letter-spacing: .01em;
+  letter-spacing: 0.01em;
   margin-bottom: var(--space-3, 1rem);
   text-transform: uppercase;
   color: var(--color-primary);
 }
-.lead { font-size: var(--lead); color: var(--text-color-step-850, var(--muted)); max-width: 45ch; }
-.actions { display: flex; gap: .75rem; margin-top: var(--space-4, 1.5rem); }
+.lead {
+  font-size: var(--lead);
+  color: var(--text-color-step-850, var(--muted));
+  max-width: 45ch;
+}
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: var(--space-4, 1.5rem);
+}
 
 /* >>> Das Bild absolut an .masthead kleben (bündig rechts/unten) */
-.masthead { position: relative; }        /* Referenzrahmen */
+.masthead {
+  position: relative;
+} /* Referenzrahmen */
 .masthead .hero-media {
   position: absolute;
   right: 0;
@@ -76,24 +89,47 @@
   width: var(--media-w);
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 30px 60px rgba(16,27,68,.18));
+  filter: drop-shadow(0 30px 60px rgba(16, 27, 68, 0.18));
 }
 
 /* Tablet: Bild/Breite anpassen – Textreserve folgt automatisch */
 @media (max-width: 1200px) {
-  .hero { --media-w: clamp(420px, 46vw, 620px); }
+  .hero {
+    --media-w: clamp(420px, 46vw, 620px);
+  }
 }
 
 /* Mobile: Bild unter den Text in den normalen Fluss rutschen lassen */
 @media (max-width: 960px) {
-  .hero { --media-w: clamp(300px, 78vw, 420px); }
-  .hero-inner { padding-right: 0; gap: var(--space-5, 2rem); }
+  .hero {
+    --media-w: clamp(300px, 78vw, 420px);
+  }
+  .hero-inner {
+    padding-right: 0;
+    gap: var(--space-5, 2rem);
+  }
   .masthead .hero-media {
-    position: static;                 /* <— rutscht unter den Text */
+    position: static; /* <— rutscht unter den Text */
     margin-top: var(--space-4, 1.5rem);
   }
   .masthead .phone-mock {
     width: var(--media-w);
     margin-inline: auto;
   }
+}
+
+
+/* ===== DARK MODE ===== */
+:root[data-theme="dark"] .hero-copy p,
+:root[data-theme="dark"] .hero h1 {
+  color: var(--color-dark); 
+}
+
+:root[data-theme="dark"] .hero .eyebrow {
+  color: var(--color-dark-neutral); 
+}
+
+:root[data-theme="dark"] .lead {
+  color: var(--color-dark-neutral) !important;
+  font-weight: 500;
 }

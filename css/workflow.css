@@ -225,3 +225,22 @@
     max-width: 320px;
   }
 }
+
+
+/* ===== DARK MODE Workflow ===== */
+:root[data-theme="dark"] {
+  --wf-blue: var(--color-secondary);
+  --wf-pill-bg: #2c323b;
+  --wf-pill-text: var(--color-light);
+  --wf-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  --wf-border: rgba(100, 164, 255, 0.25);
+}
+
+:root[data-theme="dark"] .workflow h2,
+:root[data-theme="dark"] .workflow .subtitle {
+  color: var(--color-light);
+}
+
+:root[data-theme="dark"] .workflow-or {
+  color: var(--color-medium);
+}

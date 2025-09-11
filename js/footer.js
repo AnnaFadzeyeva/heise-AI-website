@@ -4,7 +4,7 @@ export function renderFooter(content) {
   footer.innerHTML = `
     <div class="container footer-top">
       <div class="footer-brand">
-        <img src="${content.brand.logo}" alt="${content.brand.alt}" class="footer-logo"/>
+        <img src="img/heiseAI-logo.svg" alt="${content.brand.alt}" class="footer-logo"/>
         <p>${content.brand.text}</p>
         <div class="social-links">
           ${content.brand.social
@@ -37,7 +37,7 @@ export function renderFooter(content) {
 
       <div class="footer-partner">
         <span>${content.partner.text}</span>
-        <img src="${content.partner.logo}" alt="${content.partner.alt}" />
+        <img src="img/Logo_DEEP-CONTENT-Heise_micro.svg" alt="${content.partner.alt}" class="footer-partner-logo"/>
       </div>
     </div>
 
@@ -50,4 +50,27 @@ export function renderFooter(content) {
       <p>${content.bottom.text}</p>
     </div>
   `;
+
+  
+  const currentTheme = document.documentElement.getAttribute("data-theme");
+  updateFooterLogos(currentTheme);
+}
+
+function updateFooterLogos(theme) {
+  const footerLogo = document.querySelector(".footer-logo");
+  const partnerLogo = document.querySelector(".footer-partner-logo");
+
+  if (footerLogo) {
+    footerLogo.src =
+      theme === "light"
+        ? "img/heiseAI-logo.svg"
+        : "img/heiseAI-logo-dark.svg";
+  }
+
+  if (partnerLogo) {
+    partnerLogo.src =
+      theme === "light"
+        ? "img/Logo_DEEP-CONTENT-Heise_micro_light.svg"
+        : "img/Logo_DEEP-CONTENT-Heise_micro.svg";
+  }
 }

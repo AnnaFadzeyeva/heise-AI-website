@@ -56,7 +56,7 @@ export function renderAwards(sectionId, content) {
     content.buttons.forEach((btn) => {
       const a = document.createElement("a");
       a.href = btn.link;
-      a.className = "btn-small btn-primary";
+      a.className = "btn-small btn-secondary";
       a.textContent = btn.label;
       btnsEl.appendChild(a);
     });

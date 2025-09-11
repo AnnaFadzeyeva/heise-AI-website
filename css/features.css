@@ -155,3 +155,39 @@
     display: none;
   }
 }
+
+
+/* ===== DARK MODE: Features ===== */
+
+:root[data-theme="dark"] {
+  --wf-blue: var(--color-secondary);
+  --wf-pill-bg: #2c323b;
+  --wf-pill-text: var(--color-light);
+  --wf-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  --wf-border: rgba(100, 164, 255, 0.25);
+}
+
+:root[data-theme="dark"] .features h2,
+:root[data-theme="dark"] .features p,
+:root[data-theme="dark"] .feature-card h3{
+  color: var(--color-dark-neutral);
+}
+
+:root[data-theme="dark"] .feature-card p {
+  color: var(--color-neutral-6);
+}
+
+:root[data-theme="dark"] .social-icons img,
+:root[data-theme="dark"] .feature-icon {
+  background: var(--wf-pill-bg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+:root[data-theme="dark"] .social-icons img:hover,
+:root[data-theme="dark"] .feature-icon:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+}
+
+:root[data-theme="dark"] .wave-wrapper img {
+  opacity: 0.6;
+}

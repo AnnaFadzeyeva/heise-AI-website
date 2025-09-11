@@ -157,30 +157,57 @@ a {
   border: 1px solid rgba(16, 19, 26, 0.12);
   box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1);
 }
+/* ===== Buttons (Light Default) ===== */
 .btn-primary {
   background: var(--color-primary);
   color: #fff;
   border: none;
 }
+
 .btn-secondary {
   background: var(--color-secondary);
   color: #fff;
   border: none;
 }
+
 .btn-tertiary {
   background: var(--color-tertiary);
   color: #fff;
   border: none;
 }
+
 .btn-dark {
   background: #10131a;
   color: #fff;
   border: none;
 }
+
 .btn-ghost {
   background: #fff;
   color: var(--color-primary);
   border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* ===== Dark Mode Buttons (überschreibt alles) ===== */
+:root[data-theme="dark"] .btn-primary {
+  background: var(--color-primary-tint);
+  color: var(--color-primary-contrast, #fff);
+}
+
+:root[data-theme="dark"] .btn-secondary {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+:root[data-theme="dark"] .btn-tertiary {
+  background: var(--color-tertiary-tint);
+  color: var(--color-tertiary-contrast, #fff);
+}
+
+:root[data-theme="dark"] .btn-ghost {
+  background: transparent;
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
 }
 
 .btn-small {

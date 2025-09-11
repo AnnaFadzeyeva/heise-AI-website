@@ -153,3 +153,69 @@
 .pricing-footer .btn-primary {
   background: linear-gradient(225deg, #365ba5 0%, var(--color-primary) 100%);
 }
+
+
+/* ===== DARK MODE: Pricing ===== */
+:root[data-theme="dark"] .pricing h2,
+:root[data-theme="dark"] .pricing-headline,
+:root[data-theme="dark"] .price .label{
+  color: var(--color-neutral-8);
+}
+
+:root[data-theme="dark"] .pricing-subheadline,
+:root[data-theme="dark"] .price p,
+:root[data-theme="dark"] .pricing-features li {
+  color: var(--color-neutral-6);
+}
+
+:root[data-theme="dark"] .pricing-card {
+  background: rgba(37, 44, 51, 0.85); 
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+:root[data-theme="dark"] .pricing-card.highlight {
+  border: 1px solid color-mix(in srgb, var(--color-secondary) 40%, transparent);
+  box-shadow: 0 8px 32px
+    color-mix(in srgb, var(--color-secondary) 20%, transparent);
+}
+
+:root[data-theme="dark"] .pricing-card.highlight:hover {
+  border: 1px solid color-mix(in srgb, var(--color-secondary) 50%, transparent);
+  box-shadow: 0 8px 36px
+    color-mix(in srgb, var(--color-secondary) 30%, transparent);
+}
+
+/* Header Label + Tag */
+:root[data-theme="dark"] .pricing-header h4,
+:root[data-theme="dark"] .pricing-header h4 span {
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+
+}
+
+/* Social Icons */
+:root[data-theme="dark"] .pricing-social img {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Buttons */
+:root[data-theme="dark"] .pricing-footer .btn-secondary {
+  background: linear-gradient(
+    225deg,
+    var(--color-tertiary) 0%,
+    var(--color-secondary) 100%
+  );
+  color: #fff;
+}
+
+:root[data-theme="dark"] .pricing-footer .btn-primary {
+  background: linear-gradient(
+    225deg,
+    var(--color-primary-tint) 0%,
+    var(--color-primary) 100%
+  );
+  color: #fff;
+}
+

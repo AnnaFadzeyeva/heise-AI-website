@@ -168,3 +168,43 @@ blockquote {
     gap: var(--space-3);
   }
 }
+
+
+/* ===== DARK MODE: Testimonials ===== */
+:root[data-theme="dark"] .testimonials h2,
+:root[data-theme="dark"] .testimonials .subtitle,
+:root[data-theme="dark"] .testimonial-meta strong,
+:root[data-theme="dark"] .testimonial-meta span,
+:root[data-theme="dark"] blockquote {
+  color: var(--color-neutral-7);
+}
+
+:root[data-theme="dark"] .testimonial-card {
+  background: rgba(37, 44, 51, 0.85); /* dunkles Glas */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+:root[data-theme="dark"] .testimonial-card.active {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.8);
+}
+
+:root[data-theme="dark"] .testimonial-logo {
+  background: #2c333a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+:root[data-theme="dark"] .carousel-dot {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+:root[data-theme="dark"] .carousel-dot.active {
+  background: var(--color-secondary);
+}
+
+:root[data-theme="dark"] .carousel-prev,
+:root[data-theme="dark"] .carousel-next {
+  color: var(--color-secondary);
+}

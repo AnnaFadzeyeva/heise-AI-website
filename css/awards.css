@@ -180,3 +180,37 @@
     align-items: center;
   }
 }
+
+/* ===========================
+   Dark Mode: Awards
+   =========================== */
+:root[data-theme="dark"] .awards h2,
+:root[data-theme="dark"] #awards-title {
+  color: var(--color-secondary);
+}
+
+:root[data-theme="dark"] .awards-description p,
+:root[data-theme="dark"] .awards-list {
+  color: var(--color-neutral-6);
+}
+
+:root[data-theme="dark"] .awards-list li {
+  color: var(--color-neutral-7);
+}
+
+:root[data-theme="dark"] .awards-visual img {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7);
+}
+
+:root[data-theme="dark"] .awards-visual figcaption {
+  color: var(--color-neutral-5);
+}
+
+:root[data-theme="dark"] .awards-social img {
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.4));
+}
+
+:root[data-theme="dark"] .awards .container {
+  background: linear-gradient(180deg, #171e26, #0c0f13);
+  border: 1px solid rgba(255, 255, 255, 0.044);
+}

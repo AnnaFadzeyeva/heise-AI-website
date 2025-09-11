@@ -150,3 +150,52 @@
     margin-bottom: 1.5rem;
   }
 }
+
+/* ===== Dark Mode: Contact Section ===== */
+:root[data-theme="dark"] .contact-form-wrapper {
+  background: rgba(37, 44, 51, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+:root[data-theme="dark"] .contact h2 {
+  color: var(--color-neutral-7);
+}
+
+:root[data-theme="dark"] .contact .subtitle {
+  color: var(--color-neutral-6);
+}
+
+:root[data-theme="dark"] .form-note {
+  color: var(--color-tertiary);
+}
+
+:root[data-theme="dark"] .form-field label {
+  color: var(--color-neutral-6);
+}
+
+:root[data-theme="dark"] .form-field input,
+:root[data-theme="dark"] .form-field textarea {
+  color: var(--color-neutral-8);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+:root[data-theme="dark"] .form-field input::placeholder,
+:root[data-theme="dark"] .form-field textarea::placeholder {
+  color: var(--color-neutral-5);
+  opacity: 0.6;
+}
+
+:root[data-theme="dark"] .form-field input:focus,
+:root[data-theme="dark"] .form-field textarea:focus {
+  border-color: var(--color-secondary);
+  outline: 3px solid color-mix(in srgb, var(--color-secondary) 60%, transparent);
+}
+
+:root[data-theme="dark"] #contact-pagination button {
+  background: var(--color-secondary);
+  color: #fff;
+  border: none;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+}
