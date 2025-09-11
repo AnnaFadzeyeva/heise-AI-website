@@ -1,22 +1,27 @@
 /* ===== Testimonials Section ===== */
 .testimonials {
-  padding: var(--space-10) 0;
-/*   background: linear-gradient(180deg, #f9fbff 0%, #e7efff 100%); */
+  padding: var(--space-6) 0;
+  /*   background: linear-gradient(180deg, #f9fbff 0%, #e7efff 100%); */
   text-align: center;
   overflow: hidden;
+}
+
+.referenzen-header {
+  max-width: 50em;
+  margin: 0 auto;
 }
 
 .testimonials h2 {
   font-size: clamp(1.8rem, 3vw, 2.2rem);
   font-weight: 700;
-  color: var(--color-dark);
+  color: var(--color-primary);
   margin-bottom: var(--space-2);
 }
 
 .testimonials .subtitle {
   font-size: 1.1rem;
-  color: var(--text);
-  margin-bottom: var(--space-8);
+  color: var(--color-primary);
+  margin-bottom: var(--space-6);
 }
 
 /* Carousel */
@@ -68,32 +73,41 @@
 .testimonial-meta strong {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--color-dark);
+  color: var(--color-primary);
 }
 
 .testimonial-meta span {
   font-size: 0.9rem;
-  color: var(--text-light, #555);
+  color: var(--color-primary);
 }
 
 blockquote {
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--text);
+  color: var(--color-primary);
   margin: 0;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem; /* Abstand zwischen Pfeilen und Dots */
+  margin: var(--space-2) 0;
 }
 
 /* Pagination Dots */
 .carousel-dots {
   display: flex;
   justify-content: center;
-  gap: 0.5rem;
-  margin: var(--space-6) 0;
+  gap: 1rem;
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-2);
 }
 
 .carousel-dot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   border: none;
   background: #d0d6e1;
@@ -107,14 +121,16 @@ blockquote {
 }
 
 /* Navigation Arrows */
+
+.carousel-arrows {
+}
+
 .carousel-prev,
 .carousel-next {
-  position: absolute;
-  bottom: 0;
   background: transparent;
   border: none;
-  font-size: 1.5rem;
-  color: var(--color-dark);
+  font-size: 1.8rem;
+  color: var(--color-primary);
   cursor: pointer;
   transition: color 0.2s ease;
 }

@@ -4,27 +4,52 @@
 *::after {
   box-sizing: border-box;
 }
-html:focus-within { scroll-behavior: smooth; }
-body, h1, h2, h3, h4, p, figure, blockquote, dl, dd { margin: 0; }
-ul[role="list"], ol[role="list"] { list-style: none; }
-img, svg, video, canvas { max-width: 100%; height: auto; display: block; }
-button { font: inherit; }
+html:focus-within {
+  scroll-behavior: smooth;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+button {
+  font: inherit;
+}
 
 /* ——— Design Tokens (Mapping auf theme.css) ——— */
 :root {
-  --bg:           var(--background-color);
-  --bg-2:         #101b44; /* optional, entfernen wenn ungenutzt */
+  --bg: var(--background-color);
+  --bg-2: #101b44; /* optional, entfernen wenn ungenutzt */
 
-  --card:         var(--card-background);
-  --text:         var(--text-color);
-  --muted:        var(--color-medium);
+  --card: var(--card-background);
+  --text: var(--text-color);
+  --muted: var(--color-medium);
 
-  --brand:        var(--color-primary);
-  --brand-2:      var(--color-secondary);
+  --brand: var(--color-primary);
+  --brand-2: var(--color-secondary);
 
   --shadow: 0 10px 30px rgba(16, 27, 68, 0.12);
 
-  --h1:   clamp(2rem, 4vw + 0.5rem, 4rem);
+  --h1: clamp(2rem, 4vw + 0.5rem, 4rem);
   --lead: clamp(1rem, 1.2vw + 0.6rem, 1.25rem);
 
   /* Containerbreite (wird hier gesetzt, falls nicht in theme.css vorhanden) */
@@ -33,48 +58,74 @@ button { font: inherit; }
 
 /* ——— Base ——— */
 @media (prefers-reduced-motion: no-preference) {
-  :root { scroll-behavior: smooth; }
+  :root {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
-  font-family: var(--font-family), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: var(--font-family), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial;
   color: var(--text);
   line-height: 1.5;
-    min-height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   overflow-x: hidden;
   margin: 0;
-  background-attachment: fixed;
-  background-color: var(--color-bg-1);
-  background-size: 100vw 100vh;
-  background-image: 
-    radial-gradient(
-      60% 60% at 50% 40%, 
-      rgba(255, 255, 255, 0.85) 0%, 
-      rgba(255, 255, 255, 0) 100%
-    ),
-    linear-gradient(
-      180deg, 
-      hsl(210, 45%, 70%) 0%, 
-      hsl(210, 55%, 88%) 40%, 
-      hsl(210, 50%, 92%) 70%, 
-      hsl(210, 60%, 96%) 100% 
-    );
+  position: relative; /* wichtig für stacking context */
+  background: var(--color-bg-1);
 }
 
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; 
-  background-image: 
-    repeating-radial-gradient(circle, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 1px, transparent 2px);
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(
+      60% 60% at 50% 40%,
+      rgba(255, 255, 255, 0.85) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(
+      180deg,
+      hsl(210, 45%, 70%) 0%,
+      hsl(210, 55%, 88%) 40%,
+      hsl(210, 50%, 92%) 70%,
+      hsl(210, 60%, 96%) 100%
+    );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll; /* iOS Safari Fix */
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: repeating-radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.05) 0px,
+    rgba(0, 0, 0, 0.05) 1px,
+    transparent 2px
+  );
   background-size: 150px 150px;
-  mask-image: linear-gradient(to right, black 0%, transparent 20%, transparent 80%, black 100%);
-  -webkit-mask-image: linear-gradient(to right, black 0%, transparent 20%, transparent 80%, black 100%);
+  mask-image: linear-gradient(
+    to right,
+    black 0%,
+    transparent 20%,
+    transparent 80%,
+    black 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black 0%,
+    transparent 20%,
+    transparent 80%,
+    black 100%
+  );
+  opacity: 0.15;
 }
 
 /* ——— Layout Utility ——— */
@@ -83,26 +134,121 @@ body::before {
   margin-inline: auto;
 }
 
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
 /* ——— Buttons (global) ——— */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0.65rem 1rem;
-  border-radius: 999px;
+  border-radius: 100px;
   font-weight: 500;
   text-decoration: none;
   border: 1px solid rgba(16, 19, 26, 0.12);
-  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.10);
+  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1);
 }
-.btn-primary   { background: var(--color-primary);   color: #fff; border: none; }
-.btn-secondary { background: var(--color-secondary); color: #fff; border: none; }
-.btn-tertiary  { background: var(--color-tertiary);  color: #fff; border: none; }
-.btn-dark      { background: #10131a; color: #fff; border: none; }
-.btn-ghost     { background: #fff; color: var(--text); }
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+}
+.btn-secondary {
+  background: var(--color-secondary);
+  color: #fff;
+  border: none;
+}
+.btn-tertiary {
+  background: var(--color-tertiary);
+  color: #fff;
+  border: none;
+}
+.btn-dark {
+  background: #10131a;
+  color: #fff;
+  border: none;
+}
+.btn-ghost {
+  background: #fff;
+  color: var(--color-primary);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.btn-small {
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  font-weight: 400;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1);
+}
 
 /* ——— Accessibility ——— */
 :where(a, button):focus-visible {
   outline: 3px solid var(--brand);
   outline-offset: 2px;
+}
+
+/* ——— Button States ——— */
+.btn,
+.btn-small {
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+/* Hover */
+.btn:hover,
+.btn-small:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 26px rgba(0, 0, 0, 0.15);
+}
+
+/* Focus */
+.btn:focus-visible,
+.btn-small:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 2px;
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 4px rgba(29, 110, 255, 0.25),
+    0 14px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Active (Klick-Effekt) */
+.btn:active,
+.btn-small:active {
+  transform: translateY(0);
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.12) inset;
+}
+
+/* Disabled */
+.btn:disabled,
+.btn[aria-disabled="true"],
+.btn-small:disabled,
+.btn-small[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Ghost / Light Buttons – kleine Farbänderung beim Hover */
+.btn-ghost:hover {
+  background: #f9f9f9;
+}
+.btn-dark:hover {
+  background: #0c0f14;
 }

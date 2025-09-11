@@ -1,7 +1,7 @@
 /* ===== Features Section ===== */
 .features {
   text-align: center;
-  padding: var(--space-9) 0;
+  padding: var(--space-6) 0;
 }
 
 .features h2 {
@@ -9,6 +9,10 @@
   font-weight: 700;
   color: var(--color-primary);
   margin-bottom: var(--space-6);
+}
+
+.features p {
+  color: var(--color-primary);
 }
 
 /* Social Media Icons */
@@ -38,17 +42,17 @@
 .features-list {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  gap: var(--space-1);
+  gap: var(--space-4);
   flex-wrap: wrap;
 }
 
 /* Feature Card */
 .feature-card {
   flex: 1;
-  max-width: 280px;
-  min-width: 220px;
+  max-width: 360px;
+  min-width: 270px;
   padding: var(--space-6) var(--space-4);
   display: flex;
   flex-direction: column;
@@ -61,6 +65,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
 }
 
 .wave-wrapper img {
@@ -114,6 +119,39 @@
 /* Media Queries */
 @media screen and (max-width: 1075px) {
   .wave-wrapper {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .features {
+    text-align: center;
+    padding: var(--space-6) 0;
+  }
+}
+
+@media screen and (max-width: 659px) {
+  .features-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .feature-card{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: flex-start;
+    min-width: none;
+    max-width: none;
+    gap: var(--space-4);
+    padding: var(--space-4) var(--space-2);
+  }
+  .feature-card > div > h3 {
+    text-align: left;
+  }
+  .feature-card div > p {
+    text-align: left;
+  }
+  .feature-card .wave {
     display: none;
   }
 }

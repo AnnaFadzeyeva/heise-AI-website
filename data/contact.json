@@ -19,17 +19,29 @@
         "required": true
       },
       {
-        "label": "Ihr Unternehmenssitz *",
-        "placeholder": "Firma XYZ",
-        "name": "location",
+        "label": "E-Mail *",
+        "placeholder": "exemple@company.com",
+        "name": "email",
         "type": "text",
         "required": true
+      },
+      {
+        "label": "Telefonnummer *",
+        "placeholder": "+49 123 4567890",
+        "name": "telephone",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Ihre Nachricht",
+        "placeholder": "Schreiben Sie uns...",
+        "name": "message",
+        "type": "text",
+        "required": false
       }
     ],
     "pagination": {
-      "current": 1,
-      "total": 2,
-      "buttonText": "Weiter"
+      "buttonText": "Senden"
     }
   },
   "image": "img/screens/heiseAIscreens.png"

@@ -1,3 +1,8 @@
+// js/script.js
+import { renderWorkflow } from "./workflow.js";
+import { renderAwards } from "./awards.js";
+import { renderPricing } from "./pricing.js";
+
 // ---------- Dynamic Section Rendering ----------
 function renderSection(sectionId, jsonFile) {
   fetch(jsonFile)
@@ -36,8 +41,10 @@ function renderSection(sectionId, jsonFile) {
             <div class="card-icon">
               <img src="${card.icon}" alt="${card.title} Icon" />
             </div>
-            <h3>${card.title}</h3>
-            <p>${card.text}</p>
+            <div>
+              <h3>${card.title}</h3>
+              <p>${card.text}</p>
+            </div>
           `;
           cardsContainer.appendChild(cardEl);
         });
@@ -45,7 +52,7 @@ function renderSection(sectionId, jsonFile) {
 
       // Features-Block (Social + Features-Karten + Wave)
       const socialEl = document.getElementById(`${sectionId}-social`);
-      if (socialEl && data.social) {
+      if (sectionId !== "workflow" && socialEl && data.social) {
         socialEl.innerHTML = "";
         data.social.forEach((s) => {
           const icon = document.createElement("img");
@@ -65,8 +72,10 @@ function renderSection(sectionId, jsonFile) {
           card.className = "feature-card";
           card.innerHTML = `
       <img class="feature-icon" src="${f.icon}" alt="${f.title}">
-      <h3>${f.title}</h3>
-      <p>${f.text}</p>
+      <div>
+        <h3>${f.title}</h3>
+        <p>${f.text}</p>
+      </div>
     `;
           featuresEl.appendChild(card);
 
@@ -96,158 +105,148 @@ function renderSection(sectionId, jsonFile) {
         });
       }
 
-      // Workflow-Block
-      const infographicEl = document.getElementById(`${sectionId}-infographic`);
-      if (infographicEl && data.infographic) {
-        infographicEl.innerHTML = `
-          <img src="${data.infographic.image}" alt="${data.infographic.alt}">
-        `;
-      }
-
-      const visualEl = document.getElementById(`${sectionId}-visual`);
-      if (visualEl && data.visual) {
-        visualEl.innerHTML = `
-          <img src="${data.visual.image}" alt="${data.visual.alt}">
-        `;
-      }
-
-      const workflowSocialEl = document.getElementById(`${sectionId}-social`);
-      if (workflowSocialEl && data.social) {
-        workflowSocialEl.innerHTML = "";
-        data.social.forEach((s) => {
-          const icon = document.createElement("img");
-          icon.src = s.icon;
-          icon.alt = s.alt;
-          workflowSocialEl.appendChild(icon);
-        });
+      // Workflow
+      if (sectionId === "workflow") {
+        renderWorkflow(sectionId, data);
       }
 
       // Testimonials Carousel
-// Testimonials Carousel
-const testimonialsContainer = document.getElementById(`${sectionId}-items`);
-if (testimonialsContainer && data.testimonials) {
-  testimonialsContainer.innerHTML = "";
+      const testimonialsContainer = document.getElementById(
+        `${sectionId}-items`
+      );
+      if (testimonialsContainer && data.testimonials) {
+        testimonialsContainer.innerHTML = "";
 
-  // --- Testimonials rendern ---
-  data.testimonials.forEach((t, i) => {
-    const item = document.createElement("div");
-    item.className = "testimonial-card";
-    if (i === 0) item.classList.add("active");
+        // --- Testimonials rendern ---
+        data.testimonials.forEach((t, i) => {
+          const item = document.createElement("div");
+          item.className = "testimonial-card";
+          if (i === 0) item.classList.add("active");
 
-    item.innerHTML = `
-      <div class="testimonial-header">
-        ${
-          t.logo
-            ? `<img src="${t.logo}" alt="${t.company} Logo" class="testimonial-logo">`
-            : ""
+          item.innerHTML = `
+  <div class="testimonial-header">
+    ${
+      t.logo
+        ? `<img src="${t.logo}" alt="" aria-hidden="true" class="testimonial-logo">`
+        : ""
+    }
+    <div class="testimonial-meta">
+      <strong>${t.name}</strong>
+      ${t.company ? `<span class="company">${t.company}</span>` : ""}
+    </div>
+  </div>
+  <blockquote>„${t.quote}“</blockquote>
+`;
+          testimonialsContainer.appendChild(item);
+        });
+
+        // --- Pagination Dots rendern ---
+        const dotsContainer = document.getElementById(`${sectionId}-dots`);
+        if (dotsContainer) {
+          dotsContainer.innerHTML = "";
+          data.testimonials.forEach((_, i) => {
+            const dot = document.createElement("button");
+            dot.className = "carousel-dot";
+            if (i === 0) dot.classList.add("active");
+            dot.setAttribute("aria-label", `Testimonial ${i + 1}`);
+            dotsContainer.appendChild(dot);
+          });
         }
-        <div class="testimonial-meta">
-          <strong>${t.name}</strong><br>
-          <span>${t.company}</span>
-        </div>
-      </div>
-      <blockquote>„${t.quote}“</blockquote>
-    `;
-    testimonialsContainer.appendChild(item);
-  });
 
-  // --- Pagination Dots rendern ---
-  const dotsContainer = document.getElementById(`${sectionId}-dots`);
-  if (dotsContainer) {
-    dotsContainer.innerHTML = "";
-    data.testimonials.forEach((_, i) => {
-      const dot = document.createElement("button");
-      dot.className = "carousel-dot";
-      if (i === 0) dot.classList.add("active");
-      dot.setAttribute("aria-label", `Testimonial ${i + 1}`);
-      dotsContainer.appendChild(dot);
-    });
-  }
+        // --- Carousel Logic ---
+        const track = testimonialsContainer;
+        let items = Array.from(track.querySelectorAll(".testimonial-card"));
+        const dots = document.querySelectorAll(
+          `#${sectionId}-dots .carousel-dot`
+        );
 
-  // --- Carousel Logic ---
-  const track = testimonialsContainer;
-  let items = Array.from(track.querySelectorAll(".testimonial-card"));
-  const dots = document.querySelectorAll(`#${sectionId}-dots .carousel-dot`);
+        // --- Clones für Loop ---
+        const firstClone = items[0].cloneNode(true);
+        const lastClone = items[items.length - 1].cloneNode(true);
 
-  // --- Clones für Loop ---
-  const firstClone = items[0].cloneNode(true);
-  const lastClone = items[items.length - 1].cloneNode(true);
+        firstClone.classList.add("clone");
+        lastClone.classList.add("clone");
 
-  firstClone.classList.add("clone");
-  lastClone.classList.add("clone");
+        track.appendChild(firstClone);
+        track.insertBefore(lastClone, items[0]);
 
-  track.appendChild(firstClone);
-  track.insertBefore(lastClone, items[0]);
+        items = Array.from(track.querySelectorAll(".testimonial-card"));
 
-  items = Array.from(track.querySelectorAll(".testimonial-card"));
+        let currentIndex = 1; // Start beim echten ersten Element
+        let realLength = data.testimonials.length;
 
-  let currentIndex = 1; // Start beim echten ersten Element
-  let realLength = data.testimonials.length;
+        function setTranslate(index, animate = true) {
+          const activeItem = items[index];
+          const viewport = track.parentNode;
+          const viewportWidth = viewport.offsetWidth;
 
-  function setTranslate(index, animate = true) {
-    const activeItem = items[index];
-    const viewport = track.parentNode;
-    const viewportWidth = viewport.offsetWidth;
+          const itemRect = activeItem.getBoundingClientRect();
+          const trackRect = track.getBoundingClientRect();
+          const itemOffset = itemRect.left - trackRect.left;
+          const itemCenter = itemOffset + activeItem.offsetWidth / 2;
 
-    const itemRect = activeItem.getBoundingClientRect();
-    const trackRect = track.getBoundingClientRect();
-    const itemOffset = itemRect.left - trackRect.left;
-    const itemCenter = itemOffset + activeItem.offsetWidth / 2;
+          const translateX = -(itemCenter - viewportWidth / 2);
 
-    const translateX = -(itemCenter - viewportWidth / 2);
+          if (!animate) {
+            track.style.transition = "none";
+          } else {
+            track.style.transition = "transform 0.4s ease";
+          }
+          track.style.transform = `translateX(${translateX}px)`;
 
-    if (!animate) {
-      track.style.transition = "none";
-    } else {
-      track.style.transition = "transform 0.4s ease";
-    }
-    track.style.transform = `translateX(${translateX}px)`;
+          currentIndex = index;
 
-    currentIndex = index;
+          // --- Klassen aktualisieren ---
+          items.forEach((item, i) =>
+            item.classList.toggle("active", i === index)
+          );
 
-    // --- Klassen aktualisieren ---
-    items.forEach((item, i) => item.classList.toggle("active", i === index));
+          // Dots: immer echten Index berechnen
+          let realIndex = (index - 1 + realLength) % realLength;
+          dots.forEach((dot, i) =>
+            dot.classList.toggle("active", i === realIndex)
+          );
+        }
 
-    // Dots: immer echten Index berechnen
-    let realIndex = (index - 1 + realLength) % realLength;
-    dots.forEach((dot, i) => dot.classList.toggle("active", i === realIndex));
-  }
+        function updateCarousel(index) {
+          setTranslate(index);
+        }
 
-  function updateCarousel(index) {
-    setTranslate(index);
-  }
+        // --- TransitionEnd: Loop zurückspringen ---
+        track.addEventListener("transitionend", () => {
+          if (items[currentIndex].classList.contains("clone")) {
+            if (currentIndex === 0) {
+              // Anfangs-Klon → echter letzter
+              setTranslate(items.length - 2, false);
+            } else if (currentIndex === items.length - 1) {
+              // End-Klon → echter erster
+              setTranslate(1, false);
+            }
+          }
+        });
 
-  // --- TransitionEnd: Loop zurückspringen ---
-  track.addEventListener("transitionend", () => {
-    if (items[currentIndex].classList.contains("clone")) {
-      if (currentIndex === 0) {
-        // Anfangs-Klon → echter letzter
-        setTranslate(items.length - 2, false);
-      } else if (currentIndex === items.length - 1) {
-        // End-Klon → echter erster
-        setTranslate(1, false);
+        // --- Buttons ---
+        document
+          .querySelector(".carousel-prev")
+          ?.addEventListener("click", () => {
+            updateCarousel(currentIndex - 1);
+          });
+        document
+          .querySelector(".carousel-next")
+          ?.addEventListener("click", () => {
+            updateCarousel(currentIndex + 1);
+          });
+
+        // --- Dots Click ---
+        dots.forEach((dot, i) => {
+          dot.addEventListener("click", () => {
+            updateCarousel(i + 1); // +1 wegen Clone-Offset
+          });
+        });
+
+        // --- Startposition setzen ---
+        setTranslate(currentIndex, false);
       }
-    }
-  });
-
-  // --- Buttons ---
-  document.querySelector(".carousel-prev")?.addEventListener("click", () => {
-    updateCarousel(currentIndex - 1);
-  });
-  document.querySelector(".carousel-next")?.addEventListener("click", () => {
-    updateCarousel(currentIndex + 1);
-  });
-
-  // --- Dots Click ---
-  dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      updateCarousel(i + 1); // +1 wegen Clone-Offset
-    });
-  });
-
-  // --- Startposition setzen ---
-  setTranslate(currentIndex, false);
-}
 
       // FAQ
       const faqContainer = document.getElementById(`${sectionId}-items`);
@@ -311,4 +310,11 @@ document.addEventListener("DOMContentLoaded", () => {
   renderSection("workflow", "data/workflow.json");
   renderSection("testimonials", "data/testimonials.json");
   renderSection("heise-io-faq", "data/heise-io-faq.json");
+  fetch("data/auszeichnungen.json")
+    .then((res) => res.json())
+    .then((data) => renderAwards("awards", data))
+    .catch((err) => console.error("Awards JSON Fehler:", err));
+  fetch("data/pricing.json")
+    .then((res) => res.json())
+    .then((data) => renderPricing("pricing", data));
 });

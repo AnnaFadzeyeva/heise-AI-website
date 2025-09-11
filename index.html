@@ -4,9 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>heise AI – Social Media leicht gemacht</title>
+    <meta
+      name="description"
+      content="Mit der heise AI Social App erstellen Sie in Sekunden kreative Social-Media-Beiträge mit KI. Planen, veröffentlichen und posten Sie effizient auf LinkedIn, Facebook, Instagram, X und WhatsApp."
+    />
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/menu.css" />
     <link rel="stylesheet" href="css/hero.css" />
     <link rel="stylesheet" href="css/features.css" />
     <link rel="stylesheet" href="css/hero-bg.css" />
@@ -14,6 +19,8 @@
     <link rel="stylesheet" href="css/so-gehts.css" />
     <link rel="stylesheet" href="css/workflow.css" />
     <link rel="stylesheet" href="css/testimonials.css" />
+    <link rel="stylesheet" href="css/awards.css" />
+    <link rel="stylesheet" href="css/pricing.css" />
     <link rel="stylesheet" href="css/contact.css" />
     <link rel="stylesheet" href="css/faq.css" />
     <link rel="stylesheet" href="css/footer.css" />
@@ -21,54 +28,54 @@
   <body>
     <!-- Header / Navigation -->
 
+    <header class="site-header">
+      <div class="container header-inner">
+        <!-- Links: Logo -->
+        <a class="brand" href="#home" aria-label="Startseite">
+          <img
+            class="brand-logo"
+            src="img/heiseAI-logo.svg"
+            alt="heise AI"
+            width="128"
+            height="32"
+            decoding="async"
+          />
+        </a>
+
+        <!-- Mobile Burger -->
+        <button
+          class="nav-toggle"
+          aria-controls="primary-nav"
+          aria-expanded="false"
+          aria-label="Navigation öffnen"
+        >
+          <span class="nav-toggle-box" aria-hidden="true">
+            <span class="nav-toggle-line"></span>
+            <span class="nav-toggle-line"></span>
+            <span class="nav-toggle-line"></span>
+          </span>
+        </button>
+
+        <!-- Navigation -->
+        <nav class="nav" id="primary-nav" aria-label="Hauptnavigation">
+          <!-- ZENTRIERTES, SCHWEBENDES MENÜ (Desktop), vertikal (Mobile) -->
+          <ul class="nav-center">
+            <li><a class="nav-item" href="#leistungen">Vorteile</a></li>
+            <li><a class="nav-item" href="#pricing">Preise</a></li>
+            <li><a class="nav-item" href="#referenzen">Referenzen</a></li>
+            <li><a class="nav-item" href="#heise-io-faq">FAQ</a></li>
+          </ul>
+
+          <!-- RECHTS: Aktionen -->
+          <div class="nav-right">
+            <a class="nav-item login" href="#login">Anmelden</a>
+            <a class="btn btn-secondary cta" href="#test">Kostenlos testen</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
     <div class="masthead">
-      <header class="site-header">
-        <div class="container header-inner">
-          <!-- Links: Logo -->
-          <a class="brand" href="#home" aria-label="Startseite">
-            <img
-              class="brand-logo"
-              src="img/heiseAI-logo.svg"
-              alt="heise AI"
-              width="128"
-              height="32"
-              decoding="async"
-            />
-          </a>
-
-          <!-- Mobile Burger -->
-          <button
-            class="nav-toggle"
-            aria-controls="primary-nav"
-            aria-expanded="false"
-            aria-label="Navigation öffnen"
-          >
-            <span class="nav-toggle-box" aria-hidden="true">
-              <span class="nav-toggle-line"></span>
-              <span class="nav-toggle-line"></span>
-              <span class="nav-toggle-line"></span>
-            </span>
-          </button>
-
-          <!-- Navigation -->
-          <nav class="nav" id="primary-nav" aria-label="Hauptnavigation">
-            <!-- ZENTRIERTES, SCHWEBENDES MENÜ (Desktop), vertikal (Mobile) -->
-            <ul class="nav-center">
-              <li><a class="nav-item" href="#leistungen">Leistungen</a></li>
-              <li><a class="nav-item" href="#preise">Preise</a></li>
-              <li><a class="nav-item" href="#referenzen">Referenzen</a></li>
-              <li><a class="nav-item" href="#faq">FAQ</a></li>
-            </ul>
-
-            <!-- RECHTS: Aktionen -->
-            <div class="nav-right">
-              <a class="nav-item login" href="#login">Anmelden</a>
-              <a class="btn btn-secondary cta" href="#test">Kostenlos testen</a>
-            </div>
-          </nav>
-        </div>
-      </header>
-
       <!-- Hero / First Section -->
 
       <section class="hero" id="home">
@@ -92,12 +99,40 @@
           </div>
 
           <div class="hero-media" aria-hidden="true">
-            <img src="img/bg-post.png" alt="" class="phone-mock" />
+            <img
+              src="img/bg-post-1200.webp"
+              srcset="
+                img/bg-post-600.webp   600w,
+                img/bg-post-1200.webp 1200w,
+                img/bg-post-2000.webp 2000w
+              "
+              sizes="(max-width: 768px) 100vw, 50vw"
+              alt="Social Media Post Mockup"
+              class="phone-mock"
+              width="1200"
+              height="1000"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
     </div>
     <main>
+      <section id="workflow" class="workflow">
+        <div class="container workflow-inner">
+          <div class="workflow-text">
+            <h2 id="workflow-title"></h2>
+            <p id="workflow-subtitle" class="subtitle"></p>
+
+            <div id="workflow-infographic" class="workflow-infographic"></div>
+
+            <div id="workflow-social" class="workflow-social"></div>
+          </div>
+
+          <div id="workflow-visual" class="workflow-visual"></div>
+        </div>
+      </section>
+
       <section id="features" class="features">
         <div class="container">
           <h2 id="features-title"></h2>
@@ -118,7 +153,7 @@
         </div>
       </section>
 
-      <section id="so-gehts" class="so-gehts">
+      <!--       <section id="so-gehts" class="so-gehts">
         <div class="container">
           <h2 id="so-gehts-title"></h2>
           <p id="so-gehts-subtitle" class="subtitle"></p>
@@ -126,38 +161,39 @@
           <div id="so-gehts-steps" class="steps-list"></div>
         </div>
       </section>
-
-      <section id="workflow" class="workflow">
-        <div class="container workflow-inner">
-          <div class="workflow-text">
-            <h2 id="workflow-title"></h2>
-            <p id="workflow-subtitle" class="subtitle"></p>
-
-            <div id="workflow-infographic" class="workflow-infographic"></div>
-
-            <div id="workflow-social" class="workflow-social"></div>
-          </div>
-
-          <div id="workflow-visual" class="workflow-visual"></div>
-        </div>
-      </section>
-
+ -->
       <section id="compliance" class="compliance">
         <div class="container">
           <h2 id="compliance-title"></h2>
-          <p class="subtitle" id="compliance-subtitle"></p>
+          <!--           <p class="subtitle" id="compliance-subtitle"></p>
           <p class="description" id="compliance-description"></p>
-          <a id="compliance-cta" class="btn btn-primary" href="#"></a>
+          <a id="compliance-cta" class="btn btn-primary" href="#"></a> -->
 
           <div id="compliance-cards" class="card-grid"></div>
         </div>
       </section>
 
+      <section id="awards" class="awards compact">
+        <div class="container">
+          <h2 id="awards-title"></h2>
+
+          <div class="awards-header">
+            <div id="awards-visual" class="awards-visual small"></div>
+            <div class="awards-meta">
+              <div id="awards-social" class="awards-social"></div>
+              <div id="awards-description" class="awards-list"></div>
+              <div id="awards-buttons" class="awards-buttons"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="referenzen" class="testimonials">
         <div class="container">
-          <h2 id="testimonials-title"></h2>
-          <p id="testimonials-subtitle" class="subtitle"></p>
-
+          <div class="referenzen-header">
+            <h2 id="testimonials-title"></h2>
+            <p id="testimonials-subtitle" class="subtitle"></p>
+          </div>
           <div class="carousel">
             <div id="testimonials-items" class="carousel-track"></div>
 
@@ -165,13 +201,41 @@
             <div id="testimonials-dots" class="carousel-dots"></div>
 
             <!-- Navigation Arrows -->
-            <button class="carousel-prev" aria-label="Vorheriges Testimonial">
-              ←
-            </button>
-            <button class="carousel-next" aria-label="Nächstes Testimonial">
-              →
-            </button>
+            <div class="carousel-arrows">
+              <button class="carousel-prev" aria-label="Vorheriges Testimonial">
+                ←
+              </button>
+              <button class="carousel-next" aria-label="Nächstes Testimonial">
+                →
+              </button>
+            </div>
           </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="pricing">
+        <div class="container">
+          <!-- Kleine Überschrift -->
+          <h2 id="pricing-title" class="pricing-title"></h2>
+
+          <!-- Große Headline -->
+          <h3 id="pricing-headline" class="pricing-headline"></h3>
+          <!-- Subheadline -->
+          <p id="pricing-subheadline" class="pricing-subheadline"></p>
+
+          <!-- Social Icons -->
+          <div id="pricing-social" class="pricing-social"></div>
+
+          <!-- Pricing-Pläne -->
+          <div id="pricing-plans" class="pricing-plans"></div>
+        </div>
+      </section>
+
+      <section id="heise-io-faq" class="faq">
+        <div class="container">
+          <h2 id="heise-io-faq-title"></h2>
+          <div id="heise-io-faq-items" class="faq-list"></div>
+          <!-- <a id="" class="btn btn-primary" href="#"></a> -->
         </div>
       </section>
 
@@ -184,27 +248,19 @@
               <form id="contact-form"></form>
               <div id="contact-pagination"></div>
             </div>
-            <div class="contact-image">
+            <!--             <div class="contact-image">
               <img id="contact-image" alt="App Screens" />
-            </div>
+            </div> -->
           </div>
-        </div>
-      </section>
-
-      <section id="heise-io-faq" class="faq">
-        <div class="container">
-          <h2 id="heise-io-faq-title"></h2>
-          <div id="heise-io-faq-items" class="faq-list"></div>
-          <a id="" class="btn btn-primary" href="#"></a>
         </div>
       </section>
     </main>
 
-   <footer id="site-footer" class="site-footer"></footer>
+    <footer id="site-footer" class="site-footer"></footer>
 
-    <script src="script.js"></script>
-    <script src="menu.js"></script>
-    <script src="contact.js"></script>
-    <script src="footer.js"></script>
+    <script type="module" src="js/script.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/footer.js"></script>
   </body>
 </html>

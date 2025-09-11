@@ -1,0 +1,34 @@
+{
+  "title": "AUSGEZEICHNET!",
+  "visual": {
+    "image": "img/awards/awards-2025.webp",
+    "alt": "Karsten Marquardsen und Finn Hassold mit den Auszeichnungen",
+    "caption": "Karsten Marquardsen (Geschäftsführer) und Finn Hassold (Leiter Produktmanagement) Digital bei heise regioconcept"
+  },
+  "social": [
+    {
+      "icon": "img/awards/vdav-verzeichnismedienpreis-2025.webp",
+      "alt": "vdav VerzeichnismedienPreis 2025 – Innovation Award Gold"
+    },
+    {
+      "icon": "img/awards/siinda-award-2025.webp",
+      "alt": "Siinda Digital Marketing & Innovation Awards 2025 – Silver, Innovation through leveraging AI"
+    }
+  ],
+  "paragraphs": ["Unsere heise KI Social App wurde gleich zweifach prämiert:"],
+  "list": [
+    "[vdav] VerzeichnismedienPreis 2025 – Innovation Award Gold",
+    "Siinda Digital Marketing & Innovation Awards 2025 – Silber, Innovation through AI"
+  ],
+    "afterList": ["Beide Auszeichnungen würdigen unseren Einsatz für innovative Lösungen, die kleine und mittlere Unternehmen unterstützen."],
+  "buttons": [
+    {
+      "label": "[vdav] Branchentreff 2025",
+      "link": "#vdav"
+    },
+    {
+      "label": "Siinda's Innovation Awards 2025",
+      "link": "#siinda"
+    }
+  ]
+}

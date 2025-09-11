@@ -1,8 +1,8 @@
 /* ===== FAQ Section (Glasmorphism) ===== */
 
 .faq {
-  padding: var(--space-8) 0 var(--space-9);
-/*   background: linear-gradient(180deg, #f9fbff 0%, #e7efff 100%); */
+  padding: var(--space-8) 0 var(--space-2);
+  /*   background: linear-gradient(180deg, #f9fbff 0%, #e7efff 100%); */
 }
 
 .faq .container {
@@ -11,11 +11,11 @@
 
 .faq h2 {
   text-align: center;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
   font-weight: 800;
   color: var(--color-primary);
   margin-bottom: var(--space-6);
-}                     
+}
 
 /* CTA unter der Liste */
 #heise-io-faq-cta {
@@ -26,7 +26,9 @@
 /* Liste: einspaltig, mit vertikalen Abständen */
 .faq-list {
   display: grid;
-  gap: var(--space-4);
+  gap: var(--space-2);
+  max-width: 46em;
+  margin: 0 auto;
 }
 
 /* Einzelnes Item mit Glas-Effekt */
@@ -38,7 +40,9 @@
   backdrop-filter: blur(12px) saturate(150%);
   -webkit-backdrop-filter: blur(12px) saturate(150%);
   overflow: hidden;
-  transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+  transition: box-shadow 0.25s ease, transform 0.25s ease,
+    border-color 0.25s ease;
+  width: 100%;
 }
 
 .faq-item:hover {
@@ -54,56 +58,57 @@
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
+  justify-content: space-between;
   gap: var(--space-3);
-  width: 100%;
-  padding: var(--space-4) var(--space-5);
-  color: var(--color-dark);
+  padding: var(--space-4) var(--space-5); /* Platz links/rechts */
+  width: calc(100% - var(--space-2)); /* verhindert, dass Icon abgeschnitten wird */
+  box-sizing: border-box;
 }
 
 .faq-question span:first-child {
   font-size: 1.05rem;
   font-weight: 700;
   line-height: 1.35;
-  letter-spacing: .005em;
+  letter-spacing: 0.005em;
+  color: var(--color-primary);
 }
 
 /* Plus/Minus Icon rechts */
 .faq-icon {
   width: 28px;
   height: 28px;
-  border-radius: 999px;
-  display: grid;
-  place-items: center;
-  font-weight: 800;
-  font-size: 1rem;
-  color: var(--color-primary);
-  background: rgba(255,255,255,0.7);
-  border: 1px solid rgba(20, 49, 91, 0.1);
-  transition: transform .2s ease, background .2s ease, color .2s ease;
+  display: flex;
+  left: 40px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 1.75rem;
+  color: var(--color-secondary);
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 
 .faq-question:hover .faq-icon {
   transform: scale(1.05);
-  background: rgba(255,255,255,0.9);
+  color: var(--color-primary);
 }
 
 /* Fokus für A11y */
 .faq-question:focus-visible {
   outline: 3px solid var(--color-secondary);
   outline-offset: 3px;
-  border-radius: .75rem;
+  border-radius: 0.75rem;
 }
 
 /* Antwortbereich mit sanfter Collapsing-Animation */
 .faq-answer {
   padding: 0 var(--space-5) var(--space-5);
-  color: var(--text);
+  color: #09182d;
   font-size: 0.98rem;
   line-height: 1.6;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: max-height .35s ease, opacity .25s ease, padding-top .25s ease;
+  transition: max-height 0.35s ease, opacity 0.25s ease, padding-top 0.25s ease;
 }
 
 /* Wenn geöffnet (per aria-expanded gesteuert) */
@@ -116,7 +121,7 @@
 
 /* Falls JS das hidden-Attribut nutzt: sicherheitshalber ausblenden */
 .faq-answer[hidden] {
-  display: block;              /* wichtig, damit max-height animieren kann */
+  display: none;
   max-height: 0 !important;
   opacity: 0 !important;
   padding-top: 0 !important;
@@ -127,8 +132,13 @@
   content: "";
   display: block;
   height: 1px;
-  background: linear-gradient(90deg, rgba(16,27,68,0.08), rgba(16,27,68,0.02));
+  background: linear-gradient(
+    90deg,
+    rgba(16, 27, 68, 0.08),
+    rgba(16, 27, 68, 0.02)
+  );
   margin: 0 0 var(--space-3);
+  opacity: 1;
 }
 
 /* Dark Theme Anpassungen */
@@ -138,8 +148,8 @@
 
 :root[data-theme="dark"] .faq-item {
   background: rgba(37, 44, 51, 0.55);
-  border-color: rgba(255,255,255,0.08);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 :root[data-theme="dark"] .faq-question span:first-child {
@@ -151,9 +161,9 @@
 }
 
 :root[data-theme="dark"] .faq-icon {
-  background: rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.12);
   color: var(--color-secondary);
-  border-color: rgba(255,255,255,0.12);
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
 /* Motion-Reduce */

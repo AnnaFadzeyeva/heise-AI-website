@@ -20,6 +20,7 @@
   flex: 1;               
   width: 100%;
   padding-right: calc(var(--media-w) + 2rem);
+  padding-top: calc(var(--space-6, 2.5rem) + 2.5rem);
 }
 
 /* Textblock */
@@ -30,6 +31,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.hero-copy p{
+  color: var(--color-primary);
 }
 
 /* Bildblock */
@@ -47,7 +52,7 @@
 
 .hero-copy .eyebrow { color: var(--brand); font-weight: 800; letter-spacing: .02em; margin-bottom: .25rem; }
 .hero h1 {
-  font-size: clamp(2.5rem, 4.8vw + .5rem, 4.75rem);
+  font-size: clamp(2.2rem, 4vw + 0.4rem, 4rem);
   line-height: 1.05;
   letter-spacing: .01em;
   margin-bottom: var(--space-3, 1rem);

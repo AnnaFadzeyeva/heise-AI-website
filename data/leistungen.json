@@ -1,5 +1,5 @@
 {
-  "title": "Unsere Leistungen",
+  "title": "Unsere Vorteile",
   "description": "Erstellen Sie mit unserer innovativen KI-gestützten App überzeugende Social-Media-Beiträge.",
   "cta": {
     "label": "Kostenlose Demo anfordern",
@@ -10,11 +10,6 @@
       "icon": "img/icons/ai-generate-landscape.svg",
       "title": "Bildinhalte erkennen",
       "text": "Unsere Web-App erkennt und analysiert Bildinhalte, um ansprechende Beiträge für Ihr Unternehmen zu erstellen."
-    },
-    {
-      "icon": "img/icons/Graduation-Cap.svg",
-      "title": "Kontinuierliches Lernen",
-      "text": "Die Web-App lernt aus Ihren vergangenen Beiträgen und passt sich ständig an, um Ihr Unternehmen immer besser zu verstehen und zu repräsentieren."
     },
     {
       "icon": "img/icons/Business-To-Consumer.svg",
@@ -37,7 +32,7 @@
       "text": "Veröffentlichen Sie in einem Beitrag mehrere Bilder als Carousel oder Galerie. Auch Videos sind möglich für eine noch längere Verweildauer Ihrer Nutzer!"
     },
     {
-      "icon": "img/icons/sm5.svg",
+      "icon": "img/icons/Eye-Optic.svg",
       "title": "Sichtbarkeit steigern",
       "text": "Erhöhen Sie die Reichweite und Sichtbarkeit Ihres Unternehmens in den sozialen Netzwerken Facebook, Instagram, LinkedIn, X und WhatsApp."
     },
