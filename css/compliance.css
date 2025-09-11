@@ -14,7 +14,7 @@
   color: var(--color-primary);
 }
 
-.compliance h2{
+.compliance h2 {
   margin-bottom: var(--space-5);
 }
 
@@ -87,6 +87,14 @@
   width: auto;
   height: 100%;
   object-fit: contain;
+  filter: var(--card-icon-filter, none);
+}
+
+:root[data-theme="dark"] .compliance .card-icon img,
+:root[data-theme="dark"] .leistungen .card-icon img {
+  filter: brightness(0) saturate(100%) invert(62%) sepia(12%) saturate(5567%)
+    hue-rotate(199deg) brightness(103%) contrast(101%);
+  filter: invert(1) hue-rotate(180deg) !important;
 }
 
 /* Titel */
@@ -140,7 +148,6 @@
     flex-shrink: 0;
   }
 }
-
 
 /* ===== DARK MODE: Compliance & Leistungen ===== */
 :root[data-theme="dark"] .compliance h2,

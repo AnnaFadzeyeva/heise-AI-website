@@ -202,20 +202,13 @@
 
 /* Buttons */
 :root[data-theme="dark"] .pricing-footer .btn-secondary {
-  background: linear-gradient(
-    225deg,
-    var(--color-tertiary) 0%,
-    var(--color-secondary) 100%
-  );
-  color: #fff;
+    background: transparent;
+    color: var(--color-secondary);
+    border: 1px solid var(--color-secondary);
 }
 
 :root[data-theme="dark"] .pricing-footer .btn-primary {
-  background: linear-gradient(
-    225deg,
-    var(--color-primary-tint) 0%,
-    var(--color-primary) 100%
-  );
-  color: #fff;
+    background: var(--color-primary-tint);
+    color: var(--color-primary-contrast, #fff);
 }
 
