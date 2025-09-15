@@ -5,6 +5,16 @@
   /*   background: linear-gradient(180deg, #f9fbff 0%, #e7efff 100%); */
 }
 
+.workflow-hedlines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: var(--space-7);
+  margin-top: var(--space-6);
+  max-width: 36em;
+}
+
 .workflow-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -30,7 +40,6 @@
 .workflow .subtitle {
   font-size: 1.1rem;
   color: var(--color-primary);
-  margin-bottom: var(--space-8);
   max-width: 600px;
   line-height: 1.5;
 }
@@ -52,9 +61,9 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.workflow-social img:hover {
+/* .workflow-social img:hover {
   transform: translateY(-3px);
-}
+} */
 
 /* Rechtes Bild */
 .workflow-visual img {
@@ -140,7 +149,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-
+  width: 134px;
   padding: 10px 16px;
   min-height: 60px;
   line-height: 1.25;
@@ -226,6 +235,51 @@
   }
 }
 
+
+/* Nur Desktop */
+@media (min-width: 641px) {
+  .workflow-row {
+    position: relative;
+  }
+
+  /* Vertikale Linien von den drei Boxen nach unten */
+  .workflow-row .workflow-box {
+    position: relative;
+  }
+
+  .workflow-row .workflow-box::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 28px;
+    background: var(--wf-blue);
+    box-shadow: 0 0 0.5px rgba(29, 110, 255, 0.6),
+                0 0 8px rgba(29, 110, 255, 0.12);
+  }
+
+  /* horizontale Linie unten */
+  .workflow-row::after {
+    content: "";
+    position: absolute;
+    left: 74px;
+    right: 74px;
+    bottom: 0;
+    height: 2px;
+    background: var(--wf-blue);
+    border-radius: 2px;
+    box-shadow: 0 0 0.5px rgba(29, 110, 255, 0.6),
+                0 0 8px rgba(29, 110, 255, 0.12);
+  }
+}
+
+/* .workflow-row::after {
+  left: calc( (100% / 5) * 0 );
+  right: calc(100% - (100% / 5) * 5);
+}
+ */
 
 /* ===== DARK MODE Workflow ===== */
 :root[data-theme="dark"] {

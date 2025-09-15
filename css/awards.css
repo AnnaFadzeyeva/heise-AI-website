@@ -103,6 +103,10 @@
   justify-content: flex-start;
 }
 
+.awards-buttons a {
+  background: linear-gradient(225deg, #4776e6 0%, var(--color-secondary) 100%);
+}
+
 /* Container-Abstände in der Section */
 .awards .container {
   /* leichtes softes Hintergrund-Gefühl wie im Screenshot */

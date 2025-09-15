@@ -2,7 +2,6 @@
 .so-gehts {
   text-align: center;
   padding: var(--space-9) 0;
-/*   background: linear-gradient(180deg, #f9fbff 0%, #e7efff 100%); */
 }
 
 .so-gehts h2 {
@@ -16,15 +15,20 @@
   font-size: 1.1rem;
   color: var(--color-primary);
   max-width: 700px;
-  margin: 0 auto var(--space-8);
+  margin: 0 auto var(--space-6);
   line-height: 1.5;
 }
 
-.steps-list {
+/* === Desktop Grid === */
+.carousel-step-steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-8);
+  gap: var(--space-6);
   align-items: start;
+  box-shadow: inset 0 -50px 40px -30px rgba(84, 163, 224, 0.151);
+  overflow: hidden;
+  max-height: 30em;
+  justify-content: center;
 }
 
 .step-card {
@@ -53,25 +57,81 @@
 
 .step-card img {
   width: 100%;
-  max-width: 320px;
-  border-radius: 20px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+  max-width: 280px;
+  border-radius: 30px;
+  box-shadow: 0 16px 40px rgba(122, 195, 255, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.step-card img:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+/* === Dark Mode === */
+:root[data-theme="dark"] .so-gehts h2,
+:root[data-theme="dark"] .so-gehts .subtitle,
+:root[data-theme="dark"] .step-card h3 {
+  color: var(--color-dark-neutral);
 }
 
-/* Responsive Anpassung */
-@media (max-width: 900px) {
-  .steps-list {
-    grid-template-columns: 1fr;
+:root[data-theme="dark"] .step-card p {
+  color: var(--color-neutral-6);
+  border-bottom: 3px solid var(--wf-border);
+}
+
+:root[data-theme="dark"] .step-card img {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+:root[data-theme="dark"] .step-card img:hover {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* === Mobile Carousel === */
+@media (max-width: 959px) {
+  .carousel-step-steps {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+
+  .step-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .carousel-step-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    margin: 0 4px;
+    background: #cfd6e0;
+    cursor: pointer;
+  }
+
+  .carousel-step-dot.active {
+    background: var(--color-primary);
+  }
+
+  .carousel-step-arrows {
+    margin-top: var(--space-4);
+    display: flex;
+    justify-content: center;
     gap: var(--space-6);
   }
 
-  .step-card p {
-    max-width: 100%;
+  .carousel-step-arrows button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-primary);
+  }
+}
+
+/* === Desktop: Dots + Arrows verstecken === */
+@media (min-width: 960px) {
+  .carousel-step-dots {
+    display: none;
+  }
+  .carousel-step-arrows {
+    display: none;
   }
 }

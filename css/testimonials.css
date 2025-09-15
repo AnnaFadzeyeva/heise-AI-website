@@ -6,6 +6,10 @@
   overflow: hidden;
 }
 
+.testimonials .container {
+  overflow: hidden;
+}
+
 .referenzen-header {
   max-width: 50em;
   margin: 0 auto;
@@ -164,11 +168,14 @@ blockquote {
     margin: 0 auto;
   }
 
+  .testimonials .container {
+    overflow: visible;
+  }
+
   .carousel-track {
     gap: var(--space-3);
   }
 }
-
 
 /* ===== DARK MODE: Testimonials ===== */
 :root[data-theme="dark"] .testimonials h2,

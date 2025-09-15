@@ -24,6 +24,13 @@
     <link rel="stylesheet" href="css/contact.css" />
     <link rel="stylesheet" href="css/faq.css" />
     <link rel="stylesheet" href="css/footer.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Header / Navigation -->
@@ -114,11 +121,12 @@
     </div>
     <main>
       <section id="workflow" class="workflow">
+        <div class="container workflow-hedlines">
+          <h2 id="workflow-title"></h2>
+          <p id="workflow-subtitle" class="subtitle"></p>
+        </div>
         <div class="container workflow-inner">
           <div class="workflow-text">
-            <h2 id="workflow-title"></h2>
-            <p id="workflow-subtitle" class="subtitle"></p>
-
             <div id="workflow-infographic" class="workflow-infographic"></div>
 
             <div id="workflow-social" class="workflow-social"></div>
@@ -148,15 +156,30 @@
         </div>
       </section>
 
-      <!--       <section id="so-gehts" class="so-gehts">
+      <section id="so-gehts" class="so-gehts">
         <div class="container">
           <h2 id="so-gehts-title"></h2>
           <p id="so-gehts-subtitle" class="subtitle"></p>
 
-          <div id="so-gehts-steps" class="steps-list"></div>
+          <div class="carousel">
+            <div id="so-gehts-steps" class="carousel-step-steps"></div>
+
+            <!-- Pagination Dots -->
+            <div id="so-gehts-dots" class="carousel-step-dots"></div>
+
+            <!-- Navigation Arrows -->
+            <div class="carousel-step-arrows">
+              <button class="carousel-step-prev" aria-label="Vorheriger Schritt">
+                ←
+              </button>
+              <button class="carousel-step-next" aria-label="Nächster Schritt">
+                →
+              </button>
+            </div>
+          </div>
         </div>
       </section>
- -->
+
       <section id="compliance" class="compliance">
         <div class="container">
           <h2 id="compliance-title"></h2>
@@ -165,6 +188,24 @@
           <a id="compliance-cta" class="btn btn-primary" href="#"></a> -->
 
           <div id="compliance-cards" class="card-grid"></div>
+        </div>
+      </section>
+
+      <section id="pricing" class="pricing">
+        <div class="container">
+          <!-- Kleine Überschrift -->
+          <h2 id="pricing-title" class="pricing-title"></h2>
+
+          <!-- Große Headline -->
+          <h3 id="pricing-headline" class="pricing-headline"></h3>
+          <!-- Subheadline -->
+          <p id="pricing-subheadline" class="pricing-subheadline"></p>
+
+          <!-- Social Icons -->
+          <div id="pricing-social" class="pricing-social"></div>
+
+          <!-- Pricing-Pläne -->
+          <div id="pricing-plans" class="pricing-plans"></div>
         </div>
       </section>
 
@@ -205,24 +246,6 @@
               </button>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section id="pricing" class="pricing">
-        <div class="container">
-          <!-- Kleine Überschrift -->
-          <h2 id="pricing-title" class="pricing-title"></h2>
-
-          <!-- Große Headline -->
-          <h3 id="pricing-headline" class="pricing-headline"></h3>
-          <!-- Subheadline -->
-          <p id="pricing-subheadline" class="pricing-subheadline"></p>
-
-          <!-- Social Icons -->
-          <div id="pricing-social" class="pricing-social"></div>
-
-          <!-- Pricing-Pläne -->
-          <div id="pricing-plans" class="pricing-plans"></div>
         </div>
       </section>
 

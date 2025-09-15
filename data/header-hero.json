@@ -6,7 +6,8 @@
           { "label": "Vorteile", "url": "#leistungen" },
           { "label": "Preise", "url": "#pricing" },
           { "label": "Referenzen", "url": "#referenzen" },
-          { "label": "FAQ", "url": "#heise-io-faq" }
+          { "label": "FAQ", "url": "#heise-io-faq" },
+          { "label": "Kontakt", "url": "#contact-support" }
         ],
         "actions": {
           "login": { "label": "Anmelden", "url": "#login" },
@@ -37,7 +38,8 @@
           { "label": "Benefits", "url": "#leistungen" },
           { "label": "Pricing", "url": "#pricing" },
           { "label": "References", "url": "#referenzen" },
-          { "label": "FAQ", "url": "#heise-io-faq" }
+          { "label": "FAQ", "url": "#heise-io-faq" },
+          { "label": "Contact", "url": "#contact-support" }
         ],
         "actions": {
           "login": { "label": "Login", "url": "#login" },

@@ -37,6 +37,8 @@ button {
 
 /* ——— Design Tokens (Mapping auf theme.css) ——— */
 :root {
+  --font-family: "Source Sans 3", Arial, sans-serif;
+
   --bg: var(--background-color);
   --bg-2: #101b44; /* optional, entfernen wenn ungenutzt */
 
@@ -64,8 +66,7 @@ button {
 }
 
 body {
-  font-family: var(--font-family), ui-sans-serif, system-ui, -apple-system,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: var(--font-family);
   color: var(--text);
   line-height: 1.5;
   min-height: 100vh;
@@ -74,6 +75,12 @@ body {
   margin: 0;
   position: relative; /* wichtig für stacking context */
   background: var(--color-bg-1);
+  scroll-padding-top: -60px;
+}
+
+body,
+html {
+  scroll-padding-top: 70px;
 }
 
 body::before {
@@ -195,9 +202,9 @@ a {
 }
 
 :root[data-theme="dark"] .btn-secondary {
-    background: transparent;
-    color: var(--color-secondary);
-    border: 1px solid var(--color-secondary);
+  background: transparent;
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
 }
 
 :root[data-theme="dark"] .btn-tertiary {
@@ -279,4 +286,11 @@ a {
 }
 .btn-dark:hover {
   background: #0c0f14;
+}
+
+@media (max-width: 1199px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
 }

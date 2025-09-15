@@ -4,7 +4,9 @@ export function renderFooter(content) {
   footer.innerHTML = `
     <div class="container footer-top">
       <div class="footer-brand">
-        <img src="img/heiseAI-logo.svg" alt="${content.brand.alt}" class="footer-logo"/>
+        <img src="img/heiseAI-logo.svg" alt="${
+          content.brand.alt
+        }" class="footer-logo"/>
         <p>${content.brand.text}</p>
         <div class="social-links">
           ${content.brand.social
@@ -36,8 +38,13 @@ export function renderFooter(content) {
       </div>
 
       <div class="footer-partner">
+        <a href="mailto:${content.partner.email}" class="footer-email">
+    ${content.partner.email}
+        </a>
         <span>${content.partner.text}</span>
-        <img src="img/Logo_DEEP-CONTENT-Heise_micro.svg" alt="${content.partner.alt}" class="footer-partner-logo"/>
+        <img src="img/Logo_DEEP-CONTENT-Heise_micro.svg" alt="${
+          content.partner.alt
+        }" class="footer-partner-logo"/>
       </div>
     </div>
 
@@ -51,7 +58,6 @@ export function renderFooter(content) {
     </div>
   `;
 
-  
   const currentTheme = document.documentElement.getAttribute("data-theme");
   updateFooterLogos(currentTheme);
 }
@@ -62,9 +68,7 @@ function updateFooterLogos(theme) {
 
   if (footerLogo) {
     footerLogo.src =
-      theme === "light"
-        ? "img/heiseAI-logo.svg"
-        : "img/heiseAI-logo-dark.svg";
+      theme === "light" ? "img/heiseAI-logo.svg" : "img/heiseAI-logo-dark.svg";
   }
 
   if (partnerLogo) {

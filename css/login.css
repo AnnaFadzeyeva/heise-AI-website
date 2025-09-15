@@ -1,0 +1,57 @@
+/* ===== Login Section ===== */
+.login {
+  padding: 3rem 0;
+}
+
+.login-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form-wrapper {
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 1rem;
+  padding: var(--space-5);
+  text-align: left;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login h2 {
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: var(--color-primary);
+}
+
+.login .subtitle {
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.form-note {
+  font-size: 0.8rem;
+  color: var(--color-secondary);
+  margin-top: 0.6rem;
+}
+
+.login-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
