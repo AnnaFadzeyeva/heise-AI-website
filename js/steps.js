@@ -33,15 +33,17 @@ export function renderSteps(sectionId, content) {
   const stepCards = stepsEl.querySelectorAll(".step-card");
   const dots = dotsEl.querySelectorAll(".carousel-step-dot");
 
-  // Slide anzeigen (mobil)
+  // Slide anzeigen (nur mobil)
   function showSlide(index) {
     if (window.innerWidth >= 960) return; // nur mobil
     if (index < 0) index = stepCards.length - 1;
     if (index >= stepCards.length) index = 0;
     currentIndex = index;
 
-    stepsEl.style.transform = `translateX(-${index * 100}%)`;
+    const offset = -(index * 100);
+    stepsEl.style.transform = `translateX(${offset}%)`;
     stepsEl.style.transition = "transform 0.4s ease";
+
     dots.forEach((d, i) => d.classList.toggle("active", i === index));
   }
 
@@ -54,19 +56,23 @@ export function renderSteps(sectionId, content) {
   // Setup für mobil/desktop
   function setupCarousel() {
     if (window.innerWidth < 960) {
-      stepsEl.style.width = `${stepCards.length * 100}%`;
-      stepsEl.style.display = "flex";
-      stepsEl.style.flexWrap = "nowrap";
-      stepCards.forEach((c) => (c.style.minWidth = "100%"));
-      showSlide(currentIndex);
-    } else {
-      stepsEl.style.width = "100%";
-      stepsEl.style.transform = "none";
+      // Mobile: Slider
       stepsEl.style.display = "flex";
       stepsEl.style.flexWrap = "nowrap";
       stepCards.forEach((c) => {
-        c.style.minWidth = "auto"; // normale Größe
-        c.style.flex = "1";        // nebeneinander
+        c.style.flex = "0 0 100%";
+        c.style.maxWidth = "100%";
+      });
+      showSlide(currentIndex); // hier Start setzen
+    } else {
+      // Desktop: alle nebeneinander, kein translate
+      stepsEl.style.display = "flex";
+      stepsEl.style.flexWrap = "nowrap";
+      stepsEl.style.transform = "none";
+      stepCards.forEach((c) => {
+        c.style.flex = "1";
+        c.style.maxWidth = "none";
+        c.style.minWidth = "auto";
       });
     }
   }

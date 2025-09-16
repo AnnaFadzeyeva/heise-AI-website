@@ -26,9 +26,9 @@
   gap: 0;
   align-items: flex-start;
   box-shadow: inset 0 -50px 40px -30px rgba(84, 163, 224, 0.151);
-  overflow: hidden;
   max-height: 30em;
   justify-content: center;
+  overflow: hidden;
 }
 
 .step-card {
@@ -67,12 +67,26 @@
 @media (max-width: 959px) {
   .carousel-step-steps {
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
+    justify-content: flex-start;
+    box-shadow: none;
   }
 
   .step-card {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+
+  .step-card {
+    max-height: 440px;
+    overflow: hidden;
+    box-shadow: inset 0 -50px 40px -30px rgba(84, 163, 224, 0.151);
+  }
+
+  .carousel-step-dots {
+    margin-top: var(--space-4);
+    display: flex;
+    justify-content: center;
   }
 
   .carousel-step-dot {
@@ -83,6 +97,7 @@
     margin: 0 4px;
     background: #cfd6e0;
     cursor: pointer;
+    z-index: 10000;
   }
 
   .carousel-step-dot.active {
@@ -102,6 +117,10 @@
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--color-primary);
+  }
+  .step-card img {
+    max-width: 280px;
+    height: auto;
   }
 }
 
