@@ -25,7 +25,7 @@
       ],
       "image": {
         "src": "img/bg-post-1200.webp",
-        "srcset": "img/bg-post-600.webp 600w, img/bg-post-1200.webp 1200w, img/bg-post-2000.webp 2000w",
+        "srcset": "img/heiseAI-screen-600.webp 600w, img/heiseAI-screen-1200.webp 1200w, img/heiseAI-screen-2000.webp 2000w",
         "sizes": "(max-width: 768px) 100vw, 50vw",
         "alt": "Social Media Post Mockup"
       }
@@ -57,7 +57,7 @@
       ],
       "image": {
         "src": "img/bg-post-1200.webp",
-        "srcset": "img/bg-post-600.webp 600w, img/bg-post-1200.webp 1200w, img/bg-post-2000.webp 2000w",
+        "srcset": "img/heiseAI-screen-600.webp 600w, img/heiseAI-screen-1200.webp 1200w, img/heiseAI-screen-2000.webp 2000w",
         "sizes": "(max-width: 768px) 100vw, 50vw",
         "alt": "Social Media Post Mockup"
       }

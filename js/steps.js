@@ -1,3 +1,4 @@
+// js/steps.js
 export function renderSteps(sectionId, content) {
   const stepsEl = document.getElementById(`${sectionId}-steps`);
   const dotsEl = document.getElementById(`${sectionId}-dots`);
@@ -9,7 +10,7 @@ export function renderSteps(sectionId, content) {
   stepsEl.innerHTML = "";
   dotsEl.innerHTML = "";
 
-  // Alle Steps einfügen
+  // Steps einfügen
   content.steps.forEach((step, index) => {
     const stepEl = document.createElement("div");
     stepEl.className = "step-card";
@@ -20,7 +21,7 @@ export function renderSteps(sectionId, content) {
     `;
     stepsEl.appendChild(stepEl);
 
-    // Dot anlegen
+    // Dots
     const dot = document.createElement("button");
     dot.className = "carousel-step-dot";
     if (index === 0) dot.classList.add("active");
@@ -32,9 +33,9 @@ export function renderSteps(sectionId, content) {
   const stepCards = stepsEl.querySelectorAll(".step-card");
   const dots = dotsEl.querySelectorAll(".carousel-step-dot");
 
-  // Slide anzeigen (nur mobil)
+  // Slide anzeigen (mobil)
   function showSlide(index) {
-    if (window.innerWidth >= 900) return; // nur mobil aktiv
+    if (window.innerWidth >= 960) return; // nur mobil
     if (index < 0) index = stepCards.length - 1;
     if (index >= stepCards.length) index = 0;
     currentIndex = index;
@@ -50,16 +51,23 @@ export function renderSteps(sectionId, content) {
     nextBtn.addEventListener("click", () => showSlide(currentIndex + 1));
   }
 
-  // Initial mobil prüfen
+  // Setup für mobil/desktop
   function setupCarousel() {
-    if (window.innerWidth < 900) {
+    if (window.innerWidth < 960) {
+      stepsEl.style.width = `${stepCards.length * 100}%`;
       stepsEl.style.display = "flex";
+      stepsEl.style.flexWrap = "nowrap";
       stepCards.forEach((c) => (c.style.minWidth = "100%"));
       showSlide(currentIndex);
     } else {
-      stepsEl.style.display = "grid";
+      stepsEl.style.width = "100%";
       stepsEl.style.transform = "none";
-      stepCards.forEach((c) => (c.style.minWidth = "auto"));
+      stepsEl.style.display = "flex";
+      stepsEl.style.flexWrap = "nowrap";
+      stepCards.forEach((c) => {
+        c.style.minWidth = "auto"; // normale Größe
+        c.style.flex = "1";        // nebeneinander
+      });
     }
   }
 

@@ -233,6 +233,11 @@
     width: 100%;
     max-width: 320px;
   }
+
+  .workflow-box {
+    margin: auto
+    ;
+  }
 }
 
 
