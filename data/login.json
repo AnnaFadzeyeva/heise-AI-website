@@ -1,0 +1,48 @@
+{
+  "de": {
+    "login": {
+      "title": "Bei Ihrem Konto anmelden",
+      "subtitle": "Nutzen Sie Ihre E-Mail-Adresse zum Einloggen",
+      "steps": {
+        "email": {
+          "label": "E-Mail-Adresse",
+          "placeholder": "exemple@company.com",
+          "button": "Fortfahren"
+        },
+        "code": {
+          "note": "Bitte prüfe dein E-Mail-Postfach und gib den Code ein, um fortzufahren.",
+          "label": "Login-Code eingeben",
+          "placeholder": "123456",
+          "button": "Fortfahren",
+          "links": {
+            "back": "Zurück",
+            "resend": "Neuen Code anfordern"
+          }
+        }
+      }
+    }
+  },
+  "en": {
+    "login": {
+      "title": "Sign in to your account",
+      "subtitle": "Use your email address to log in",
+      "steps": {
+        "email": {
+          "label": "Email address",
+          "placeholder": "example@company.com",
+          "button": "Continue"
+        },
+        "code": {
+          "note": "Please check your email inbox and enter the code to continue.",
+          "label": "Enter login code",
+          "placeholder": "123456",
+          "button": "Continue",
+          "links": {
+            "back": "Back",
+            "resend": "Request new code"
+          }
+        }
+      }
+    }
+  }
+}

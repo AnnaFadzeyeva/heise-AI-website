@@ -1,6 +1,7 @@
 /* ===== Login Section ===== */
-.login {
+.section-login {
   padding: 3rem 0;
+
 }
 
 .login-content {
@@ -18,19 +19,19 @@
   backdrop-filter: blur(12px) saturate(150%);
   -webkit-backdrop-filter: blur(12px) saturate(150%);
   border: 1px solid rgba(255, 255, 255, 0.4);
-  max-width: 400px;
+  max-width: 440px;
   width: 100%;
 }
 
-.login h2 {
+#login-title {
   font-size: clamp(1.6rem, 3vw, 2rem);
   font-weight: 700;
   margin-bottom: 0.3rem;
   color: var(--color-primary);
 }
 
-.login .subtitle {
-  font-size: 0.95rem;
+#login-subtitle {
+  font-size: 1rem;
   color: var(--color-primary);
   margin-bottom: 1rem;
 }
@@ -38,8 +39,20 @@
 .form-note {
   font-size: 0.8rem;
   color: var(--color-secondary);
-  margin-top: 0.6rem;
+  margin: var(--space-5) var(--space-1);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.login-pagination{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  align-items: center;
+}
+
 
 .login-links {
   display: flex;
@@ -53,5 +66,8 @@
   color: var(--color-primary);
   font-size: 0.85rem;
   cursor: pointer;
+}
+
+.btn-link:hover {
   text-decoration: underline;
 }

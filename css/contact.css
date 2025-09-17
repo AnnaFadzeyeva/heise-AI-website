@@ -89,9 +89,18 @@
   opacity: 50%;
 }
 
+textarea {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+textarea::placeholder {
+  font-family: "Source Sans 3", sans-serif;
+}
 /* Zwei Spalten für Email + Telefon */
 .form-row {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   gap: 0.8rem;
 }
 
@@ -104,7 +113,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  margin-top: var(--space-3) 0;
+  margin: var(--space-2) 0;
 }
 
 /* ===== Image ===== */
@@ -118,6 +127,34 @@
   height: auto;
   border-radius: 0.5rem;
 }
+
+/* Phone input wrapper */
+.phone-input-wrapper {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  width: 100%;
+}
+
+.phone-select {
+  flex: 0 0 90px;
+  padding: 0.5rem 0.45rem;
+  border: 1px solid #cfd6e0;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  background-color: transparent; /* gleich wie Inputs */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Fokus wie Input */
+.phone-select:focus {
+  border-color: #4777e696;
+  outline: 3px solid var(--color-secondary);
+}
+
+
+
 
 /* ===== Responsive ===== */
 @media (max-width: 1057px) {
@@ -141,9 +178,6 @@
     font-size: 0.85rem;
   }
 
-  #contact-pagination {
-    
-  }
 
   .contact-image {
     order: -1;
@@ -197,4 +231,15 @@
     background: transparent;
     color: var(--color-secondary);
     border: 1px solid var(--color-secondary);
+}
+
+:root[data-theme="dark"] .phone-select {
+  color: var(--color-neutral-8);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+:root[data-theme="dark"] .phone-select:focus {
+  border-color: var(--color-secondary);
+  outline: 3px solid color-mix(in srgb, var(--color-secondary) 60%, transparent);
 }

@@ -3,14 +3,14 @@
     "header": {
       "nav": {
         "links": [
-          { "label": "Vorteile", "url": "#leistungen" },
-          { "label": "Preise", "url": "#pricing" },
-          { "label": "Referenzen", "url": "#referenzen" },
-          { "label": "FAQ", "url": "#heise-io-faq" },
-          { "label": "Kontakt", "url": "#contact-support" }
+          { "label": "Vorteile", "url": "/#leistungen" },
+          { "label": "Preise", "url": "/#pricing" },
+          { "label": "Referenzen", "url": "/#referenzen" },
+          { "label": "FAQ", "url": "/#heise-io-faq" },
+          { "label": "Kontakt", "url": "/#contact-support" }
         ],
         "actions": {
-          "login": { "label": "Anmelden", "url": "#login" },
+          "login": { "label": "Anmelden", "url": "/login" },
           "cta": { "label": "Kostenlos testen", "url": "#test" }
         }
       }
@@ -35,14 +35,14 @@
     "header": {
       "nav": {
         "links": [
-          { "label": "Benefits", "url": "#leistungen" },
-          { "label": "Pricing", "url": "#pricing" },
-          { "label": "References", "url": "#referenzen" },
-          { "label": "FAQ", "url": "#heise-io-faq" },
-          { "label": "Contact", "url": "#contact-support" }
+          { "label": "Benefits", "url": "/#leistungen" },
+          { "label": "Pricing", "url": "/#pricing" },
+          { "label": "References", "url": "/#referenzen" },
+          { "label": "FAQ", "url": "/#heise-io-faq" },
+          { "label": "Contact", "url": "/#contact-support" }
         ],
         "actions": {
-          "login": { "label": "Login", "url": "#login" },
+          "login": { "label": "Login", "url": "/login" },
           "cta": { "label": "Start Free Trial", "url": "#test" }
         }
       }

@@ -26,7 +26,10 @@
     <link rel="stylesheet" href="css/login.css" />
     <link rel="stylesheet" href="css/footer.css" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Header / Navigation -->
@@ -34,7 +37,7 @@
     <header class="site-header">
       <div class="container header-inner">
         <!-- Links: Logo -->
-        <a class="brand" href="#home" aria-label="Startseite">
+        <a class="brand" href="/#home" aria-label="Startseite">
           <img
             class="brand-logo"
             src="img/heiseAI-logo.svg"
@@ -91,62 +94,42 @@
     </header>
 
     <main>
-      <section class="login">
+      <section class="section-login container">
         <div class="login-content">
           <div class="login-form-wrapper">
-            <h2 id="login-title">Bei Ihrem Konto anmelden</h2>
-            <p class="subtitle" id="login-subtitle">
-              Nutzen Sie Ihre E-Mail-Adresse zum Einloggen
-            </p>
+            <h1 id="login-title"></h1>
+            <p class="subtitle" id="login-subtitle"></p>
 
             <!-- Step 1: Email -->
             <div id="login-step-email">
               <div class="form-field">
-                <label for="login-email">E-Mail-Adresse</label>
-                <input
-                  id="login-email"
-                  type="email"
-                  name="email"
-                  placeholder="exemple@company.com"
-                  required
-                />
+                <label for="login-email"></label>
+                <input id="login-email" type="email" name="email" required />
               </div>
-              <div id="login-pagination">
-                <button id="login-email-submit" class="btn-small btn-primary">
-                  Fortfahren
-                </button>
+              <div id="login-pagination" class="login-pagination">
+                <button
+                  id="login-email-submit"
+                  class="btn btn-primary"
+                ></button>
               </div>
-              <p class="form-note">
-                Neu bei heise AI? <a href="#">Konto erstellen</a>
-              </p>
             </div>
 
             <!-- Step 2: Code -->
             <div id="login-step-code" style="display: none">
-              <p class="form-note">
-                Bitte prüfe dein E-Mail-Postfach und gib den Code ein, um
-                fortzufahren.
-              </p>
+              <p class="form-note"></p>
               <div class="form-field">
-                <label for="login-code">Login-Code eingeben</label>
-                <input
-                  id="login-code"
-                  type="text"
-                  name="code"
-                  placeholder="123456"
-                  required
-                />
+                <label for="login-code"></label>
+                <input id="login-code" type="text" name="code" required />
               </div>
               <div id="login-pagination">
-                <button id="login-code-submit" class="btn-small btn-primary">
-                  Fortfahren
-                </button>
+                <button
+                  id="login-code-submit"
+                  class="btn-small btn-primary"
+                ></button>
               </div>
               <div class="login-links">
-                <button id="login-back" class="btn-link">Zurück</button>
-                <button id="login-resend" class="btn-link">
-                  Neuen Code anfordern
-                </button>
+                <button id="login-back" class="btn-link"></button>
+                <button id="login-resend" class="btn-link"></button>
               </div>
             </div>
           </div>
@@ -161,5 +144,6 @@
     <script src="js/contact.js"></script>
     <script src="js/footer.js"></script>
     <script src="js/themeToggle.js"></script>
+
   </body>
 </html>
