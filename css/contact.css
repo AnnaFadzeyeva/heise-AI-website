@@ -49,53 +49,6 @@
   margin-bottom: 0.6rem;
 }
 
-/* ===== Form Fields ===== */
-.form-field {
-  margin-bottom: 0.8rem;
-}
-
-.form-field label {
-  display: block;
-  font-weight: 500;
-  margin-bottom: 0.15rem;
-  font-size: 0.85rem;
-  color: var(--color-primary);
-}
-
-.form-field input,
-.form-field textarea {
-  width: 100%;
-  padding: 0.55rem 0 0.55rem 0.55rem;
-  border: none;
-  border-radius: 0.25rem;
-  border: 1px solid #cfd6e0;
-  font-size: 0.9rem;
-  color: var(--color-primary);
-  background-color: transparent;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  resize: vertical;
-}
-
-.form-field input:focus,
-.form-field textarea:focus {
-  border-color: #4777e696;
-  outline: 3px solid var(--color-secondary);
-/*   box-shadow: 0 1px 0 0 var(--color-primary); */
-}
-
-.form-field input::placeholder,
-.form-field textarea::placeholder {
-  color: var(--color-primary);
-  opacity: 50%;
-}
-
-textarea {
-  font-family: "Source Sans 3", sans-serif;
-}
-
-textarea::placeholder {
-  font-family: "Source Sans 3", sans-serif;
-}
 /* Zwei Spalten für Email + Telefon */
 .form-row {
   display: flex;
@@ -106,6 +59,10 @@ textarea::placeholder {
 
 .form-row .form-field {
   flex: 1;
+}
+
+.phone-select {
+  padding: 0.5rem 0.55rem;
 }
 
 /* ===== Pagination / Button ===== */
@@ -136,26 +93,6 @@ textarea::placeholder {
   width: 100%;
 }
 
-.phone-select {
-  flex: 0 0 90px;
-  padding: 0.5rem 0.45rem;
-  border: 1px solid #cfd6e0;
-  border-radius: 0.25rem;
-  font-size: 0.9rem;
-  color: var(--color-primary);
-  background-color: transparent; /* gleich wie Inputs */
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* Fokus wie Input */
-.phone-select:focus {
-  border-color: #4777e696;
-  outline: 3px solid var(--color-secondary);
-}
-
-
-
-
 /* ===== Responsive ===== */
 @media (max-width: 1057px) {
   .contact-content {
@@ -177,7 +114,6 @@ textarea::placeholder {
   .form-field textarea {
     font-size: 0.85rem;
   }
-
 
   .contact-image {
     order: -1;
@@ -208,38 +144,8 @@ textarea::placeholder {
   color: var(--color-neutral-6);
 }
 
-:root[data-theme="dark"] .form-field input,
-:root[data-theme="dark"] .form-field textarea {
-  color: var(--color-neutral-8);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-:root[data-theme="dark"] .form-field input::placeholder,
-:root[data-theme="dark"] .form-field textarea::placeholder {
-  color: var(--color-neutral-5);
-  opacity: 0.6;
-}
-
-:root[data-theme="dark"] .form-field input:focus,
-:root[data-theme="dark"] .form-field textarea:focus {
-  border-color: var(--color-secondary);
-  outline: 3px solid color-mix(in srgb, var(--color-secondary) 60%, transparent);
-}
-
 :root[data-theme="dark"] #contact-pagination button {
-    background: transparent;
-    color: var(--color-secondary);
-    border: 1px solid var(--color-secondary);
-}
-
-:root[data-theme="dark"] .phone-select {
-  color: var(--color-neutral-8);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-:root[data-theme="dark"] .phone-select:focus {
-  border-color: var(--color-secondary);
-  outline: 3px solid color-mix(in srgb, var(--color-secondary) 60%, transparent);
+  background: transparent;
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
 }

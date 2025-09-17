@@ -7,6 +7,7 @@ import { renderTestimonials } from "./testimonials.js";
 import { renderContact } from "./contact.js";
 import { renderFooter } from "./footer.js";
 import { renderHeaderHero } from "./headerHero.js";
+import { renderLogin } from "./login.js";
 function getLanguage() {
   return localStorage.getItem("lang") || "de";
 }
@@ -284,4 +285,5 @@ function reloadSections() {
       const content = data[lang] || data["de"];
       renderFooter(content);
     });
+  renderLogin();
 }

@@ -1,0 +1,88 @@
+/* ===== Einheitliche Input Styles ===== */
+
+/* Wrapper für alle Input-Felder, Textareas und Dropdowns */
+.form-field {
+  margin-bottom: 0.8rem;
+}
+
+.form-field label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.15rem;
+  font-size: 0.85rem;
+  color: var(--color-primary);
+}
+
+/* Einheitliche Basis-Styles für Input, Textarea, Select */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.55rem 0.55rem;
+  border-radius: 0.25rem;
+  border: 1px solid #cfd6e0;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  background-color: transparent;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Fokus-Styles */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #4777e696;
+  outline: 3px solid var(--color-secondary);
+}
+
+/* Placeholder */
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-primary);
+  opacity: 0.5;
+}
+
+/* Textarea extra */
+textarea {
+  resize: vertical;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+textarea::placeholder {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+/* Telefon Input Wrapper */
+.phone-input-wrapper {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  width: 100%;
+}
+
+.phone-input-wrapper select {
+  flex: 0 0 90px;
+}
+
+/* Dark Mode */
+:root[data-theme="dark"] input,
+:root[data-theme="dark"] textarea,
+:root[data-theme="dark"] select {
+  color: var(--color-neutral-8);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+:root[data-theme="dark"] input::placeholder,
+:root[data-theme="dark"] textarea::placeholder,
+:root[data-theme="dark"] select::placeholder {
+  color: var(--color-neutral-5);
+  opacity: 0.6;
+}
+
+:root[data-theme="dark"] input:focus,
+:root[data-theme="dark"] textarea:focus,
+:root[data-theme="dark"] select:focus {
+  border-color: var(--color-secondary);
+  outline: 3px solid color-mix(in srgb, var(--color-secondary) 60%, transparent);
+}

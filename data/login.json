@@ -1,22 +1,22 @@
 {
   "de": {
     "login": {
-      "title": "Bei Ihrem Konto anmelden",
-      "subtitle": "Nutzen Sie Ihre E-Mail-Adresse zum Einloggen",
+      "title": "Anmelden oder Konto erstellen",
+      "subtitle": "Bitte geben Sie Ihre E-Mail-Adresse ein",
       "steps": {
         "email": {
           "label": "E-Mail-Adresse",
-          "placeholder": "exemple@company.com",
-          "button": "Fortfahren"
+          "placeholder": "beispiel@firma.com",
+          "button": "Weiter"
         },
         "code": {
-          "note": "Bitte prüfe dein E-Mail-Postfach und gib den Code ein, um fortzufahren.",
+          "note": "Bitte prüfen Sie Ihr E-Mail-Postfach und geben Sie den Code ein, um fortzufahren.",
           "label": "Login-Code eingeben",
           "placeholder": "123456",
-          "button": "Fortfahren",
+          "button": "Weiter",
           "links": {
             "back": "Zurück",
-            "resend": "Neuen Code anfordern"
+            "resend": "Neuen Code senden"
           }
         }
       }
@@ -24,22 +24,22 @@
   },
   "en": {
     "login": {
-      "title": "Sign in to your account",
-      "subtitle": "Use your email address to log in",
+      "title": "Sign in or create an account",
+      "subtitle": "Please enter your email address",
       "steps": {
         "email": {
           "label": "Email address",
           "placeholder": "example@company.com",
-          "button": "Continue"
+          "button": "Next"
         },
         "code": {
-          "note": "Please check your email inbox and enter the code to continue.",
+          "note": "Please check your inbox and enter the code to continue.",
           "label": "Enter login code",
           "placeholder": "123456",
-          "button": "Continue",
+          "button": "Next",
           "links": {
             "back": "Back",
-            "resend": "Request new code"
+            "resend": "Send new code"
           }
         }
       }
