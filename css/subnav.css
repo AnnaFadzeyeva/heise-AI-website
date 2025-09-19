@@ -62,3 +62,71 @@
 .subnav .subnav-item.active .subnav-link img {
   filter: brightness(0) invert(1); /* Icon weiß färben */
 }
+
+
+
+/* ===== DARK MODE: Subnav & Download ===== */
+
+/* Sidebar Container + Download */
+:root[data-theme="dark"] .subnav .subnav-menu,
+:root[data-theme="dark"] .download-block {
+  background: rgba(37, 44, 51, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+}
+
+/* Download Texte */
+:root[data-theme="dark"] .download-block h2,
+:root[data-theme="dark"] .download-block p {
+  color: var(--color-neutral-7, #dee2e6);
+}
+
+/* Links */
+:root[data-theme="dark"] .subnav .subnav-link {
+  color: var(--color-neutral-7, #dee2e6);
+}
+
+:root[data-theme="dark"] .subnav .subnav-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-neutral-8, #f1f3f5);
+}
+
+/* Aktiver Link */
+:root[data-theme="dark"] .subnav .subnav-item.active .subnav-link {
+  background: #8A99AE;
+  color: #111619;
+}
+
+:root[data-theme="dark"] .subnav .subnav-item.active .subnav-link img {
+  filter: brightness(0) invert(1);
+}
+
+/* Icons allgemein */
+:root[data-theme="dark"] .subnav .subnav-link img {
+  filter: brightness(0.85);
+}
+
+
+/* ===== Subnav Icons im Dark Mode ===== */
+
+
+:root[data-theme="dark"] .subnav .subnav-link img {
+  filter: brightness(0) invert(0.8);
+  opacity: 0.85;
+}
+
+:root[data-theme="dark"] .subnav .subnav-link:hover img {
+  filter: brightness(0) invert(1);
+  opacity: 1;
+}
+
+
+:root[data-theme="dark"] .subnav .subnav-item.active .subnav-link img {
+  filter: none;
+  opacity: 1;
+}
+
+
+

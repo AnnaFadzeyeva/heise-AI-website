@@ -33,11 +33,11 @@
       "buttons": {
         "appstore": {
           "link": "https://apps.apple.com/de/app/heise-ai",
-          "image": "img/badges/appstore-badge.svg"
+          "image": "img/badges/appstore-badge-light.svg"
         },
         "googleplay": {
           "link": "https://play.google.com/store/apps/details?id=heise.ai",
-          "image": "img/badges/googleplay-badge.svg"
+          "image": "img/badges/googleplay-badge-light.svg"
         }
       }
     }
@@ -76,11 +76,11 @@
       "buttons": {
         "appstore": {
           "link": "https://apps.apple.com/app/heise-ai",
-          "image": "img/badges/appstore-badge.svg"
+          "image": "img/badges/appstore-badge-light.svg"
         },
         "googleplay": {
           "link": "https://play.google.com/store/apps/details?id=heise.ai",
-          "image": "img/badges/googleplay-badge.svg"
+          "image": "img/badges/googleplay-badge-light.svg"
         }
       }
     }
