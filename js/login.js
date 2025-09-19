@@ -99,3 +99,8 @@ function initLoginEvents(content) {
 document.addEventListener("DOMContentLoaded", () => {
   renderLogin();
 });
+
+document.getElementById("login-code-submit").addEventListener("click", (e) => {
+  e.preventDefault();
+  window.location.href = "/profile.html";
+});

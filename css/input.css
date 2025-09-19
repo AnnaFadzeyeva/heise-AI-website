@@ -1,4 +1,4 @@
-/* ===== Einheitliche Input Styles ===== */
+/* ===== input.css ===== */
 
 /* Wrapper für alle Input-Felder, Textareas und Dropdowns */
 .form-field {
@@ -25,6 +25,15 @@ select {
   color: var(--color-primary);
   background-color: transparent;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea {
+  line-height: 1.4;
+  padding: 0.55rem 0.55rem;
+  font-size: 0.9rem;
+  border: 1px solid #cfd6e0;
+  border-radius: 0.25rem;
+  font-family: "Source Sans 3", sans-serif;
 }
 
 /* Fokus-Styles */
@@ -85,4 +94,20 @@ textarea::placeholder {
 :root[data-theme="dark"] select:focus {
   border-color: var(--color-secondary);
   outline: 3px solid color-mix(in srgb, var(--color-secondary) 60%, transparent);
+}
+
+
+
+
+/* Auto-Resize Textareas */
+textarea.auto-resize {
+  overflow: hidden;
+  resize: none;
+  min-height: 0;
+}
+
+/* Mehrzeiliges Padding */
+textarea.auto-resize:not(:placeholder-shown):not(:focus) {
+  padding-top: 0.55rem;
+  padding-bottom: 0.55rem;
 }

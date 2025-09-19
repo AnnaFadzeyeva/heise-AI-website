@@ -1,0 +1,57 @@
+{
+  "de": {
+    "download": {
+      "title": "Heise AI Download",
+      "subtitle": "Lad dir jetzt die App im AppStore runter!",
+      "buttons": {
+        "appstore": {
+          "label": "Download on the App Store",
+          "link": "https://apps.apple.com/de/app/heise-ai"
+        },
+        "googleplay": {
+          "label": "Get it on Google Play",
+          "link": "https://play.google.com/store/apps/details?id=heise.ai"
+        }
+      }
+    },
+    "profile": {
+      "company": {
+        "title": "Unternehmen",
+        "logo": "img/customer-logo/schulz-gebaeudetechnik-gmbh-logo.jpg",
+        "logoButton": "Logo hochladen",
+        "brand": "Schulz Gebäudetechnik GmbH",
+        "slogan": "Wir sind Ihre Partner, rund um den Bereich Heizung und Bäder."
+      },
+      "details": {
+        "title": "Unternehmensdetails",
+        "products": "Sanitäranlagen: Dachrinnen - Bauklempnerei, Zentralstaubsaugeranlagen, Schwimmbad",
+        "services": "Sanitäranlagen: Installation und Reparatur, Bäderplanung und -installation (auch behindertengerecht), Ortung und Behebung von Leitungswasserschäden, Bautrocknung, Trocknung von Wasserschäden, Regenwassernutzungsanlagen",
+        "size": "20",
+        "year": "2017"
+      },
+      "presence": {
+        "title": "Online-Präsenz",
+        "website": "https://www.schulz-gebaeudetechnik.de/",
+        "email": "dieter.schulz@schulz-gebaeudetechnik.de"
+      },
+      "contact": {
+        "title": "Kontaktinformationen",
+        "opening": "Mo - Do.: 07:00 - 16:00 Uhr, Fr.: 07:00 - 12:30 Uhr",
+        "phone": "+494795 550310",
+        "address": "Hellerdammsweg 2",
+        "zip": "27711",
+        "city": "Osterholz-Scharmbeck",
+        "country": "Deutschland"
+      },
+      "personalization": {
+        "title": "Personalisierung",
+        "style": "Ich schreibe in einem klaren, freundlichen und leicht verständlichen Stil. Die Sprache soll modern, direkt und inspirierend sein – ohne komplizierte Fachbegriffe.",
+        "hashtags": "#Gebauudetechnik #Sanitaeranlagen #Heizung #Bader"
+      },
+      "actions": {
+        "logout": "Abmelden",
+        "save": "Speichern"
+      }
+    }
+  }
+}

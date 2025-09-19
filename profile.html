@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>heise AI – Social Media leicht gemacht</title>
+    <meta
+      name="description"
+      content="Mit der heise AI Social App erstellen Sie in Sekunden kreative Social-Media-Beiträge mit KI. Planen, veröffentlichen und posten Sie effizient auf LinkedIn, Facebook, Instagram, X und WhatsApp."
+    />
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/hero-bg.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/input.css" />
+    <link rel="stylesheet" href="css/subnav.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header / Navigation -->
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <!-- Links: Logo -->
+        <a class="brand" href="/#home" aria-label="Startseite">
+          <img
+            class="brand-logo"
+            src="img/heiseAI-logo.svg"
+            alt="heise AI"
+            width="128"
+            height="32"
+            decoding="async"
+          />
+        </a>
+
+        <!-- Mobile Burger -->
+        <button
+          class="nav-toggle"
+          aria-controls="primary-nav"
+          aria-expanded="false"
+          aria-label="Navigation öffnen"
+        >
+          <span class="nav-toggle-box" aria-hidden="true">
+            <span class="nav-toggle-line"></span>
+            <span class="nav-toggle-line"></span>
+            <span class="nav-toggle-line"></span>
+          </span>
+        </button>
+
+        <!-- Navigation -->
+        <nav class="nav" id="primary-nav" aria-label="Hauptnavigation">
+          <ul class="nav-center">
+            <!-- wird dynamisch gefüllt -->
+          </ul>
+
+          <div class="nav-right">
+            <div class="nav-right-actions">
+              <a class="nav-item logout" href="#">Abmelden</a>
+              <!--               <a class="nav-item login" href="#"></a>
+              <a class="btn btn-secondary cta" href="#"></a> -->
+            </div>
+            <div class="nav-settings">
+              <div class="lang-switch">
+                <a href="#" data-lang="de" class="lang active">DE</a> |
+                <a href="#" data-lang="en" class="lang">EN</a>
+              </div>
+              <div class="theme-switch">
+                <button id="theme-toggle" aria-label="Theme umschalten">
+                  <img
+                    id="theme-icon"
+                    src="img/svg/Brightness.svg"
+                    alt="Theme Switch Icon"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="layout-wrapper">
+      <!-- Subnav section -->
+      <aside class="subnav">
+        <div class="subnav-menu">
+          <ul id="subnav-list" class="subnav-list"></ul>
+        </div>
+
+        <!-- Download Section -->
+        <section class="download-block">
+          <h2 id="download-title"></h2>
+          <p id="download-subtitle" class="subtitle"></p>
+          <div class="download-buttons">
+            <a id="download-appstore" target="_blank" rel="noopener">
+              <img alt="App Store Download" width="100" />
+            </a>
+            <a id="download-googleplay" target="_blank" rel="noopener">
+              <img alt="Google Play Download" width="100" />
+            </a>
+          </div>
+        </section>
+      </aside>
+
+      <!-- Main section -->
+      <main class="profile-main">
+        <div class="container-profile">
+          <div class="container-profile-details">
+            <!-- Unternehmensdaten -->
+            <section class="profile-block company-block">
+              <h2 data-section="company"></h2>
+
+              <div class="form-field">
+                <label for="brand">Markenname</label>
+                <input id="brand" type="text" />
+              </div>
+              <div class="form-field">
+                <label for="slogan">Slogan</label>
+                <textarea
+                  id="slogan"
+                  type="text"
+                  class="auto-resize"
+                ></textarea>
+              </div>
+              <div class="form-field">
+                <label for="company-logo-upload">Unternehmenslogo</label>
+                <div class="logo-upload" id="logo-upload">
+                  <input
+                    type="file"
+                    id="company-logo-upload"
+                    accept="image/png,image/jpeg"
+                    hidden
+                  />
+                  <div class="logo-upload-content">
+                    <img
+                      id="company-logo-preview"
+                      src=""
+                      alt=""
+                      style="display: none"
+                    />
+                    <div class="logo-upload-placeholder">
+                      <img
+                        id="upload-icon"
+                        src="img/svg/UploadTray.svg"
+                        alt="Theme Switch Icon"
+                      />
+                      <p>
+                        <span class="upload-text">Click to upload</span> or drag
+                        and drop
+                      </p>
+                      <small>SVG,PNG, JPG up to 2MB</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Online-Präsenz -->
+            <section class="profile-block">
+              <h2 data-section="presence"></h2>
+              <div class="form-field">
+                <label for="website">Webseite</label>
+                <input id="website" type="url" />
+              </div>
+              <div class="form-field">
+                <label for="email">E-Mail Adresse</label>
+                <input id="email" type="email" />
+              </div>
+            </section>
+          </div>
+
+          <div class="container-company-details">
+            <!-- Unternehmensdetails -->
+            <section class="profile-block">
+              <h2 data-section="details"></h2>
+              <div class="form-field">
+                <label for="products">Produkte</label>
+                <textarea id="products" class="auto-resize"></textarea>
+              </div>
+              <div class="form-field">
+                <label for="services">Dienstleistungen</label>
+                <textarea
+                  id="services"
+                  type="text"
+                  class="auto-resize"
+                ></textarea>
+              </div>
+              <div class="form-field">
+                <label for="size">Unternehmensgröße</label>
+                <input id="size" type="number" />
+              </div>
+              <div class="form-field">
+                <label for="year">Gründungsjahr</label>
+                <input id="year" type="number" />
+              </div>
+            </section>
+
+            <!-- Kontaktinformationen -->
+            <section class="profile-block">
+              <h2 data-section="contact"></h2>
+              <div class="form-field">
+                <label for="opening">Öffnungszeiten</label>
+                <input id="opening" type="text" />
+              </div>
+              <div class="form-field">
+                <label for="phone">Telefonnummer</label>
+                <input id="phone" type="tel" />
+              </div>
+              <div class="form-field">
+                <label for="address">Straße und Hausnummer</label>
+                <input id="address" type="text" />
+              </div>
+              <div class="form-inline">
+                <input id="zip" type="text" placeholder="PLZ" />
+                <input id="city" type="text" placeholder="Stadt" />
+              </div>
+              <div class="form-field">
+                <label for="country">Land</label>
+                <input id="country" type="text" />
+              </div>
+            </section>
+          </div>
+          <!-- Personalisierung -->
+          <section class="profile-block">
+            <h2 data-section="personalization"></h2>
+            <div class="form-field">
+              <label for="style">Was soll heise KI Pro beachten …?</label>
+              <textarea id="style" class="auto-resize"></textarea>
+            </div>
+            <div class="form-field">
+              <label for="hashtags">Welche #Hashtags …?</label>
+              <input id="hashtags" type="text" />
+            </div>
+          </section>
+
+          <!-- Logout + Save -->
+          <section class="profile-actions">
+            <button id="logout-btn" class="btn-link danger"></button>
+            <button id="save-btn" class="btn btn-primary"></button>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <footer id="site-footer" class="site-footer"></footer>
+
+    <script type="module" src="js/profile.js"></script>
+    <script type="module" src="js/subnav.js"></script>
+    <script type="module" src="js/script.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/themeToggle.js"></script>
+  </body>
+</html>

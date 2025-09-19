@@ -1,0 +1,181 @@
+.layout-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--space-5);
+  padding: var(--space-5);
+}
+
+/* Sidebar links */
+.subnav {
+  flex: 0 0 280px; /* feste Breite, kannst du anpassen */
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* Hauptinhalt rechts */
+.profile-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4); /* kleiner: vorher space-5 */
+  padding: var(--space-4); /* kleiner: vorher space-5 */
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* softer */
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.container-profile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4); /* kleinerer Abstand zwischen Blocks */
+  width: 100%;
+}
+
+.container-profile-details,
+.container-company-details {
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  gap: var(--space-4);
+}
+
+/* ===== Form Wrapper ===== */
+.profile-block,
+.profile-actions {
+  border-radius: 0.75rem; /* weniger rund für cleaner Look */
+  padding: var(--space-4); /* kompakter: vorher space-5 */
+  text-align: left;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.profile-block h2 {
+  margin-bottom: var(--space-3); /* etwas mehr Abstand zur Überschrift */
+  font-size: 1.1rem;
+  color: var(--color-primary);
+}
+
+.form-field,
+.form-inline {
+  margin-bottom: var(--space-3); /* kleinere Feldabstände */
+}
+
+.profile-block p {
+  color: var(--color-primary);
+}
+
+.container-logo {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-2);
+}
+
+.company-logo {
+  width: 90px;
+  aspect-ratio: 1 / 1;
+  /*   border-radius: 1rem / 1.4rem;
+  clip-path: inset(0 round 1rem 1.4rem 1rem 1.4rem); */
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px) saturate(150%);
+}
+
+.company-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.download-block {
+  text-align: left;
+}
+
+.download-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.download-buttons img {
+  height: 47px;
+  width: auto;
+  display: block;
+}
+
+
+
+/* Upload-Wrapper */
+.logo-upload {
+  border: 2px dashed #cfd6e0;
+  border-radius: 0.75rem;
+  background: #fafbfc;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.logo-upload:hover {
+  border-color: var(--color-primary, #14315b);
+  background: #f5f9ff;
+}
+
+/* Inhalt */
+.logo-upload-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-primary, #14315b);
+}
+
+.logo-upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* sorgt für vertikale Mitte */
+  gap: 0.5rem;
+  text-align: center;
+  height: 100%; /* nutzt die volle Höhe der Box */
+}
+
+.logo-upload-placeholder img {
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin: 0 auto; /* horizontale Mitte */
+}
+
+.logo-upload-placeholder p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.logo-upload-placeholder .upload-text {
+  color: var(--color-secondary, #64a4ff);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.logo-upload-placeholder small {
+  color: #828a93;
+  font-size: 0.8rem;
+}
+
+/* Wenn ein Bild hochgeladen ist */
+#company-logo-preview {
+  max-width: 180px;
+  max-height: 120px;
+  object-fit: contain;
+  display: block;
+}

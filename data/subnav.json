@@ -1,0 +1,88 @@
+{
+  "de": {
+    "subnav": [
+      {
+        "id": "profile",
+        "label": "Profil",
+        "icon": "img/svg/subnav/UserProfileFocus.svg"
+      },
+      {
+        "id": "subscription",
+        "label": "Abonnement",
+        "icon": "img/svg/subnav/UserKingCrown.svg"
+      },
+      {
+        "id": "payment",
+        "label": "Zahlungsmethoden",
+        "icon": "img/svg/subnav/CreditCard.svg"
+      },
+      {
+        "id": "invoices",
+        "label": "Rechnungen",
+        "icon": "img/svg/subnav/TextFile.svg"
+      },
+      {
+        "id": "logout",
+        "label": "Abmelden",
+        "icon": "img/svg/subnav/logout.svg"
+      }
+    ],
+    "download": {
+      "title": "Heise AI Download",
+      "subtitle": "Lad dir jetzt die App im AppStore runter!",
+      "buttons": {
+        "appstore": {
+          "link": "https://apps.apple.com/de/app/heise-ai",
+          "image": "img/badges/appstore-badge.svg"
+        },
+        "googleplay": {
+          "link": "https://play.google.com/store/apps/details?id=heise.ai",
+          "image": "img/badges/googleplay-badge.svg"
+        }
+      }
+    }
+  },
+  "en": {
+    "subnav": [
+      {
+        "id": "profile",
+        "label": "Profile",
+        "icon": "img/svg/subnav/UserProfileFocus.svg"
+      },
+      {
+        "id": "subscription",
+        "label": "Subscription",
+        "icon": "img/svg/subnav/UserKingCrown.svg"
+      },
+      {
+        "id": "payment",
+        "label": "Payment Methods",
+        "icon": "img/svg/subnav/CreditCard.svg"
+      },
+      {
+        "id": "invoices",
+        "label": "Invoices",
+        "icon": "img/svg/subnav/TextFile.svg"
+      },
+      {
+        "id": "logout",
+        "label": "Logout",
+        "icon": "img/svg/subnav/logout.svg"
+      }
+    ],
+    "download": {
+      "title": "Heise AI Download",
+      "subtitle": "Get the app now in the App Store!",
+      "buttons": {
+        "appstore": {
+          "link": "https://apps.apple.com/app/heise-ai",
+          "image": "img/badges/appstore-badge.svg"
+        },
+        "googleplay": {
+          "link": "https://play.google.com/store/apps/details?id=heise.ai",
+          "image": "img/badges/googleplay-badge.svg"
+        }
+      }
+    }
+  }
+}

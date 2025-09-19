@@ -23,7 +23,7 @@
   -webkit-backdrop-filter: blur(12px) saturate(150%);
   border: 1px solid rgba(255, 255, 255, 0.4);
   transition: transform 0.75s ease, box-shadow 0.25s ease;
-  max-width: 440px;
+  max-width: 580px;
   width: 100%;
   margin: 0 auto;
 }

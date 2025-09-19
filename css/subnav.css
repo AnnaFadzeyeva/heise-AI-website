@@ -1,0 +1,64 @@
+/* Container der Sidebar */
+.subnav .subnav-menu,
+.download-block {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.download-block {
+  padding: var(--space-5);
+}
+
+/* Liste resetten */
+.subnav .subnav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Einträge */
+.subnav .subnav-item {
+  margin: 0;
+}
+
+/* Links */
+.subnav .subnav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary, #14315b);
+  text-decoration: none;
+  border-radius: 1rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Icons */
+.subnav .subnav-link img {
+  width: 22px;
+  height: 22px;
+}
+
+/* Hover-Effekt */
+.subnav .subnav-link:hover {
+  background: rgba(20, 49, 91, 0.08);
+  color: var(--color-primary-shade, #122b50);
+}
+
+/* Aktiver Link */
+.subnav .subnav-item.active .subnav-link {
+  background: var(--color-primary, #14315b);
+  color: #fff;
+}
+
+.subnav .subnav-item.active .subnav-link img {
+  filter: brightness(0) invert(1); /* Icon weiß färben */
+}
